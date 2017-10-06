@@ -1,0 +1,80 @@
+    1  cd /d/Daniel/
+    2  mkdir HBO-ICT
+    3  cd HBO-ICT/
+    4  mkdir Memory Game
+    5  cd Memory/
+    6  cd Memory Game/
+    7  cd
+    8  cd /d/Daniel/
+    9  cd HBO-ICT/
+   10  cd Memory\ Game/
+   11  git init
+   12  git remote add memory https://github.com/Coenraad7/Memory/branches
+   13  git pull
+   14*
+   15  git remote add memory https://github.com/Coenraad7/Memory/branches.git
+   16  git remote add Memory https://github.com/Coenraad7/Memory/branches.git
+   17  git pull
+   18  git remote add memorygame https://github.com/Coenraad7/Memory.git
+   19  git pull
+   20  git push
+   21  git remote -v
+   22  git remote rm Memory
+   23  git remote rm memory
+   24  git pul
+   25  git pull
+   26  git remote rm memorygame
+   27  git remote -v
+   28  git config --global user.name dantheman0125
+   29  git config --global user.name "dantheman0125"
+   30  git config --global user.email "danielroskam@gmail.com"
+   31  git config --global user.name "dantheman0125"
+   32  git remote add memory https://github.com/Coenraad7/Memory.git
+   33  remote -v
+   34  git remote -v
+   35  git pull
+   36  git pull memory
+   37  git add Test.docx
+   38  git checkout
+   39  git checkout "version 0.0.1"
+   40  git checkout -m "version 0.0.1"
+   41  git commit -m "version 0.0.1
+
+
+   42  git commit -m "version 0.0.1"
+   43  git push
+   44  git push memory
+   45  git push memory master
+   46  git pull
+   47  git pull memory
+   48  git pull memory master
+   49  git push memory master
+   50  git pull
+   51  git pull memory master
+   52  git pull memory master
+   53  git remote -v
+   54  git add Test.docx
+   55  git commit -m "version 0.0.2"
+   56  git push memory master
+   57  rm Test.docx
+   58  git pull memory master
+   59  git pull memory
+   60  git pull memory master
+   61  git pull memory master --allow-unrelated-histories
+   62  git add test.txt
+   63  git commit "Version 0.0.1"
+   64  git commit "Version 0.0.3"
+   65  git commit -m "Version 0.0.3"
+   66  git push memory master
+   67  history
+   68  git pull memory master
+   69  rm dir Memory/
+   70  rm dir Memory
+   71  rm Memory
+   72  rmdir Memory
+   73  rm -r Memory/
+   74  git add Memory
+   75  git commit "Version 0.5.1"
+   76  git commit -m "Version 0.5.1"
+   77  git push memory master
+   78  history

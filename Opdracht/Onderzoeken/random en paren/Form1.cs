@@ -18,11 +18,11 @@ namespace random_en_paren
 
         public Form1()
         {
+            InitializeComponent();
             label1.Text = "";
             int amount = 16; //aantal kaarten die gebruikt worden
             cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
             scramble(); //spel begin kaarten randomizen
-            InitializeComponent();
         }
 
         private void scramble()

@@ -18,43 +18,37 @@ namespace random_en_paren
 
         public Form1()
         {
+            label1.Text = "";
             int amount = 16; //aantal kaarten die gebruikt worden
             cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
-            InitializeComponent();
-            label1.Text = "";
             scramble(); //spel begin kaarten randomizen
+            InitializeComponent();
         }
 
         private void scramble()
         {
             Random rng = new Random();
-            bool done = false, check = false;
-            int random = 0;
+            bool check;
+            int random;
 
-            for (int i = 0; i < cardproperties.GetLength(0); i++)
+            for (int i = 0; i < cardproperties.GetLength(0); i++) //cardproperties.GetLength(0) houd in dat hij de lengte bekijkt van de eerste indice
             {
-                done = false;
-                check = false;
-
-                while (done == false)
+                check = true;
+                random = rng.Next(1, (cardproperties.GetLength(0) / 2 + 1));
+                for (int e = 0; e < cardproperties.GetLength(0); e++)
                 {
-                    check = true;
-                    done = true;
-                    random = rng.Next(1, (cardproperties.GetLength(0)/2+1));
-                    for (int e = 0; e < cardproperties.GetLength(0); e++)
+                    if ((cardproperties[e, 1] == random) && (check == true)) //1e check dat er 1 nummer instaat (dit mag wel)
                     {
-                        
-                        if ((cardproperties[e, 1] == random) && (check == false)) //2e check dat er een nummer 2x instaat (dit mag niet)
-                        {
-                            done = false;
-                        }
-                        else if ((cardproperties[e, 1] == random) && (check == true)) //1e check dat er 1 nummer instaat (dit mag wel)
-                        {
-                            check = false;
-                        }
-                    }                   
+                        check = false;
+                    }
+                    else if ((cardproperties[e, 1] == random) && (check == false)) //2e check dat er een nummer 2x instaat (dit mag niet en alles word gereset zodra dit bekend is)
+                    {
+                        e = -1;
+                        check = true;
+                        random = rng.Next(1, (cardproperties.GetLength(0) / 2 + 1));
+                    }
                 }
-                cardproperties[i, 1] = random; //nummer aan de array geven
+                cardproperties[i, 1] = random; //nummer aan de array 
             }
         }
 
@@ -69,7 +63,7 @@ namespace random_en_paren
                 cardinfo1 = card;
                 oldcard = picture;
             }
-            else if (card2 == 0 && oldcard != picture) //2e klik
+            else if (card1 != 0 && card2 == 0 && oldcard != picture) //2e klik
             {
                 card2 = cardproperties[picture, 1];
                 cardinfo2 = card;
@@ -107,13 +101,15 @@ namespace random_en_paren
         {
             foreach (var pictureBox in Controls.OfType<PictureBox>()) //vraagt alle picture boxes op
             {
-                for (int i = 1; i <= cardproperties.GetLength(0); i++) 
+                string name = pictureBox.Name;
+                if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default en visible (voorkomen dat andere pictureboxes worden aangepast)
                 {
-                    if (pictureBox.Name == ("pictureBox" + Convert.ToString(i))) //vergelijkt de namen van de pictureboxes die gebruikt worden en reset ze naar _default en visible
-                    {
-                        pictureBox.BackgroundImage = Properties.Resources._default;
-                        pictureBox.Visible = true;
-                    }
+                    pictureBox.BackgroundImage = Properties.Resources._default;
+                    pictureBox.Visible = true;
+                }
+                else
+                {
+                    break;
                 }
             }
             card1 = 0; //alle code die hier staat zorgt er voor dat de standaard waarden terug worden gezet

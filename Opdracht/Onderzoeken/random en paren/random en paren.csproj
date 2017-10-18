@@ -80,61 +80,61 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\1.png" />
+    <None Include="Theme\5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\2.png" />
+    <None Include="Theme\6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\3.png" />
+    <None Include="Theme\7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\4.png" />
+    <None Include="Theme\8.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\5.png" />
+    <None Include="Theme\9.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\6.png" />
+    <None Include="Theme\10.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\7.png" />
+    <None Include="Theme\11.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\8.png" />
+    <None Include="Theme\12.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\9.png" />
+    <None Include="Theme\13.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\10.png" />
+    <None Include="Theme\14.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\11.png" />
+    <None Include="Theme\15.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\12.png" />
+    <None Include="Theme\16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\13.png" />
+    <None Include="Theme\17.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\14.png" />
+    <None Include="Theme\18.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\15.png" />
+    <None Include="Theme\default.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\16.png" />
+    <None Include="Theme\1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\17.png" />
+    <None Include="Theme\2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\18.png" />
+    <None Include="Theme\3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Thema\default.png" />
+    <None Include="Theme\4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

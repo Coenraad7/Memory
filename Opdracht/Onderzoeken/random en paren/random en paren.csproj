@@ -53,6 +53,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -74,6 +78,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thema\default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,9 @@
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\bin\Debug\Dynamisch speelveld.exe.config
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\bin\Debug\Dynamisch speelveld.exe
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\bin\Debug\Dynamisch speelveld.pdb
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\obj\Debug\Dynamisch speelveld.csprojResolveAssemblyReference.cache
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\obj\Debug\Dynamisch_speelveld.Properties.Resources.resources
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\obj\Debug\Dynamisch speelveld.csproj.GenerateResource.Cache
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\obj\Debug\Dynamisch speelveld.csproj.CoreCompileInputs.cache
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\obj\Debug\Dynamisch speelveld.exe
+C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\Dynamisch speelveld\Dynamisch speelveld\obj\Debug\Dynamisch speelveld.pdb

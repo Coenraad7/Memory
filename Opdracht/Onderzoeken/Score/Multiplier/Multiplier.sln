@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplier", "Multiplier\Multiplier.csproj", "{2174D085-1DB3-430C-AAC0-2A57E252C2EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2174D085-1DB3-430C-AAC0-2A57E252C2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2174D085-1DB3-430C-AAC0-2A57E252C2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2174D085-1DB3-430C-AAC0-2A57E252C2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2174D085-1DB3-430C-AAC0-2A57E252C2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FADF5696-6A47-4084-A853-1B6F6BF69639}
+	EndGlobalSection
+EndGlobal

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24F0A2F4-E3D5-42C7-B3A8-30C70300A25E}</ProjectGuid>
+    <ProjectGuid>{111784DB-D8E9-4549-B161-BC56BCC5DB27}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>random_en_paren</RootNamespace>
-    <AssemblyName>random en paren</AssemblyName>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -53,9 +53,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,9 +61,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,63 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\17.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\18.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\default.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

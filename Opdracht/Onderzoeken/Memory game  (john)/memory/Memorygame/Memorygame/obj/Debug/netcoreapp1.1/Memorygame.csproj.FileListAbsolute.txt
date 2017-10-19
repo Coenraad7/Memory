@@ -1,0 +1,10 @@
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\bin\Debug\netcoreapp1.1\Memorygame.deps.json
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\bin\Debug\netcoreapp1.1\Memorygame.runtimeconfig.json
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\bin\Debug\netcoreapp1.1\Memorygame.runtimeconfig.dev.json
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\bin\Debug\netcoreapp1.1\Memorygame.dll
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\bin\Debug\netcoreapp1.1\Memorygame.pdb
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\obj\Debug\netcoreapp1.1\Memorygame.csprojResolveAssemblyReference.cache
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\obj\Debug\netcoreapp1.1\Memorygame.csproj.CoreCompileInputs.cache
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\obj\Debug\netcoreapp1.1\Memorygame.AssemblyInfo.cs
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\obj\Debug\netcoreapp1.1\Memorygame.dll
+C:\Users\JohnW\Desktop\Memory game\memory\Memorygame\Memorygame\obj\Debug\netcoreapp1.1\Memorygame.pdb

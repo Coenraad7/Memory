@@ -15,8 +15,7 @@ namespace random_en_paren
         int[,] cardproperties;
         int count,card1,card2,oldcard = -1,oldcard2 = -1;
         PictureBox cardinfo1,cardinfo2;
-        int score = 0;
-        double winst = 10, multiplier = 1;
+        double multiplier = 1;
 
         public Form1()
         {
@@ -58,7 +57,7 @@ namespace random_en_paren
             PictureBox card = (PictureBox)sender;
             card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + cardproperties[picture,1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
 
-            if (card1 == 0) //1e klik (word maar 1x gedraaid in de code)
+            if (card1 == 0) //1e klik (word gedraaid na een goed paar)
             {
                 card1 = cardproperties[picture, 1];
                 cardinfo1 = card;
@@ -71,7 +70,7 @@ namespace random_en_paren
                 oldcard2 = picture;
                 paircheck(); //hier word de methode voor het controlleren van paren opgevraagd
             }
-            else if (card2 != 0 && oldcard != picture && oldcard2 != picture) //3e klik en ook 1e (omdat de 3e klik ook een kaartje registreerd)
+            else if (card2 != 0 && oldcard != picture && oldcard2 != picture) //3e klik en ook 1e (als het paar niet juist is)
             {
                 cardinfo1.BackgroundImage = Properties.Resources._default;
                 cardinfo2.BackgroundImage = Properties.Resources._default;
@@ -88,10 +87,10 @@ namespace random_en_paren
         {
             if (card1 == card2) //als de waarden gelijk zijn zal hij ze terug zetten naar standaard(_default) en verstoppen
             {
-                cardinfo1.BackgroundImage = Properties.Resources._default;
-                cardinfo2.BackgroundImage = Properties.Resources._default;
                 cardinfo1.Visible = false;
                 cardinfo2.Visible = false;
+                cardinfo1.BackgroundImage = Properties.Resources._default;
+                cardinfo2.BackgroundImage = Properties.Resources._default;
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;
@@ -102,10 +101,15 @@ namespace random_en_paren
 
         private void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         {
+            
+
             if (correct == true)
             {
-                score += Convert.ToInt32(multiplier * winst);
-
+                string temp = label1.Text;
+                int score = Convert.ToInt32(temp.Replace("Score: ", ""));
+                score += Convert.ToInt32(multiplier * 10);
+                label1.Text = "Score: " + Convert.ToString(score);
+                
                 if (multiplier % 1 == 0)
                 {
                     multiplier++;
@@ -126,7 +130,7 @@ namespace random_en_paren
                     multiplier = 1;
                 }
             }
-            label1.Text = "Score: " + Convert.ToString(score);
+            
         }
 
         private void Reset()
@@ -152,7 +156,6 @@ namespace random_en_paren
             {
                 cardproperties[r, 1] = 0;
             }
-            score = 0;
             label1.Text = "Score: 0";
             scramble(); //vraagt scramble op om zo de kaartjes te husselen
         }

@@ -1,4 +1,6 @@
-﻿namespace Dynamisch_speelveld
+﻿using System;
+
+namespace Dynamisch_speelveld
 {
     partial class Form1
     {
@@ -711,6 +713,11 @@
 
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -760,6 +767,12 @@
         private System.Windows.Forms.Label highscore;
         private System.Windows.Forms.Label restartgame;
         private System.Windows.Forms.Label exitgame;
+        private EventHandler pictureBox1_Click;
+        private EventHandler label1_Click;
+        private EventHandler player3_Click;
+        private EventHandler score_player2_Click;
+
+        public EventHandler Form1_Load { get; private set; }
     }
 }
 

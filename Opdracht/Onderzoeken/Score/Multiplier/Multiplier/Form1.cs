@@ -10,8 +10,42 @@ using System.Windows.Forms;
 
 namespace Multiplier
 {
+
     public partial class Form1 : Form
     {
+        int score = 0;
+        double winst = 10;
+        double multiplier = 1;
+
+        private void test (bool iets)
+        {
+            if (iets == true)
+            {
+                score += Convert.ToInt32(multiplier * winst);
+
+                if (multiplier % 1 == 0)
+                {
+                    multiplier++;
+                }
+                else
+                {
+                    multiplier = 1;
+                }
+            }
+            else if (iets == false)
+            {
+                if (multiplier <= 1)
+                {
+                    multiplier -= 0.1;
+                }
+                else
+                {
+                    multiplier = 1;
+                }
+            }
+            scorelabel.Text = "Score: " + Convert.ToString(score);
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -24,87 +58,12 @@ namespace Multiplier
 
         private void goed_Click(object sender, EventArgs e)
         {
-
+            test(true);
         }
+
         private void fout_Click(object sender, EventArgs e)
         {
-
-        }
-
-        public void goed_Click(object sender, EventArgs e)
-        {
-            double score = 0;
-            double multiplier = 1.0;
-            if (goed.Click += (s, e) => { multiplier};)
-            {
-                score *= multiplier;
-
-                switch (multiplier)
-                {
-                    case 1:
-                        multiplier += 1;
-                        break;
-                    case 2:
-                        multiplier += 1;
-                        break;
-                    case 3:
-                        multiplier += 1;
-                        break;
-                    case 4:
-                        multiplier += 1;
-                        break;
-                    case 5:
-                        multiplier += 1;
-                        break;
-                    case 6:
-                        multiplier += 1;
-                        break;
-                    case 7:
-                        multiplier += 1;
-                        break;
-                    case 8:
-                        multiplier += 1;
-                        break;
-                    case 9:
-                        multiplier += 1;
-                        break;
-                    case 10:
-                        multiplier += 1;
-                        break;
-                    case 11:
-                        multiplier += 1;
-                        break;
-                    case 12:
-                        multiplier += 1;
-                        break;
-                    case 13:
-                        multiplier += 1;
-                        break;
-                    case 14:
-                        multiplier += 1;
-                        break;
-                    case 15:
-                        multiplier += 1;
-                        break;
-                    case 16:
-                        multiplier += 1;
-                        break;
-                    case 17:
-                        multiplier += 1;
-                        break;
-                    case 18:
-                        multiplier += 1;
-                        break;
-                    default:
-                        multiplier = 1;
-                        break;
-                }
-                else if (fout.Click = true)
-                {
-                    multiplier -= 0.1;
-                }
-                
-            }
+            test(false);
         }
     }
 }

@@ -41,6 +41,7 @@
             this.goed.TabIndex = 0;
             this.goed.Text = "goed";
             this.goed.UseVisualStyleBackColor = true;
+            this.goed.Click += new System.EventHandler(this.goed_Click);
             // 
             // fout
             // 

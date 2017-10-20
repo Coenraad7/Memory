@@ -8,26 +8,3 @@ C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csproj.Gen
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.exe
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.pdb
-<<<<<<< HEAD
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe.config
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.pdb
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csprojResolveAssemblyReference.cache
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random_en_paren.Form1.resources
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random_en_paren.Properties.Resources.resources
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.GenerateResource.Cache
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.exe
-D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.pdb
-=======
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe.config
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.pdb
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csprojResolveAssemblyReference.cache
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random_en_paren.Form1.resources
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random_en_paren.Properties.Resources.resources
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.GenerateResource.Cache
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.exe
-C:\Users\JohnW\OneDrive\Documenten\GitHub\Memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.pdb
->>>>>>> 6aba8ff04f343bbb28cf57431ac845bf955469f9

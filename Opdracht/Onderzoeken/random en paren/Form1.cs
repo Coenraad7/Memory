@@ -15,11 +15,12 @@ namespace random_en_paren
         int[,] cardproperties;
         int count,card1,card2,oldcard = -1,oldcard2 = -1;
         PictureBox cardinfo1,cardinfo2;
+        int score = 0;
+        double winst = 10, multiplier = 1;
 
         public Form1()
         {
             InitializeComponent();
-            label1.Text = "";
             int amount = 16; //aantal kaarten die gebruikt worden
             cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
             scramble(); //spel begin kaarten randomizen
@@ -79,6 +80,7 @@ namespace random_en_paren
                 oldcard = picture;
                 card2 = 0;
                 cardinfo2 = null;
+                keepscore(false);
             }
         }
 
@@ -94,7 +96,37 @@ namespace random_en_paren
                 cardinfo1 = null;
                 card2 = 0;
                 cardinfo2 = null;
+                keepscore(true);
             }
+        }
+
+        private void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
+        {
+            if (correct == true)
+            {
+                score += Convert.ToInt32(multiplier * winst);
+
+                if (multiplier % 1 == 0)
+                {
+                    multiplier++;
+                }
+                else
+                {
+                    multiplier = 1;
+                }
+            }
+            else if (correct == false)
+            {
+                if (multiplier <= 1)
+                {
+                    multiplier -= 0.1;
+                }
+                else
+                {
+                    multiplier = 1;
+                }
+            }
+            label1.Text = "Score: " + Convert.ToString(score);
         }
 
         private void Reset()
@@ -120,6 +152,8 @@ namespace random_en_paren
             {
                 cardproperties[r, 1] = 0;
             }
+            score = 0;
+            label1.Text = "Score: 0";
             scramble(); //vraagt scramble op om zo de kaartjes te husselen
         }
 
@@ -206,11 +240,6 @@ namespace random_en_paren
         private void reset_Click(object sender, EventArgs e)
         {
             Reset();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

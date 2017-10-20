@@ -8,3 +8,13 @@ C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csproj.Gen
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.exe
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.pdb
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe.config
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.pdb
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csprojResolveAssemblyReference.cache
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random_en_paren.Form1.resources
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random_en_paren.Properties.Resources.resources
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.GenerateResource.Cache
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.exe
+C:\GIT\memory\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.pdb

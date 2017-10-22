@@ -11,3 +11,16 @@ C:\Users\Coenraad\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\Win
 C:\Users\Coenraad\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.CoreCompileInputs.cache
 C:\Users\Coenraad\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
 C:\Users\Coenraad\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojResolveAssemblyReference.cache
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Form1.resources
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Form2.resources
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Form3.resources
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Form4.resources
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.Cache
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.CoreCompileInputs.cache
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\GIT\memory\Opdracht\Onderzoeken\Menu Switchen\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb

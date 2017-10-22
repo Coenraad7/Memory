@@ -1,13 +1,8 @@
-C:\Users\richa\OneDrive\NHL\random en paren\bin\Debug\random en paren.exe.config
-C:\Users\richa\OneDrive\NHL\random en paren\bin\Debug\random en paren.exe
-C:\Users\richa\OneDrive\NHL\random en paren\bin\Debug\random en paren.pdb
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csprojResolveAssemblyReference.cache
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random_en_paren.Form1.resources
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random_en_paren.Properties.Resources.resources
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csproj.GenerateResource.Cache
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
-C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.exe
-C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\random en paren.pdb
 C:\GIT\memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe.config
 C:\GIT\memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.exe
 C:\GIT\memory\Opdracht\Onderzoeken\random en paren\bin\Debug\random en paren.pdb
@@ -28,3 +23,8 @@ D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\ran
 D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.csproj.CoreCompileInputs.cache
 D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.exe
 D:\Daniel\HBO-ICT\Memory Game\Opdracht\Onderzoeken\random en paren\obj\Debug\random en paren.pdb
+C:\Users\richa\OneDrive\NHL\random en paren\bin\Debug\Memory Game.exe.config
+C:\Users\richa\OneDrive\NHL\random en paren\bin\Debug\Memory Game.exe
+C:\Users\richa\OneDrive\NHL\random en paren\bin\Debug\Memory Game.pdb
+C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\Memory Game.exe
+C:\Users\richa\OneDrive\NHL\random en paren\obj\Debug\Memory Game.pdb

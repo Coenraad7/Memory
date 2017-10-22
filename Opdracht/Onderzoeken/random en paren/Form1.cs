@@ -13,8 +13,8 @@ namespace random_en_paren
     public partial class Form1 : Form
     {
         int[,] cardproperties;
-        int count,card1,card2,oldcard = -1,oldcard2 = -1;
-        PictureBox cardinfo1,cardinfo2;
+        int count, card1, card2;
+        PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
 
         public Form1()
@@ -22,7 +22,7 @@ namespace random_en_paren
             InitializeComponent();
             int amount = 16; //aantal kaarten die gebruikt worden
             cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
-            scramble(); //spel begin kaarten randomizen
+            scramble(); //spel begin kaarten randomizen       
         }
 
         private void scramble()
@@ -54,32 +54,34 @@ namespace random_en_paren
 
         private void rotate(object sender, int picture)
         {
-            PictureBox card = (PictureBox)sender;
-            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + cardproperties[picture,1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
-
-            if (card1 == 0) //1e klik (word gedraaid na een goed paar)
+            if (card1 != 0 && card2 != 0) //3e kaart click als ze nog niet zijn omgedraaid
             {
-                card1 = cardproperties[picture, 1];
-                cardinfo1 = card;
-                oldcard = picture;
+                undorotate.Stop();
+                cardinfo1.Enabled = true;
+                cardinfo2.Enabled = true;
+                cardinfo1.BackgroundImage = Properties.Resources._default;
+                cardinfo2.BackgroundImage = Properties.Resources._default;
+                card1 = 0;
+                cardinfo1 = null;
+                card2 = 0;
+                cardinfo2 = null;
             }
-            else if (card1 != 0 && card2 == 0 && oldcard != picture) //2e klik
+
+            PictureBox card = (PictureBox)sender;
+            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
+
+            if (card1 == 0) //1e klik
+            {
+                card1 = cardproperties[picture, 1]; //onhouden wat het paarnummer is van 1e kaart
+                cardinfo1 = card; //onhouden wat de 1e kaart is
+                card.Enabled = false; //zorgt ervoor dat het kaartje niet meer klikbaar is
+            }
+            else //2e klik
             {
                 card2 = cardproperties[picture, 1];
                 cardinfo2 = card;
-                oldcard2 = picture;
+                card.Enabled = false;
                 paircheck(); //hier word de methode voor het controlleren van paren opgevraagd
-            }
-            else if (card2 != 0 && oldcard != picture && oldcard2 != picture) //3e klik en ook 1e (als het paar niet juist is)
-            {
-                cardinfo1.BackgroundImage = Properties.Resources._default;
-                cardinfo2.BackgroundImage = Properties.Resources._default;
-                card1 = cardproperties[picture, 1];
-                cardinfo1 = card;
-                oldcard = picture;
-                card2 = 0;
-                cardinfo2 = null;
-                keepscore(false);
             }
         }
 
@@ -87,21 +89,26 @@ namespace random_en_paren
         {
             if (card1 == card2) //als de waarden gelijk zijn zal hij ze terug zetten naar standaard(_default) en verstoppen
             {
-                cardinfo1.Visible = false;
-                cardinfo2.Visible = false;
-                cardinfo1.BackgroundImage = Properties.Resources._default;
-                cardinfo2.BackgroundImage = Properties.Resources._default;
+                cardinfo1.BackColor = Color.Transparent;
+                cardinfo2.BackColor = Color.Transparent;
+                cardinfo1.BackgroundImage = null;
+                cardinfo2.BackgroundImage = null;
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;
                 cardinfo2 = null;
                 keepscore(true);
             }
+            else
+            {
+                keepscore(false);
+                undorotate.Start();
+            }
         }
 
         private void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         {
-            
+
 
             if (correct == true)
             {
@@ -109,7 +116,7 @@ namespace random_en_paren
                 int score = Convert.ToInt32(temp.Replace("Score: ", ""));
                 score += Convert.ToInt32(multiplier * 10);
                 label1.Text = "Score: " + Convert.ToString(score);
-                
+
                 if (multiplier % 1 == 0)
                 {
                     multiplier++;
@@ -130,7 +137,7 @@ namespace random_en_paren
                     multiplier = 1;
                 }
             }
-            
+
         }
 
         private void Reset()
@@ -138,10 +145,11 @@ namespace random_en_paren
             foreach (var pictureBox in Controls.OfType<PictureBox>()) //vraagt alle picture boxes op
             {
                 string name = pictureBox.Name;
-                if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default en visible (voorkomen dat andere pictureboxes worden aangepast)
+                if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default, visible en enabled (voorkomen dat andere pictureboxes worden aangepast)
                 {
                     pictureBox.BackgroundImage = Properties.Resources._default;
-                    pictureBox.Visible = true;
+                    pictureBox.Enabled = true;
+                    pictureBox.BackColor = Color.White;
                 }
                 else
                 {
@@ -157,6 +165,7 @@ namespace random_en_paren
                 cardproperties[r, 1] = 0;
             }
             label1.Text = "Score: 0";
+            multiplier = 1;
             scramble(); //vraagt scramble op om zo de kaartjes te husselen
         }
 
@@ -243,6 +252,22 @@ namespace random_en_paren
         private void reset_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private void undorotate_Tick(object sender, EventArgs e)
+        {
+            if (card1 != 0 && card2 != 0) //reset na 0,25 seconden
+            {
+                cardinfo1.Enabled = true;
+                cardinfo2.Enabled = true;
+                cardinfo1.BackgroundImage = Properties.Resources._default;
+                cardinfo2.BackgroundImage = Properties.Resources._default;
+                card1 = 0;
+                cardinfo1 = null;
+                card2 = 0;
+                cardinfo2 = null;
+                undorotate.Stop();
+            }
         }
     }
 }

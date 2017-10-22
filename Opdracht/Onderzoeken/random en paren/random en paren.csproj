@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Memory Game Icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -140,11 +141,7 @@
     <None Include="Theme\4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Theme\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Memory Game Icon 48x48.ico" />
-    <Content Include="Memory Game Icon.ico" />
+    <None Include="Theme\Background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

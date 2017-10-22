@@ -48,29 +48,27 @@ namespace multiplayer
 
         private void save_Click(object sender, EventArgs e)
         {
-            mis3.Visible = false;
-            mis4.Visible = false;
 
             if (player1.Visible == true && p1box.Text == "")
             {
-                mis1.Visible = true;
+                
             }
             else
             {
-                mis1.Visible = false;
+
             }
             if (player2.Visible == true && p2box.Text == "")
             {
-                mis2.Visible = true;
+                
             }
             else
             {
-                mis2.Visible = false;
+                
             }
 
             if (player3.Visible == true && p3box.Text == "")
             {
-                mis3.Visible = true;
+                
             }
             else
             {

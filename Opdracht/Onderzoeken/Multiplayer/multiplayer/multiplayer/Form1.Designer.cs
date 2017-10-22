@@ -41,10 +41,6 @@
             this.p2txt = new System.Windows.Forms.Label();
             this.p3txt = new System.Windows.Forms.Label();
             this.p4txt = new System.Windows.Forms.Label();
-            this.mis1 = new System.Windows.Forms.Label();
-            this.mis2 = new System.Windows.Forms.Label();
-            this.mis3 = new System.Windows.Forms.Label();
-            this.mis4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // player1
@@ -168,55 +164,11 @@
             this.p4txt.Size = new System.Drawing.Size(0, 13);
             this.p4txt.TabIndex = 9;
             // 
-            // mis1
-            // 
-            this.mis1.AutoSize = true;
-            this.mis1.Location = new System.Drawing.Point(260, 16);
-            this.mis1.Name = "mis1";
-            this.mis1.Size = new System.Drawing.Size(120, 13);
-            this.mis1.TabIndex = 12;
-            this.mis1.Text = "<-- Insert your nickname";
-            this.mis1.Visible = false;
-            // 
-            // mis2
-            // 
-            this.mis2.AutoSize = true;
-            this.mis2.Location = new System.Drawing.Point(260, 42);
-            this.mis2.Name = "mis2";
-            this.mis2.Size = new System.Drawing.Size(120, 13);
-            this.mis2.TabIndex = 12;
-            this.mis2.Text = "<-- Insert your nickname";
-            this.mis2.Visible = false;
-            // 
-            // mis3
-            // 
-            this.mis3.AutoSize = true;
-            this.mis3.Location = new System.Drawing.Point(260, 68);
-            this.mis3.Name = "mis3";
-            this.mis3.Size = new System.Drawing.Size(120, 13);
-            this.mis3.TabIndex = 12;
-            this.mis3.Text = "<-- Insert your nickname";
-            this.mis3.Visible = false;
-            // 
-            // mis4
-            // 
-            this.mis4.AutoSize = true;
-            this.mis4.Location = new System.Drawing.Point(260, 94);
-            this.mis4.Name = "mis4";
-            this.mis4.Size = new System.Drawing.Size(120, 13);
-            this.mis4.TabIndex = 12;
-            this.mis4.Text = "<-- Insert your nickname";
-            this.mis4.Visible = false;
-            // 
             // multiplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 385);
-            this.Controls.Add(this.mis4);
-            this.Controls.Add(this.mis3);
-            this.Controls.Add(this.mis2);
-            this.Controls.Add(this.mis1);
             this.Controls.Add(this.save);
             this.Controls.Add(this.p4txt);
             this.Controls.Add(this.p3txt);
@@ -252,10 +204,6 @@
         private System.Windows.Forms.Label p2txt;
         private System.Windows.Forms.Label p3txt;
         private System.Windows.Forms.Label p4txt;
-        private System.Windows.Forms.Label mis1;
-        private System.Windows.Forms.Label mis2;
-        private System.Windows.Forms.Label mis3;
-        private System.Windows.Forms.Label mis4;
     }
 }
 

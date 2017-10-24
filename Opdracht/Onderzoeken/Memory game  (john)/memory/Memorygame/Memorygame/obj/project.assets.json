@@ -7037,7 +7037,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JohnW\\.nuget\\packages\\": {}
+    "C:\\Users\\Berry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7045,14 +7045,14 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\JohnW\\Desktop\\Memory game\\memory\\Memorygame\\Memorygame\\Memorygame.csproj",
+      "projectUniqueName": "C:\\Memory\\Opdracht\\Onderzoeken\\Memory game  (john)\\memory\\Memorygame\\Memorygame\\Memorygame.csproj",
       "projectName": "Memorygame",
-      "projectPath": "C:\\Users\\JohnW\\Desktop\\Memory game\\memory\\Memorygame\\Memorygame\\Memorygame.csproj",
-      "packagesPath": "C:\\Users\\JohnW\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JohnW\\Desktop\\Memory game\\memory\\Memorygame\\Memorygame\\obj\\",
+      "projectPath": "C:\\Memory\\Opdracht\\Onderzoeken\\Memory game  (john)\\memory\\Memorygame\\Memorygame\\Memorygame.csproj",
+      "packagesPath": "C:\\Users\\Berry\\.nuget\\packages\\",
+      "outputPath": "C:\\Memory\\Opdracht\\Onderzoeken\\Memory game  (john)\\memory\\Memorygame\\Memorygame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JohnW\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Berry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

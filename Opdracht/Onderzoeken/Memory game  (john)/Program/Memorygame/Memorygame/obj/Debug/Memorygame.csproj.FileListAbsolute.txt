@@ -8,3 +8,10 @@ C:\Users\john\Desktop\Memory game\Program\Memorygame\Memorygame\obj\Debug\Memory
 C:\Users\john\Desktop\Memory game\Program\Memorygame\Memorygame\obj\Debug\Memorygame.csproj.CoreCompileInputs.cache
 C:\Users\john\Desktop\Memory game\Program\Memorygame\Memorygame\obj\Debug\Memorygame.exe
 C:\Users\john\Desktop\Memory game\Program\Memorygame\Memorygame\obj\Debug\Memorygame.pdb
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.csprojResolveAssemblyReference.cache
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.GameWindow.resources
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.Properties.Resources.resources
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.csproj.GenerateResource.Cache
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.csproj.CoreCompileInputs.cache
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.exe
+C:\Memory\Opdracht\Onderzoeken\Memory game  (john)\Program\Memorygame\Memorygame\obj\Debug\Memorygame.pdb

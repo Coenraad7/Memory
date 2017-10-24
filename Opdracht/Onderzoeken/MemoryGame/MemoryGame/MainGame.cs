@@ -13,9 +13,10 @@ namespace MemoryGame
     public partial class MainGame : Form
     {
         int[,] cardproperties;
-        int count, card1, card2;
+        int card1, card2, thema = 2;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
+        
 
         public MainGame()
         {
@@ -23,15 +24,32 @@ namespace MemoryGame
             this.FormBorderStyle = FormBorderStyle.None;
             int amount = 16; //aantal kaarten die gebruikt worden
             cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
+            init();
             scramble(); //spel begin kaarten randomizen
         }
 
+        private void init()
+        {
+            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "Background");
+            foreach (var pictureBox in Controls.OfType<PictureBox>()) //vraagt alle picture boxes op
+            {
+                string name = pictureBox.Name;
+                if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default, visible en enabled (voorkomen dat andere pictureboxes worden aangepast)
+                {
+                    pictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
         private void scramble()
         {
             Random rng = new Random();
             bool check;
             int random;
-
+            
             for (int i = 0; i < cardproperties.GetLength(0); i++) //cardproperties.GetLength(0) houd in dat hij de lengte bekijkt van de eerste indice
             {
                 check = true;
@@ -60,8 +78,8 @@ namespace MemoryGame
                 undorotate.Stop();
                 cardinfo1.Enabled = true;
                 cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = Properties.Resources._default;
-                cardinfo2.BackgroundImage = Properties.Resources._default;
+                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
+                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;
@@ -69,7 +87,7 @@ namespace MemoryGame
             }
 
             PictureBox card = (PictureBox)sender;
-            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
+            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_"+ thema + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
 
             if (card1 == 0) //1e klik
             {
@@ -148,7 +166,7 @@ namespace MemoryGame
                 string name = pictureBox.Name;
                 if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default, visible en enabled (voorkomen dat andere pictureboxes worden aangepast)
                 {
-                    pictureBox.BackgroundImage = Properties.Resources._default;
+                    pictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
                     pictureBox.Enabled = true;
                     pictureBox.BackColor = Color.White;
                 }
@@ -274,8 +292,8 @@ namespace MemoryGame
             {
                 cardinfo1.Enabled = true;
                 cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = Properties.Resources._default;
-                cardinfo2.BackgroundImage = Properties.Resources._default;
+                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
+                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;

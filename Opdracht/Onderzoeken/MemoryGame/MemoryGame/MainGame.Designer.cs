@@ -69,7 +69,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(416, 123);
             this.pictureBox1.Name = "pictureBox1";
@@ -80,7 +79,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(522, 123);
             this.pictureBox2.Name = "pictureBox2";
@@ -91,7 +89,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(628, 123);
             this.pictureBox3.Name = "pictureBox3";
@@ -102,7 +99,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(734, 123);
             this.pictureBox4.Name = "pictureBox4";
@@ -113,7 +109,6 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(416, 229);
             this.pictureBox5.Name = "pictureBox5";
@@ -124,7 +119,6 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(522, 229);
             this.pictureBox6.Name = "pictureBox6";
@@ -135,7 +129,6 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(628, 229);
             this.pictureBox7.Name = "pictureBox7";
@@ -146,7 +139,6 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(734, 229);
             this.pictureBox8.Name = "pictureBox8";
@@ -157,7 +149,6 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(416, 335);
             this.pictureBox9.Name = "pictureBox9";
@@ -168,7 +159,6 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(522, 335);
             this.pictureBox10.Name = "pictureBox10";
@@ -179,7 +169,6 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(628, 335);
             this.pictureBox11.Name = "pictureBox11";
@@ -190,7 +179,6 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox12.Location = new System.Drawing.Point(734, 335);
             this.pictureBox12.Name = "pictureBox12";
@@ -201,7 +189,6 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox13.Location = new System.Drawing.Point(416, 441);
             this.pictureBox13.Name = "pictureBox13";
@@ -212,7 +199,6 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox14.Location = new System.Drawing.Point(522, 441);
             this.pictureBox14.Name = "pictureBox14";
@@ -223,7 +209,6 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox15.Location = new System.Drawing.Point(628, 441);
             this.pictureBox15.Name = "pictureBox15";
@@ -234,7 +219,6 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.BackgroundImage = global::MemoryGame.Properties.Resources._default;
             this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox16.Location = new System.Drawing.Point(734, 441);
             this.pictureBox16.Name = "pictureBox16";
@@ -282,7 +266,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MemoryGame.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1259, 676);
             this.Controls.Add(this.button1);

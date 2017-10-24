@@ -54,6 +54,8 @@
             this.theme3 = new System.Windows.Forms.RadioButton();
             this.theme2 = new System.Windows.Forms.RadioButton();
             this.theme1 = new System.Windows.Forms.RadioButton();
+            this.diftxt = new System.Windows.Forms.Label();
+            this.themetxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -201,6 +203,7 @@
             this.dif1.TabStop = true;
             this.dif1.Text = "Very Easy";
             this.dif1.UseVisualStyleBackColor = true;
+            this.dif1.CheckedChanged += new System.EventHandler(this.dif1_CheckedChanged);
             // 
             // panel1
             // 
@@ -226,6 +229,7 @@
             this.dif5.TabStop = true;
             this.dif5.Text = "Extreme";
             this.dif5.UseVisualStyleBackColor = true;
+            this.dif5.CheckedChanged += new System.EventHandler(this.dif5_CheckedChanged);
             // 
             // dif4
             // 
@@ -239,6 +243,7 @@
             this.dif4.TabStop = true;
             this.dif4.Text = "Hard";
             this.dif4.UseVisualStyleBackColor = true;
+            this.dif4.CheckedChanged += new System.EventHandler(this.dif4_CheckedChanged);
             // 
             // dif3
             // 
@@ -252,6 +257,7 @@
             this.dif3.TabStop = true;
             this.dif3.Text = "Normal";
             this.dif3.UseVisualStyleBackColor = true;
+            this.dif3.CheckedChanged += new System.EventHandler(this.dif3_CheckedChanged);
             // 
             // dif2
             // 
@@ -265,6 +271,7 @@
             this.dif2.TabStop = true;
             this.dif2.Text = "Easy";
             this.dif2.UseVisualStyleBackColor = true;
+            this.dif2.CheckedChanged += new System.EventHandler(this.dif2_CheckedChanged);
             // 
             // panel2
             // 
@@ -357,6 +364,25 @@
             this.theme1.TabStop = true;
             this.theme1.Text = "1";
             this.theme1.UseVisualStyleBackColor = true;
+            this.theme1.CheckedChanged += new System.EventHandler(this.theme1_CheckedChanged);
+            // 
+            // diftxt
+            // 
+            this.diftxt.AutoSize = true;
+            this.diftxt.Location = new System.Drawing.Point(358, 181);
+            this.diftxt.Name = "diftxt";
+            this.diftxt.Size = new System.Drawing.Size(51, 13);
+            this.diftxt.TabIndex = 9;
+            this.diftxt.Text = "difficulty: ";
+            // 
+            // themetxt
+            // 
+            this.themetxt.AutoSize = true;
+            this.themetxt.Location = new System.Drawing.Point(358, 316);
+            this.themetxt.Name = "themetxt";
+            this.themetxt.Size = new System.Drawing.Size(13, 13);
+            this.themetxt.TabIndex = 9;
+            this.themetxt.Text = "4";
             // 
             // multiplayer
             // 
@@ -370,6 +396,8 @@
             this.Controls.Add(this.save);
             this.Controls.Add(this.p1txt);
             this.Controls.Add(this.p3txt);
+            this.Controls.Add(this.themetxt);
+            this.Controls.Add(this.diftxt);
             this.Controls.Add(this.p4txt);
             this.Name = "multiplayer";
             this.Text = "Multiplayer";
@@ -412,6 +440,8 @@
         private System.Windows.Forms.RadioButton theme3;
         private System.Windows.Forms.RadioButton theme2;
         private System.Windows.Forms.RadioButton theme1;
+        private System.Windows.Forms.Label diftxt;
+        private System.Windows.Forms.Label themetxt;
     }
 }
 

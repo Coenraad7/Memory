@@ -105,5 +105,35 @@ namespace multiplayer
         {
             p4box.BackColor = Color.White;
         }
+
+        private void dif1_CheckedChanged(object sender, EventArgs e)
+        {
+            difficulty = 1;
+            diftxt.Text = "The Difficulty is level is set: 1";
+        }
+
+        private void dif2_CheckedChanged(object sender, EventArgs e)
+        {
+            difficulty = 2;
+            diftxt.Text = "The Difficulty is level is set: 2";
+        }
+
+        private void dif3_CheckedChanged(object sender, EventArgs e)
+        {
+            difficulty = 3;
+            diftxt.Text = "The Difficulty is level is set: 3";
+        }
+
+        private void dif4_CheckedChanged(object sender, EventArgs e)
+        {
+            difficulty = 4;
+            diftxt.Text = "The Difficulty is level is set: 4";
+        }
+
+        private void dif5_CheckedChanged(object sender, EventArgs e)
+        {
+            difficulty = 5;
+            diftxt.Text = "The Difficulty is level is set: 5";
+        }
     }
 }

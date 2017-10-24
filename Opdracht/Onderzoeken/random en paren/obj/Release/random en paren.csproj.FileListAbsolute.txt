@@ -1,9 +1,9 @@
-C:\Users\richa\OneDrive\NHL\random en paren\bin\Release\random en paren.exe.config
-C:\Users\richa\OneDrive\NHL\random en paren\bin\Release\random en paren.exe
-C:\Users\richa\OneDrive\NHL\random en paren\bin\Release\random en paren.pdb
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\random_en_paren.Form1.resources
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\random_en_paren.Properties.Resources.resources
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\random en paren.csproj.GenerateResource.Cache
 C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\random en paren.csproj.CoreCompileInputs.cache
-C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\random en paren.exe
-C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\random en paren.pdb
+C:\Users\richa\OneDrive\NHL\random en paren\bin\Release\Memory Game.exe.config
+C:\Users\richa\OneDrive\NHL\random en paren\bin\Release\Memory Game.exe
+C:\Users\richa\OneDrive\NHL\random en paren\bin\Release\Memory Game.pdb
+C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\Memory Game.exe
+C:\Users\richa\OneDrive\NHL\random en paren\obj\Release\Memory Game.pdb

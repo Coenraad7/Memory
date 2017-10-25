@@ -49,6 +49,7 @@
             this.undorotate = new System.Windows.Forms.Timer(this.components);
             this.reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.player1txt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -262,12 +263,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // player1txt
+            // 
+            this.player1txt.AutoSize = true;
+            this.player1txt.Location = new System.Drawing.Point(416, 23);
+            this.player1txt.Name = "player1txt";
+            this.player1txt.Size = new System.Drawing.Size(79, 13);
+            this.player1txt.TabIndex = 19;
+            this.player1txt.Text = "Name Player 1:";
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1259, 676);
+            this.Controls.Add(this.player1txt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.label1);
@@ -335,5 +346,6 @@
         private System.Windows.Forms.Timer undorotate;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label player1txt;
     }
 }

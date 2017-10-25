@@ -18,6 +18,8 @@ namespace multiplayer
             InitializeComponent();
         }
 
+        int difficulty = 0;
+
         private void player1_CheckedChanged(object sender, EventArgs e)
         {
             p2box.Visible = false;

@@ -13,7 +13,7 @@ namespace MemoryGame
     public partial class MainGame : Form
     {
         int[,] cardproperties;
-        int card1, card2, thema = 2;
+        int card1, card2, thema = Variables.theme;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
         
@@ -43,6 +43,7 @@ namespace MemoryGame
                     break;
                 }
             }
+            player1txt.Text = Variables.playernames[0];
         }
         private void scramble()
         {
@@ -268,17 +269,17 @@ namespace MemoryGame
             rotate(sender, 14);
         }
 
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            rotate(sender, 15);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
             MainMenu.MdiParent = this.ParentForm;
             MainMenu.Show();
             Close();
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 15);
         }
 
         private void reset_Click(object sender, EventArgs e)

@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace MemoryGame
 {
+    class Variables
+    {
+        public static string[] playernames = new string[4];
+        public static int theme = 1, difficulty = 1, amountplayers = 1;
+    }
+
     public partial class MdiContainer : Form
     {
         public MdiContainer()

@@ -431,5 +431,23 @@
   <ItemGroup>
     <None Include="Theme\Theme 4\416.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Theme\theme 3\3icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Theme\theme 1\1icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Theme\theme 2\2icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Theme\Theme 4\4icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Theme\Theme 5\5icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Theme\Theme 5\5icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

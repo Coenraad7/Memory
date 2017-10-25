@@ -263,6 +263,16 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1icon {
+            get {
+                object obj = ResourceManager.GetObject("_1icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _21 {
             get {
                 object obj = ResourceManager.GetObject("_21", resourceCulture);
@@ -456,6 +466,16 @@ namespace MemoryGame.Properties {
         internal static System.Drawing.Bitmap _2default {
             get {
                 object obj = ResourceManager.GetObject("_2default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2icon {
+            get {
+                object obj = ResourceManager.GetObject("_2icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -663,6 +683,16 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3icon {
+            get {
+                object obj = ResourceManager.GetObject("_3icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _41 {
             get {
                 object obj = ResourceManager.GetObject("_41", resourceCulture);
@@ -863,6 +893,16 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4icon {
+            get {
+                object obj = ResourceManager.GetObject("_4icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _51 {
             get {
                 object obj = ResourceManager.GetObject("_51", resourceCulture);
@@ -1056,6 +1096,16 @@ namespace MemoryGame.Properties {
         internal static System.Drawing.Bitmap _5default {
             get {
                 object obj = ResourceManager.GetObject("_5default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5icon {
+            get {
+                object obj = ResourceManager.GetObject("_5icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -184,6 +184,9 @@
   <data name="_1default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\theme 1\1default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_1icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Theme\theme 1\1icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\theme 2\21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -243,6 +246,9 @@
   </data>
   <data name="_2default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\theme 2\2default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Theme\theme 2\2icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\theme 3\31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,6 +310,9 @@
   <data name="_3default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\theme 3\3default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_3icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Theme\theme 3\3icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\Theme 4\41.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -364,6 +373,9 @@
   <data name="_4default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\Theme 4\4default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_4icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Theme\Theme 4\4icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\Theme 5\51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -423,5 +435,8 @@
   </data>
   <data name="_5default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\Theme 5\5default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Theme\Theme 5\5icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

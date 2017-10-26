@@ -1113,16 +1113,6 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Memory_Game_Icon {
-            get {
-                object obj = ResourceManager.GetObject("Memory_Game_Icon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
         internal static System.Drawing.Icon Memory_Game_Icon_48x48 {
             get {
                 object obj = ResourceManager.GetObject("Memory_Game_Icon_48x48", resourceCulture);

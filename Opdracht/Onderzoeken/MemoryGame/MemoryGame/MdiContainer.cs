@@ -13,7 +13,7 @@ namespace MemoryGame
     class Variables
     {
         public static string[] playernames = new string[4];
-        public static int theme = 1, difficulty = 1, amountplayers = 1;
+        public static int theme = 1, difficulty = 3, amountplayers = 1;
     }
 
     public partial class MdiContainer : Form
@@ -25,6 +25,7 @@ namespace MemoryGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Icon = new System.Drawing.Icon("Memory Game Icon 48x48.ico");
             MainMenu form2 = new MainMenu();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

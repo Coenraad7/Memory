@@ -16,7 +16,7 @@ namespace MemoryGame
         int card1, card2, theme = Variables.theme;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
-        
+        int winst = 1, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1;
 
         public MainGame()
         {
@@ -60,6 +60,10 @@ namespace MemoryGame
             panel1.BackColor = Color.Transparent;
             this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "Background");
             player1txt.Text = Variables.playernames[0];
+            player2txt.Text = Variables.playernames[1];
+            player3txt.Text = Variables.playernames[2];
+            player4txt.Text = Variables.playernames[3];
+
         }
         private void scramble()
         {
@@ -146,35 +150,77 @@ namespace MemoryGame
 
         private void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         {
-
-
-            if (correct == true)
+            if (Variables.amountplayers == 1)
             {
-                string temp = label1.Text;
-                int score = Convert.ToInt32(temp.Replace("Score: ", ""));
-                score += Convert.ToInt32(multiplier * 10);
-                label1.Text = "Score: " + Convert.ToString(score);
+                if (correct == true)
+                {
+                    string temp = score1txt.Text;
+                    int score = Convert.ToInt32(temp.Replace("Score: ", ""));
+                    score += Convert.ToInt32(multiplier * 10);
+                    score1txt.Text = "Score: " + Convert.ToString(score);
 
-                if (multiplier % 1 == 0)
-                {
-                    multiplier++;
+                    if (multiplier % 1 == 0)
+                    {
+                        multiplier++;
+                    }
+                    else
+                    {
+                        multiplier = 1;
+                    }
                 }
-                else
+                else if (correct == false)
                 {
-                    multiplier = 1;
+                    if (multiplier <= 1)
+                    {
+                        multiplier -= 0.1;
+                    }
+                    else
+                    {
+                        multiplier = 1;
+                    }
                 }
             }
-            else if (correct == false)
+            else if (Variables.amountplayers >= 2)
             {
-                if (multiplier <= 1)
                 {
-                    multiplier -= 0.1;
-                }
-                else
-                {
-                    multiplier = 1;
+                    if (correct == true)
+                    {
+                        if (turn == 1)
+                        {
+                            score1 += Convert.ToInt32(winst);
+                        }
+                        else if (turn == 2)
+                        {
+                            score2 += Convert.ToInt32(winst);
+                        }
+                        else if (turn == 3 && Variables.amountplayers >= 3)
+                        {
+                            score3 += Convert.ToInt32(winst);
+                        }
+                        else if (turn == 4 && Variables.amountplayers == 4)
+                        {
+                            score4 += Convert.ToInt32(winst);
+                        }
+
+                    }
+                    else if (correct == false)
+                    {
+                        if (turn != Variables.amountplayers)
+                        {
+                            turn += 1;
+                        }
+                        else
+                        {
+                            turn = 1;
+                        }
+                    }
+                    score1txt.Text = "Score: " + Convert.ToString(score1);
+                    score2txt.Text = "Score: " + Convert.ToString(score2);
+                    score3txt.Text = "Score: " + Convert.ToString(score3);
+                    score4txt.Text = "Score: " + Convert.ToString(score4);
                 }
             }
+
 
         }
 

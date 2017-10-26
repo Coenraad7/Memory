@@ -26,11 +26,11 @@ namespace MemoryGame
             else if (theme4.Checked) { Variables.theme = 4; }
             else if (theme5.Checked) { Variables.theme = 5; }
 
-            if (dif1.Checked) { Variables.difficulty= 1; }
-            else if (dif2.Checked) { Variables.difficulty= 2; }
-            else if (dif3.Checked) { Variables.difficulty= 3; }
-            else if (dif4.Checked) { Variables.difficulty = 4; }
-            else if (dif5.Checked) { Variables.difficulty = 5; }
+            if (dif1.Checked) { Variables.difficulty= 0; }
+            else if (dif2.Checked) { Variables.difficulty= 1; }
+            else if (dif3.Checked) { Variables.difficulty= 2; }
+            else if (dif4.Checked) { Variables.difficulty = 3; }
+            else if (dif5.Checked) { Variables.difficulty = 4; }
 
             if (player1.Checked) { Variables.amountplayers = 1; }
             else if (player2.Checked) { Variables.amountplayers = 2; }

@@ -13,7 +13,7 @@ namespace MemoryGame
     public partial class MainGame : Form
     {
         int[,] cardproperties;
-        int card1, card2, thema = Variables.theme;
+        int card1, card2, theme = Variables.theme;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
         
@@ -22,27 +22,43 @@ namespace MemoryGame
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            int amount = 16; //aantal kaarten die gebruikt worden
-            cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
-            init();
+            init(); //maakt speelveld aan en geeft de juiste theme mee.
             scramble(); //spel begin kaarten randomizen
         }
 
         private void init()
         {
-            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "Background");
-            foreach (var pictureBox in Controls.OfType<PictureBox>()) //vraagt alle picture boxes op
+            int[,] grid = new int[5, 2] { { 4, 4 },{ 5, 4 },{ 6, 4 },{ 6, 4 },{ 6, 6 } };
+            int amount = grid[(Variables.difficulty-1), 0] * grid[(Variables.difficulty-1), 1];
+            cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
+            
+            string[] stringArray = new string[amount];
+            for (int i = 0; i < amount; i++)
             {
-                string name = pictureBox.Name;
-                if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default, visible en enabled (voorkomen dat andere pictureboxes worden aangepast)
+                stringArray[i] = "pictureBox" + (i + 1);
+            }
+
+            int m = 0;
+            for (int i = 0; i < grid[(Variables.difficulty - 1), 0]; i++)
+            {
+                for (int e = 0; e < grid[(Variables.difficulty - 1), 1]; e++)
                 {
-                    pictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
-                }
-                else
-                {
-                    break;
+                    PictureBox box = new PictureBox();
+                    box.Location = new System.Drawing.Point((110 * i), (110 * e));
+                    box.Name = stringArray[m];
+                    box.Size = new System.Drawing.Size(100, 100);
+                    box.BackColor = Color.White;
+                    box.Enabled = true;
+                    box.BackgroundImageLayout = ImageLayout.Stretch;
+                    box.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default"); ;
+                    box.Click += new EventHandler(rotate);
+                    panel1.Controls.Add(box);
+                    m++;
                 }
             }
+
+            panel1.BackColor = Color.Transparent;
+            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "Background");
             player1txt.Text = Variables.playernames[0];
         }
         private void scramble()
@@ -72,15 +88,17 @@ namespace MemoryGame
             }
         }
 
-        private void rotate(object sender, int picture)
+        private void rotate(object sender, EventArgs e)
         {
+            string temp = (sender as PictureBox).Name;
+            int picture = ((Convert.ToInt32(temp.Replace("pictureBox", ""))) - 1);
             if (card1 != 0 && card2 != 0) //3e kaart click als ze nog niet zijn omgedraaid
             {
                 undorotate.Stop();
                 cardinfo1.Enabled = true;
                 cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
-                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
+                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
+                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;
@@ -88,7 +106,7 @@ namespace MemoryGame
             }
 
             PictureBox card = (PictureBox)sender;
-            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_"+ thema + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
+            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
 
             if (card1 == 0) //1e klik
             {
@@ -160,6 +178,7 @@ namespace MemoryGame
 
         }
 
+        /*
         private void Reset()
         {
             foreach (var pictureBox in Controls.OfType<PictureBox>()) //vraagt alle picture boxes op
@@ -167,7 +186,7 @@ namespace MemoryGame
                 string name = pictureBox.Name;
                 if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default, visible en enabled (voorkomen dat andere pictureboxes worden aangepast)
                 {
-                    pictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
+                    pictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
                     pictureBox.Enabled = true;
                     pictureBox.BackColor = Color.White;
                 }
@@ -188,91 +207,7 @@ namespace MemoryGame
             multiplier = 1;
             scramble(); //vraagt scramble op om zo de kaartjes te husselen
         }
-
-        private void MainGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 0); //rotate is een methode voor het omdraaien van de kaartjes, sender geeft de informatie mee van de picturebox, 0 geeft aan dat hij slot 0 gebruikt in de array (cardproperties[0,*])
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 1);
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 2);
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 3);
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 4);
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 5);
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 6);
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 7);
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 8);
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 9);
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 10);
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 11);
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 12);
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 13);
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 14);
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-            rotate(sender, 15);
-        }
+        */
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -284,7 +219,11 @@ namespace MemoryGame
 
         private void reset_Click(object sender, EventArgs e)
         {
-            Reset();
+            MainGame MainGame = new MainGame();
+            MainGame.MdiParent = this.ParentForm;
+            MainGame.Show();
+            Close();
+            //Reset();
         }
 
         private void undorotate_Tick(object sender, EventArgs e)
@@ -293,8 +232,8 @@ namespace MemoryGame
             {
                 cardinfo1.Enabled = true;
                 cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
-                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + thema + "default");
+                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
+                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;

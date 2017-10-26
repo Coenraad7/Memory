@@ -17,6 +17,7 @@ namespace MemoryGame
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
         }
+
         private void checkform()
         {
             if (theme1.Checked) { Variables.theme = 1; }
@@ -42,10 +43,6 @@ namespace MemoryGame
             Variables.playernames[3] = p4box.Text;
         }
 
-        private void Players_Load(object sender, EventArgs e)
-        {
-
-        }
         private void nextbutton_Click(object sender, EventArgs e)
         {
 
@@ -155,146 +152,6 @@ namespace MemoryGame
         private void p4box_KeyPress(object sender, KeyPressEventArgs e)
         {
             p4box.BackColor = Color.White;
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void theme5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void theme4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void theme3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void theme2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void theme1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void p2box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void p1box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void p4box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void p3box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dif5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dif4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dif3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dif2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dif1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

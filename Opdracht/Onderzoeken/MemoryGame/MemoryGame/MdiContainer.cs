@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace MemoryGame
 {
+    class Variables
+    {
+        public static string[] playernames = new string[4];
+        public static int theme = 1, difficulty = 3, amountplayers = 1;
+    }
+
     public partial class MdiContainer : Form
     {
         public MdiContainer()
@@ -19,6 +25,8 @@ namespace MemoryGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Icon = ((System.Drawing.Icon)(Properties.Resources.ResourceManager.GetObject("Memory_Game_Icon_48x48")));
+            this.Text = "Memorygame";
             MainMenu form2 = new MainMenu();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

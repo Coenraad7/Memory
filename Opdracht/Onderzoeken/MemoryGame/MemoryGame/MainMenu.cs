@@ -13,10 +13,6 @@ namespace MemoryGame
     
     public partial class MainMenu : Form
     {
-        Players form3 = new Players();
-        Help Help = new Help();
-        Highscores Highscores = new Highscores();
-        About About = new About();
         public MainMenu()
         {
             InitializeComponent();
@@ -25,6 +21,7 @@ namespace MemoryGame
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Players form3 = new Players();
             form3.MdiParent = this.ParentForm;
             form3.FormClosed += Form3_FormClosed;
             form3.Show();
@@ -32,6 +29,7 @@ namespace MemoryGame
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Players form3 = new Players();
             form3 = null;
             // throw new NotImplementedException();
         }
@@ -43,6 +41,7 @@ namespace MemoryGame
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Highscores Highscores = new Highscores();
             Highscores.MdiParent = this.ParentForm;
             Highscores.FormClosed += Highscores_FormClosed;
             Highscores.Show();
@@ -50,12 +49,14 @@ namespace MemoryGame
 
         private void Highscores_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Highscores Highscores = new Highscores();
             Highscores = null;
            // throw new NotImplementedException();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Help Help = new Help();
             Help.MdiParent = this.ParentForm;
             Help.FormClosed += Help_FormClosed;
             Help.Show();
@@ -63,12 +64,14 @@ namespace MemoryGame
 
         private void Help_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Help Help = new Help();
             Help = null;
            // throw new NotImplementedException();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            About About = new About();
             About.MdiParent = this.ParentForm;
             About.FormClosed += About_FormClosed;
             About.Show();
@@ -76,6 +79,7 @@ namespace MemoryGame
 
         private void About_FormClosed(object sender, FormClosedEventArgs e)
         {
+            About About = new About();
             About = null;
             //throw new NotImplementedException();
         }

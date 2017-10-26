@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(783, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Help Form";
             // 
             // button1
             // 
@@ -52,26 +43,71 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Items.AddRange(new object[] {
+            "WHAT IS MEMORY?:",
+            "",
+            "Memory is a card game in which all of the cards are laid face down on a surface a" +
+                "nd two cards are flipped face up over each turn.",
+            "The object of the game is to turn over pairs of matching cards. Memory can be pla" +
+                "yed with any number of players or as solitaire. ",
+            "It is a particularly good game for young children, though adults may find it chal" +
+                "lenging and stimulating as well.",
+            "The scheme is often used in quiz shows and can be employed as an educational game" +
+                ". It requires observation, concentration and a good memory to win.",
+            "",
+            "Memory is also known as Match Match, Match Up, Concentration, Pelmanism, Shinkei-" +
+                "suijaku, Pexeso or simply Pairs.",
+            "",
+            "WHAT IS THE GOAL?:",
+            "",
+            "The object of the game is to collect the most matching pairs.",
+            "",
+            "HOW TO PLAY?:",
+            "",
+            "The first player chooses a random card. The same player then selects another rand" +
+                "om card. If the two cards are excactly the same they get a point and choose ",
+            "again 2 random cards. If the cards are not a match your turn is over and it is no" +
+                "w the next players turn. The next player chooses their 2 random card. If they ar" +
+                "e ",
+            "excactly the same they get a point and choose again 2 cards. The game continues i" +
+                "n this fashion until all the cards are played.",
+            "",
+            "HOW DO I WIN?:",
+            "Once all the cards have been played the player with the most matching pairs is th" +
+                "e winner.",
+            "",
+            "HINT:",
+            "Just because it is another players turn doesn\'t mean you should stop paying atten" +
+                "tion. The cards that other players flip over could be the match you\'re looking f" +
+                "or."});
+            this.listBox1.Location = new System.Drawing.Point(12, 53);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(1235, 504);
+            this.listBox1.TabIndex = 20;
+            // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 676);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "Help";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Help";
             this.Load += new System.EventHandler(this.Help_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

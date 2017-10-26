@@ -364,7 +364,6 @@
             this.theme1.TabStop = true;
             this.theme1.Text = "1";
             this.theme1.UseVisualStyleBackColor = true;
-            this.theme1.CheckedChanged += new System.EventHandler(this.theme1_CheckedChanged);
             // 
             // diftxt
             // 

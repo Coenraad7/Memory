@@ -17,9 +17,10 @@ namespace MemoryGame
         int card1, card2, theme = Variables.theme;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
-        int winst = 1, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1;
+        int winst = 1, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1,count;
         int timercount = 1;
-        
+        int[,] grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
+
 
 
         public MainGame()
@@ -34,20 +35,18 @@ namespace MemoryGame
 
         private void init()
         {
-            int[,] grid = new int[5, 2] { { 4, 4 }, { 5, 4 }, { 6, 4 }, { 6, 4 }, { 6, 6 } };
-            int amount = grid[(Variables.difficulty - 1), 0] * grid[(Variables.difficulty - 1), 1];
-            cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
+            cardproperties = new int[grid[Variables.difficulty,2], 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
 
-            string[] stringArray = new string[amount];
-            for (int i = 0; i < amount; i++)
+            string[] stringArray = new string[grid[Variables.difficulty,2]];
+            for (int i = 0; i < grid[Variables.difficulty,2]; i++)
             {
                 stringArray[i] = "pictureBox" + (i + 1);
             }
 
             int m = 0;
-            for (int i = 0; i < grid[(Variables.difficulty - 1), 0]; i++)
+            for (int i = 0; i < grid[(Variables.difficulty), 0]; i++)
             {
-                for (int e = 0; e < grid[(Variables.difficulty - 1), 1]; e++)
+                for (int e = 0; e < grid[(Variables.difficulty), 1]; e++)
                 {
                     PictureBox box = new PictureBox();
                     box.Location = new System.Drawing.Point((110 * i), (110 * e));
@@ -148,11 +147,33 @@ namespace MemoryGame
                 card2 = 0;
                 cardinfo2 = null;
                 keepscore(true);
+                count +=2;
             }
             else
             {
                 keepscore(false);
                 undorotate.Start();
+            }
+
+            if (count == grid[Variables.difficulty,2] && Variables.amountplayers == 1)
+            {
+                string temp = score1txt.Text;
+                int score = Convert.ToInt32(temp.Replace("Score: ", ""));
+
+                if (score > Convert.ToInt32(Variables.highscoresscore[Variables.difficulty,4]))
+                {
+                    int spot = 10;
+                    for (int i = 9; i >= 0; i--)
+                    {
+                        if (score > Variables.highscoresscore[Variables.difficulty,i])
+                        {
+                            Variables.highscoresscore[Variables.difficulty,(i + 1)] = Variables.highscoresscore[Variables.difficulty,i];
+                            spot--;
+                        }
+                    }
+                    Variables.highscoresscore[Variables.difficulty, spot] = score;
+                    Variables.highscoresplayer[Variables.difficulty, spot] = player1txt.Text;
+                }
             }
         }
 

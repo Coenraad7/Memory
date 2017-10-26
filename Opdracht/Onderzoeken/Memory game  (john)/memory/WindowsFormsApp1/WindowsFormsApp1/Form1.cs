@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         bool again = false; // Play again button.
         PictureBox PendingImg1; // opslaan van de 1e geklikte kaart.
         PictureBox PendingImg2; // Opslaan van 2e geklikte kaart.
+        
 
         public GameWindow()
         {
@@ -27,7 +28,7 @@ namespace WindowsFormsApp1
 
         private void GameWindow_Load(object sender, EventArgs e)
         {
-            label1.Text = "5";
+           
             foreach(PictureBox picture in Cardsholder.Controls)
             {
                 picture.Enabled = false;
@@ -107,6 +108,7 @@ namespace WindowsFormsApp1
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            
             int timer = Convert.ToInt32(label1.Text);
             timer = timer -1;
             label1.Text = Convert.ToString(timer);
@@ -1130,6 +1132,11 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             GameWindow_Load(sender, e);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

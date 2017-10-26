@@ -41,6 +41,11 @@
             this.score3txt = new System.Windows.Forms.Label();
             this.player2txt = new System.Windows.Forms.Label();
             this.score2txt = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.txtresult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // score1txt
@@ -149,12 +154,42 @@
             this.score2txt.TabIndex = 25;
             this.score2txt.Text = "Score: 0";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 1000;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // txtresult
+            // 
+            this.txtresult.AutoSize = true;
+            this.txtresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtresult.Location = new System.Drawing.Point(1062, 277);
+            this.txtresult.Name = "txtresult";
+            this.txtresult.Size = new System.Drawing.Size(0, 26);
+            this.txtresult.TabIndex = 27;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1259, 676);
+            this.Controls.Add(this.txtresult);
             this.Controls.Add(this.player2txt);
             this.Controls.Add(this.score2txt);
             this.Controls.Add(this.player3txt);
@@ -188,5 +223,10 @@
         private System.Windows.Forms.Label score3txt;
         private System.Windows.Forms.Label player2txt;
         private System.Windows.Forms.Label score2txt;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Label txtresult;
     }
 }

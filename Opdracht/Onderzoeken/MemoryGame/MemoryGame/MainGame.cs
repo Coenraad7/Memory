@@ -12,11 +12,15 @@ namespace MemoryGame
 {
     public partial class MainGame : Form
     {
+
         int[,] cardproperties;
         int card1, card2, theme = Variables.theme;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
         int winst = 1, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1;
+        int timercount = 1;
+        
+
 
         public MainGame()
         {
@@ -26,12 +30,14 @@ namespace MemoryGame
             scramble(); //spel begin kaarten randomizen
         }
 
+
+
         private void init()
         {
-            int[,] grid = new int[5, 2] { { 4, 4 },{ 5, 4 },{ 6, 4 },{ 6, 4 },{ 6, 6 } };
-            int amount = grid[(Variables.difficulty-1), 0] * grid[(Variables.difficulty-1), 1];
+            int[,] grid = new int[5, 2] { { 4, 4 }, { 5, 4 }, { 6, 4 }, { 6, 4 }, { 6, 6 } };
+            int amount = grid[(Variables.difficulty - 1), 0] * grid[(Variables.difficulty - 1), 1];
             cardproperties = new int[amount, 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
-            
+
             string[] stringArray = new string[amount];
             for (int i = 0; i < amount; i++)
             {
@@ -63,14 +69,15 @@ namespace MemoryGame
             player2txt.Text = Variables.playernames[1];
             player3txt.Text = Variables.playernames[2];
             player4txt.Text = Variables.playernames[3];
-
         }
+
+        #region scramble funtions
         private void scramble()
         {
             Random rng = new Random();
             bool check;
             int random;
-            
+
             for (int i = 0; i < cardproperties.GetLength(0); i++) //cardproperties.GetLength(0) houd in dat hij de lengte bekijkt van de eerste indice
             {
                 check = true;
@@ -91,7 +98,8 @@ namespace MemoryGame
                 cardproperties[i, 1] = random; //nummer aan de array 
             }
         }
-
+        #endregion
+        #region Rotate/cards functions
         private void rotate(object sender, EventArgs e)
         {
             string temp = (sender as PictureBox).Name;
@@ -148,8 +156,9 @@ namespace MemoryGame
             }
         }
 
-        private void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
+        public void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         {
+            
             if (Variables.amountplayers == 1)
             {
                 if (correct == true)
@@ -188,18 +197,120 @@ namespace MemoryGame
                         if (turn == 1)
                         {
                             score1 += Convert.ToInt32(winst);
+                            if (timercount == 1)
+                            {
+                                timer1.Stop();
+
+                                txtresult.Text = "30";
+                                timer1.Start();
+                            }
+                            else if (timercount == 2)
+                            {
+                                timer2.Stop();
+                                txtresult.Text = "25";
+                                timer2.Start();
+                            }
+                            else if (timercount == 3)
+                            {
+                                timer3.Stop();
+                                txtresult.Text = "20";
+                                timer3.Start();
+                            }
+                            else
+                            {
+                                timer4.Stop();
+                                txtresult.Text = "15";
+                                timer4.Start();
+                            }
+
                         }
                         else if (turn == 2)
                         {
                             score2 += Convert.ToInt32(winst);
+                            if (timercount == 1)
+                            {
+                                timer1.Stop();
+
+                                txtresult.Text = "30";
+                                timer1.Start();
+                            }
+                            else if (timercount == 2)
+                            {
+                                timer2.Stop();
+                                txtresult.Text = "25";
+                                timer2.Start();
+                            }
+                            else if (timercount == 3)
+                            {
+                                timer3.Stop();
+                                txtresult.Text = "20";
+                                timer3.Start();
+                            }
+                            else
+                            {
+                                timer4.Stop();
+                                txtresult.Text = "15";
+                                timer4.Start();
+                            }
                         }
                         else if (turn == 3 && Variables.amountplayers >= 3)
                         {
                             score3 += Convert.ToInt32(winst);
+                            if (timercount == 1)
+                            {
+                                timer1.Stop();
+
+                                txtresult.Text = "30";
+                                timer1.Start();
+                            }
+                            else if (timercount == 2)
+                            {
+                                timer2.Stop();
+                                txtresult.Text = "25";
+                                timer2.Start();
+                            }
+                            else if (timercount == 3)
+                            {
+                                timer3.Stop();
+                                txtresult.Text = "20";
+                                timer3.Start();
+                            }
+                            else
+                            {
+                                timer4.Stop();
+                                txtresult.Text = "15";
+                                timer4.Start();
+                            }
+
                         }
                         else if (turn == 4 && Variables.amountplayers == 4)
                         {
                             score4 += Convert.ToInt32(winst);
+                            if (timercount == 1)
+                            {
+                                timer1.Stop();
+
+                                txtresult.Text = "30";
+                                timer1.Start();
+                            }
+                            else if (timercount == 2)
+                            {
+                                timer2.Stop();
+                                txtresult.Text = "25";
+                                timer2.Start();
+                            }
+                            else if (timercount == 3)
+                            {
+                                timer3.Stop();
+                                txtresult.Text = "20";
+                                timer3.Start();
+                            }
+                            else
+                            {
+                                timer4.Stop();
+                                txtresult.Text = "15";
+                                timer4.Start();
+                            }
                         }
 
                     }
@@ -208,10 +319,64 @@ namespace MemoryGame
                         if (turn != Variables.amountplayers)
                         {
                             turn += 1;
+                            if (timercount == 1)
+                            {
+                                timer1.Stop();
+
+                                txtresult.Text = "30";
+                                timer1.Start();
+                            }
+                            else if (timercount == 2)
+                            {
+                                timer2.Stop();
+                                txtresult.Text = "25";
+                                timer2.Start();
+                            }
+                            else if (timercount == 3)
+                            {
+                                timer3.Stop();
+                                txtresult.Text = "20";
+                                timer3.Start();
+                            }
+                            else
+                            {
+                                timer4.Stop();
+                                txtresult.Text = "15";
+                                timer4.Start();
+                            }
+
                         }
                         else
                         {
                             turn = 1;
+                            timercount++;
+                            if (timercount == 1)
+                            {
+                                timer1.Stop();
+                                txtresult.Text = "30";
+                                timer1.Start();
+                            }
+                            else if (timercount == 2)
+                            {
+                                timer1.Stop();
+                                timer2.Stop();
+                                txtresult.Text = "25";
+                                timer2.Start();
+                            }
+                            else if (timercount == 3)
+                            {
+                                timer2.Stop();
+                                timer3.Stop();
+                                txtresult.Text = "20";
+                                timer3.Start();
+                            }
+                            else
+                            {
+                                timer3.Stop();
+                                timer4.Stop();
+                                txtresult.Text = "15";
+                                timer4.Start();
+                            }
                         }
                     }
                     score1txt.Text = "Score: " + Convert.ToString(score1);
@@ -220,10 +385,9 @@ namespace MemoryGame
                     score4txt.Text = "Score: " + Convert.ToString(score4);
                 }
             }
-
-
         }
-
+        #endregion
+        #region wat moeten we hier nog mee?
         /*
         private void Reset()
         {
@@ -254,7 +418,8 @@ namespace MemoryGame
             scramble(); //vraagt scramble op om zo de kaartjes te husselen
         }
         */
-
+        #endregion
+        #region Buttons
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -271,7 +436,7 @@ namespace MemoryGame
             Close();
             //Reset();
         }
-
+#endregion
         private void undorotate_Tick(object sender, EventArgs e)
         {
             if (card1 != 0 && card2 != 0) //reset na 0,4 seconden
@@ -287,5 +452,54 @@ namespace MemoryGame
                 undorotate.Stop();
             }
         }
+        #region Timers
+        public void timer1_Tick(object sender, EventArgs e)
+        {
+            int timer = Convert.ToInt32(txtresult.Text);
+            timer = timer - 1;
+            txtresult.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                timer1.Stop();
+                turn++;
+            }
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            int timer = Convert.ToInt32(txtresult.Text);
+            timer = timer - 1;
+            txtresult.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                timer1.Stop();
+                turn++;
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            int timer = Convert.ToInt32(txtresult.Text);
+            timer = timer - 1;
+            txtresult.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                timer1.Stop();
+                turn++;
+            }
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            int timer = Convert.ToInt32(txtresult.Text);
+            timer = timer - 1;
+            txtresult.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                timer1.Stop();
+                turn++;
+            }
+        }
     }
+        #endregion
 }
+

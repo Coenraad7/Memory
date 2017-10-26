@@ -519,20 +519,20 @@
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
-            this.ScoreLabel.Font = new System.Drawing.Font("Cooper Std Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreLabel.Location = new System.Drawing.Point(906, 39);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(71, 23);
+            this.ScoreLabel.Size = new System.Drawing.Size(71, 24);
             this.ScoreLabel.TabIndex = 1;
             this.ScoreLabel.Text = "Score:";
             // 
             // ScoreCounter
             // 
             this.ScoreCounter.AutoSize = true;
-            this.ScoreCounter.Font = new System.Drawing.Font("Cooper Std Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreCounter.Location = new System.Drawing.Point(983, 39);
             this.ScoreCounter.Name = "ScoreCounter";
-            this.ScoreCounter.Size = new System.Drawing.Size(21, 23);
+            this.ScoreCounter.Size = new System.Drawing.Size(21, 24);
             this.ScoreCounter.TabIndex = 2;
             this.ScoreCounter.Text = "0";
             // 
@@ -549,12 +549,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Std Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(956, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 23);
+            this.label1.Size = new System.Drawing.Size(21, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "5";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer3
             // 

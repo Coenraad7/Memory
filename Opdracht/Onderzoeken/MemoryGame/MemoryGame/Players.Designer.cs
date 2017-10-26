@@ -76,10 +76,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.button1.Location = new System.Drawing.Point(1143, 613);
+            this.button1.Font = new System.Drawing.Font("Merriweather Bold", 25F);
+            this.button1.Location = new System.Drawing.Point(1129, 614);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 50);
+            this.button1.Size = new System.Drawing.Size(118, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,10 +87,10 @@
             // 
             // backbutton
             // 
-            this.backbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.backbutton.Font = new System.Drawing.Font("Merriweather Bold", 25F);
             this.backbutton.Location = new System.Drawing.Point(12, 614);
             this.backbutton.Name = "backbutton";
-            this.backbutton.Size = new System.Drawing.Size(105, 50);
+            this.backbutton.Size = new System.Drawing.Size(112, 50);
             this.backbutton.TabIndex = 20;
             this.backbutton.Text = "Back";
             this.backbutton.UseVisualStyleBackColor = true;
@@ -123,60 +123,65 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Merriweather Bold", 18F);
             this.label6.Location = new System.Drawing.Point(609, 221);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 29);
+            this.label6.Size = new System.Drawing.Size(97, 31);
             this.label6.TabIndex = 18;
             this.label6.Text = "Drinks";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Merriweather Bold", 18F);
             this.label5.Location = new System.Drawing.Point(782, 221);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 29);
+            this.label5.Size = new System.Drawing.Size(108, 31);
             this.label5.TabIndex = 18;
             this.label5.Text = "Colours";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Merriweather Bold", 18F);
             this.label4.Location = new System.Drawing.Point(420, 221);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 29);
+            this.label4.Size = new System.Drawing.Size(103, 31);
             this.label4.TabIndex = 18;
             this.label4.Text = "Memes";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Merriweather Bold", 18F);
             this.label3.Location = new System.Drawing.Point(239, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 29);
+            this.label3.Size = new System.Drawing.Size(111, 31);
             this.label3.TabIndex = 18;
             this.label3.Text = "Gaming";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Merriweather Bold", 18F);
             this.label2.Location = new System.Drawing.Point(21, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 29);
+            this.label2.Size = new System.Drawing.Size(197, 31);
             this.label2.TabIndex = 18;
             this.label2.Text = "Software Icons";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Font = new System.Drawing.Font("Merriweather Bold", 20F);
             this.label1.Location = new System.Drawing.Point(406, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 31);
+            this.label1.Size = new System.Drawing.Size(119, 34);
             this.label1.TabIndex = 17;
             this.label1.Text = "Theme:";
             // 
@@ -235,9 +240,10 @@
             this.theme5.Appearance = System.Windows.Forms.Appearance.Button;
             this.theme5.AutoSize = true;
             this.theme5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.theme5.Font = new System.Drawing.Font("Merriweather Bold", 25F);
             this.theme5.Location = new System.Drawing.Point(807, 254);
             this.theme5.Name = "theme5";
-            this.theme5.Size = new System.Drawing.Size(46, 49);
+            this.theme5.Size = new System.Drawing.Size(49, 52);
             this.theme5.TabIndex = 15;
             this.theme5.Text = "5";
             this.theme5.UseVisualStyleBackColor = true;
@@ -247,9 +253,10 @@
             this.theme4.Appearance = System.Windows.Forms.Appearance.Button;
             this.theme4.AutoSize = true;
             this.theme4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.theme4.Font = new System.Drawing.Font("Merriweather Bold", 25F);
             this.theme4.Location = new System.Drawing.Point(626, 254);
             this.theme4.Name = "theme4";
-            this.theme4.Size = new System.Drawing.Size(46, 49);
+            this.theme4.Size = new System.Drawing.Size(51, 52);
             this.theme4.TabIndex = 14;
             this.theme4.Text = "4";
             this.theme4.UseVisualStyleBackColor = true;
@@ -259,9 +266,10 @@
             this.theme3.Appearance = System.Windows.Forms.Appearance.Button;
             this.theme3.AutoSize = true;
             this.theme3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.theme3.Font = new System.Drawing.Font("Merriweather Bold", 25F);
             this.theme3.Location = new System.Drawing.Point(445, 254);
             this.theme3.Name = "theme3";
-            this.theme3.Size = new System.Drawing.Size(46, 49);
+            this.theme3.Size = new System.Drawing.Size(47, 52);
             this.theme3.TabIndex = 13;
             this.theme3.Text = "3";
             this.theme3.UseVisualStyleBackColor = true;
@@ -271,9 +279,10 @@
             this.theme2.Appearance = System.Windows.Forms.Appearance.Button;
             this.theme2.AutoSize = true;
             this.theme2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.theme2.Font = new System.Drawing.Font("Merriweather Bold", 25F);
             this.theme2.Location = new System.Drawing.Point(264, 254);
             this.theme2.Name = "theme2";
-            this.theme2.Size = new System.Drawing.Size(46, 49);
+            this.theme2.Size = new System.Drawing.Size(49, 52);
             this.theme2.TabIndex = 12;
             this.theme2.Text = "2";
             this.theme2.UseVisualStyleBackColor = true;
@@ -284,9 +293,10 @@
             this.theme1.AutoSize = true;
             this.theme1.Checked = true;
             this.theme1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.theme1.Font = new System.Drawing.Font("Merriweather Bold", 25F);
             this.theme1.Location = new System.Drawing.Point(83, 254);
             this.theme1.Name = "theme1";
-            this.theme1.Size = new System.Drawing.Size(46, 49);
+            this.theme1.Size = new System.Drawing.Size(44, 52);
             this.theme1.TabIndex = 11;
             this.theme1.TabStop = true;
             this.theme1.Text = "1";
@@ -312,10 +322,10 @@
             // 
             this.player1.AutoSize = true;
             this.player1.Checked = true;
-            this.player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.player1.Font = new System.Drawing.Font("Merriweather Bold", 22F);
             this.player1.Location = new System.Drawing.Point(94, 4);
             this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(198, 40);
+            this.player1.Size = new System.Drawing.Size(225, 42);
             this.player1.TabIndex = 0;
             this.player1.TabStop = true;
             this.player1.Text = "Singleplayer";
@@ -334,10 +344,10 @@
             // player2
             // 
             this.player2.AutoSize = true;
-            this.player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.player2.Font = new System.Drawing.Font("Merriweather Bold", 22F);
             this.player2.Location = new System.Drawing.Point(94, 51);
             this.player2.Name = "player2";
-            this.player2.Size = new System.Drawing.Size(157, 40);
+            this.player2.Size = new System.Drawing.Size(172, 42);
             this.player2.TabIndex = 1;
             this.player2.TabStop = true;
             this.player2.Text = "2 Players";
@@ -347,10 +357,10 @@
             // player3
             // 
             this.player3.AutoSize = true;
-            this.player3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.player3.Font = new System.Drawing.Font("Merriweather Bold", 22F);
             this.player3.Location = new System.Drawing.Point(94, 98);
             this.player3.Name = "player3";
-            this.player3.Size = new System.Drawing.Size(157, 40);
+            this.player3.Size = new System.Drawing.Size(171, 42);
             this.player3.TabIndex = 2;
             this.player3.TabStop = true;
             this.player3.Text = "3 Players";
@@ -378,10 +388,10 @@
             // player4
             // 
             this.player4.AutoSize = true;
-            this.player4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.player4.Font = new System.Drawing.Font("Merriweather Bold", 22F);
             this.player4.Location = new System.Drawing.Point(94, 145);
             this.player4.Name = "player4";
-            this.player4.Size = new System.Drawing.Size(157, 40);
+            this.player4.Size = new System.Drawing.Size(174, 42);
             this.player4.TabIndex = 3;
             this.player4.TabStop = true;
             this.player4.Text = "4 Players";
@@ -408,7 +418,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.panel1.Location = new System.Drawing.Point(275, 210);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 97);
+            this.panel1.Size = new System.Drawing.Size(731, 97);
             this.panel1.TabIndex = 28;
             // 
             // dif5
@@ -416,10 +426,10 @@
             this.dif5.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif5.AutoSize = true;
             this.dif5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dif5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.dif5.Location = new System.Drawing.Point(571, 48);
+            this.dif5.Font = new System.Drawing.Font("Merriweather Bold", 22F);
+            this.dif5.Location = new System.Drawing.Point(571, 37);
             this.dif5.Name = "dif5";
-            this.dif5.Size = new System.Drawing.Size(133, 46);
+            this.dif5.Size = new System.Drawing.Size(156, 48);
             this.dif5.TabIndex = 15;
             this.dif5.TabStop = true;
             this.dif5.Text = "Extreme";
@@ -430,10 +440,10 @@
             this.dif4.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif4.AutoSize = true;
             this.dif4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dif4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.dif4.Location = new System.Drawing.Point(456, 48);
+            this.dif4.Font = new System.Drawing.Font("Merriweather Bold", 22F);
+            this.dif4.Location = new System.Drawing.Point(456, 37);
             this.dif4.Name = "dif4";
-            this.dif4.Size = new System.Drawing.Size(89, 46);
+            this.dif4.Size = new System.Drawing.Size(102, 48);
             this.dif4.TabIndex = 14;
             this.dif4.TabStop = true;
             this.dif4.Text = "Hard";
@@ -445,10 +455,10 @@
             this.dif3.AutoSize = true;
             this.dif3.Checked = true;
             this.dif3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dif3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.dif3.Location = new System.Drawing.Point(310, 48);
+            this.dif3.Font = new System.Drawing.Font("Merriweather Bold", 22F);
+            this.dif3.Location = new System.Drawing.Point(310, 37);
             this.dif3.Name = "dif3";
-            this.dif3.Size = new System.Drawing.Size(120, 46);
+            this.dif3.Size = new System.Drawing.Size(141, 48);
             this.dif3.TabIndex = 13;
             this.dif3.TabStop = true;
             this.dif3.Text = "Normal";
@@ -459,10 +469,10 @@
             this.dif2.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif2.AutoSize = true;
             this.dif2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dif2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.dif2.Location = new System.Drawing.Point(193, 48);
+            this.dif2.Font = new System.Drawing.Font("Merriweather Bold", 22F);
+            this.dif2.Location = new System.Drawing.Point(193, 37);
             this.dif2.Name = "dif2";
-            this.dif2.Size = new System.Drawing.Size(91, 46);
+            this.dif2.Size = new System.Drawing.Size(97, 48);
             this.dif2.TabIndex = 12;
             this.dif2.TabStop = true;
             this.dif2.Text = "Easy";
@@ -473,10 +483,10 @@
             this.dif1.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif1.AutoSize = true;
             this.dif1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dif1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.dif1.Location = new System.Drawing.Point(6, 48);
+            this.dif1.Font = new System.Drawing.Font("Merriweather Bold", 22F);
+            this.dif1.Location = new System.Drawing.Point(6, 37);
             this.dif1.Name = "dif1";
-            this.dif1.Size = new System.Drawing.Size(161, 46);
+            this.dif1.Size = new System.Drawing.Size(174, 48);
             this.dif1.TabIndex = 11;
             this.dif1.TabStop = true;
             this.dif1.Text = "Very Easy";
@@ -485,10 +495,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label7.Location = new System.Drawing.Point(311, 0);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Merriweather Bold", 20F);
+            this.label7.Location = new System.Drawing.Point(307, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 31);
+            this.label7.Size = new System.Drawing.Size(154, 34);
             this.label7.TabIndex = 17;
             this.label7.Text = "Difficulty:";
             // 

@@ -83,5 +83,10 @@ namespace MemoryGame
             About = null;
             //throw new NotImplementedException();
         }
+
+        private void Loadbtn_Click(object sender, EventArgs e)  //the load funtion to load in the Previous game.
+        {
+
+        }
     }
 }

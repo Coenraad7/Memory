@@ -134,6 +134,16 @@ namespace MemoryGame
             }
         }
 
+        private void MainGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void paircheck()
         {
             if (card1 == card2) //als de waarden gelijk zijn zal hij ze terug zetten naar standaard(_default) en verstoppen

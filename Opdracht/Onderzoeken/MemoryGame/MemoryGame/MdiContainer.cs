@@ -25,7 +25,8 @@ namespace MemoryGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Icon = new System.Drawing.Icon("Memory Game Icon 48x48.ico");
+            this.Icon = ((System.Drawing.Icon)(Properties.Resources.ResourceManager.GetObject("Memory_Game_Icon_48x48")));
+            this.Text = "Memorygame";
             MainMenu form2 = new MainMenu();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

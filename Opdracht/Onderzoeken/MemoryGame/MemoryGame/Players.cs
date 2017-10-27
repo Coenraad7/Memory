@@ -47,12 +47,8 @@ namespace MemoryGame
         {
 
             if (!(p1box.Text == "") && ((p2box.Visible == true && !(p2box.Text == "")) || p2box.Visible == false) && ((p3box.Visible == true && !(p3box.Text == ""))
-                || p3box.Visible == false) && ((p4box.Visible == true && !(p4box.Text == "")) || p4box.Visible == false)
+                || p3box.Visible == false) && ((p4box.Visible == true && !(p4box.Text == "")) || p4box.Visible == false))
                 //Bij een x aantal spelers MOET hetzelfde aantal aan nicknames ingevult worden.
-                && ((dif1.Checked) || (dif2.Checked) || (dif3.Checked) || (dif4.Checked) || (dif5.Checked)))
-                //Er MOET een een moeilijkheidsgraad ingevuld worden.
-                // && ((theme1.Checked) || (theme2.Checked) || (theme3.Checked) || (theme4.Checked) || (theme5.Checked)))
-                //Als de gene hierboven ook wordt aangezet MOET er ook een thema worden gekozen.
             {
 
                 checkform();

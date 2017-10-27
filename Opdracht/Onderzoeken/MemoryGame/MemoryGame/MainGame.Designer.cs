@@ -47,12 +47,20 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.txtresult = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // score1txt
             // 
             this.score1txt.AutoSize = true;
-            this.score1txt.BackColor = System.Drawing.Color.Transparent;
+            this.score1txt.BackColor = System.Drawing.Color.White;
             this.score1txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score1txt.Location = new System.Drawing.Point(27, 36);
             this.score1txt.Name = "score1txt";
@@ -67,7 +75,7 @@
             // 
             // reset
             // 
-            this.reset.Font = new System.Drawing.Font("Merriweather Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reset.Location = new System.Drawing.Point(1089, 363);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(158, 51);
@@ -78,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Merriweather Bold", 16F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.Location = new System.Drawing.Point(1089, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 51);
@@ -90,7 +98,7 @@
             // player1txt
             // 
             this.player1txt.AutoSize = true;
-            this.player1txt.BackColor = System.Drawing.Color.Transparent;
+            this.player1txt.BackColor = System.Drawing.Color.White;
             this.player1txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player1txt.Location = new System.Drawing.Point(26, 23);
             this.player1txt.Name = "player1txt";
@@ -105,12 +113,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 611);
             this.panel1.TabIndex = 20;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // player4txt
             // 
             this.player4txt.AutoSize = true;
-            this.player4txt.BackColor = System.Drawing.Color.Transparent;
+            this.player4txt.BackColor = System.Drawing.Color.White;
             this.player4txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player4txt.Location = new System.Drawing.Point(984, 586);
             this.player4txt.Name = "player4txt";
@@ -121,7 +128,7 @@
             // score4txt
             // 
             this.score4txt.AutoSize = true;
-            this.score4txt.BackColor = System.Drawing.Color.Transparent;
+            this.score4txt.BackColor = System.Drawing.Color.White;
             this.score4txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score4txt.Location = new System.Drawing.Point(985, 599);
             this.score4txt.Name = "score4txt";
@@ -132,7 +139,7 @@
             // player3txt
             // 
             this.player3txt.AutoSize = true;
-            this.player3txt.BackColor = System.Drawing.Color.Transparent;
+            this.player3txt.BackColor = System.Drawing.Color.White;
             this.player3txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player3txt.Location = new System.Drawing.Point(27, 586);
             this.player3txt.Name = "player3txt";
@@ -143,7 +150,7 @@
             // score3txt
             // 
             this.score3txt.AutoSize = true;
-            this.score3txt.BackColor = System.Drawing.Color.Transparent;
+            this.score3txt.BackColor = System.Drawing.Color.White;
             this.score3txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score3txt.Location = new System.Drawing.Point(28, 599);
             this.score3txt.Name = "score3txt";
@@ -154,7 +161,7 @@
             // player2txt
             // 
             this.player2txt.AutoSize = true;
-            this.player2txt.BackColor = System.Drawing.Color.Transparent;
+            this.player2txt.BackColor = System.Drawing.Color.White;
             this.player2txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player2txt.Location = new System.Drawing.Point(984, 23);
             this.player2txt.Name = "player2txt";
@@ -165,7 +172,7 @@
             // score2txt
             // 
             this.score2txt.AutoSize = true;
-            this.score2txt.BackColor = System.Drawing.Color.Transparent;
+            this.score2txt.BackColor = System.Drawing.Color.White;
             this.score2txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score2txt.Location = new System.Drawing.Point(985, 36);
             this.score2txt.Name = "score2txt";
@@ -205,7 +212,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Merriweather Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(1089, 306);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 51);
@@ -213,12 +220,56 @@
             this.button2.Text = "Save Game";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MemoryGame.Properties.Resources.arrow_up;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MemoryGame.Properties.Resources.arrow_up;
+            this.pictureBox2.Location = new System.Drawing.Point(988, 64);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 119);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MemoryGame.Properties.Resources.arrow_down;
+            this.pictureBox3.Location = new System.Drawing.Point(31, 452);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 119);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MemoryGame.Properties.Resources.arrow_down;
+            this.pictureBox4.Location = new System.Drawing.Point(987, 452);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(72, 119);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 30;
+            this.pictureBox4.TabStop = false;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1259, 676);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtresult);
             this.Controls.Add(this.player2txt);
@@ -236,7 +287,10 @@
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
-            this.Load += new System.EventHandler(this.MainGame_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +315,9 @@
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Label txtresult;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

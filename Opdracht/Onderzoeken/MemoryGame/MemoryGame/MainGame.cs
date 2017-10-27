@@ -260,6 +260,9 @@ namespace MemoryGame
                             timercount++;
                             timers();
                         }
+                        score2txt.Text = "Score: " + Convert.ToString(score2);
+                        score3txt.Text = "Score: " + Convert.ToString(score3);
+                        score4txt.Text = "Score: " + Convert.ToString(score4);
                     }
                 }
             }

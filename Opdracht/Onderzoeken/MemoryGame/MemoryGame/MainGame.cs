@@ -71,6 +71,18 @@ namespace MemoryGame
             score2txt.Text = "";
             score3txt.Text = "";
             score4txt.Text = "";
+            if (Variables.amountplayers >= 2)
+            {
+                score2txt.Text = "Score: 0";
+            }
+            if (Variables.amountplayers >= 3)
+            {
+                score3txt.Text = "Score: 0";
+            }
+            if (Variables.amountplayers == 4)
+            {
+                score4txt.Text = "Score: 0";
+            }
         }
 
         #region scramble funtions
@@ -260,9 +272,6 @@ namespace MemoryGame
                             timercount++;
                             timers();
                         }
-                        score2txt.Text = "Score: " + Convert.ToString(score2);
-                        score3txt.Text = "Score: " + Convert.ToString(score3);
-                        score4txt.Text = "Score: " + Convert.ToString(score4);
                     }
                 }
             }
@@ -342,7 +351,7 @@ namespace MemoryGame
             if (timer == 0)
             {
                 timer1.Stop();
-                turn++;
+                keepscore(false);
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -353,7 +362,7 @@ namespace MemoryGame
             if (timer == 0)
             {
                 timer1.Stop();
-                turn++;
+                keepscore(false);
             }
         }
 
@@ -365,7 +374,7 @@ namespace MemoryGame
             if (timer == 0)
             {
                 timer1.Stop();
-                turn++;
+                keepscore(false);
             }
         }
 
@@ -377,7 +386,7 @@ namespace MemoryGame
             if (timer == 0)
             {
                 timer1.Stop();
-                turn++;
+                keepscore(false);
             }
         }
 

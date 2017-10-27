@@ -335,6 +335,7 @@
             // p2box
             // 
             this.p2box.Location = new System.Drawing.Point(323, 52);
+            this.p2box.MaxLength = 3;
             this.p2box.Name = "p2box";
             this.p2box.Size = new System.Drawing.Size(247, 41);
             this.p2box.TabIndex = 5;
@@ -371,6 +372,7 @@
             // 
             this.p1box.ForeColor = System.Drawing.SystemColors.WindowText;
             this.p1box.Location = new System.Drawing.Point(323, 5);
+            this.p1box.MaxLength = 3;
             this.p1box.Name = "p1box";
             this.p1box.Size = new System.Drawing.Size(247, 41);
             this.p1box.TabIndex = 4;
@@ -379,6 +381,7 @@
             // p4box
             // 
             this.p4box.Location = new System.Drawing.Point(323, 146);
+            this.p4box.MaxLength = 3;
             this.p4box.Name = "p4box";
             this.p4box.Size = new System.Drawing.Size(247, 41);
             this.p4box.TabIndex = 7;
@@ -401,6 +404,7 @@
             // p3box
             // 
             this.p3box.Location = new System.Drawing.Point(323, 99);
+            this.p3box.MaxLength = 3;
             this.p3box.Name = "p3box";
             this.p3box.Size = new System.Drawing.Size(247, 41);
             this.p3box.TabIndex = 6;

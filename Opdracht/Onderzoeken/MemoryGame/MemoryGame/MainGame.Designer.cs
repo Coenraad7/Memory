@@ -67,7 +67,7 @@
             // 
             // reset
             // 
-            this.reset.Font = new System.Drawing.Font("Merriweather Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reset.Location = new System.Drawing.Point(1089, 363);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(158, 51);
@@ -78,7 +78,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Merriweather Bold", 16F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.Location = new System.Drawing.Point(1089, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 51);
@@ -105,7 +105,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 611);
             this.panel1.TabIndex = 20;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // player4txt
             // 
@@ -205,7 +204,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Merriweather Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(1089, 306);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 51);
@@ -236,7 +235,6 @@
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
-            this.Load += new System.EventHandler(this.MainGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

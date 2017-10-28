@@ -264,7 +264,6 @@ namespace MemoryGame
                         {
                             turn += 1;
                             timers();
-
                         }
                         else
                         {
@@ -273,6 +272,17 @@ namespace MemoryGame
                             timers();
                         }
                     }
+                    if (turn == 2){ arrow1.Visible = false; arrow2.Visible = true; }
+                    if (turn == 3) { arrow2.Visible = false; arrow3.Visible = true; }
+                    if (turn == 4) { arrow3.Visible = false; arrow4.Visible = true; }
+                    if (turn == 1)
+                    {
+                        arrow2.Visible = false;
+                        arrow3.Visible = false;
+                        arrow4.Visible = false;
+                        arrow1.Visible = true;
+                    }
+
                 }
             }
         }

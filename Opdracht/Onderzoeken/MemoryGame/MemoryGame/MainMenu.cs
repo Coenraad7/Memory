@@ -16,7 +16,6 @@ namespace MemoryGame
         public MainMenu()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,25 +26,12 @@ namespace MemoryGame
             Close();
         }
 
-        
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Highscores Highscores = new Highscores();
             Highscores.MdiParent = this.ParentForm;
             Highscores.Show();
             Close();
-        }
-
-        private void Highscores_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Highscores Highscores = new Highscores();
-            Highscores = null;
-           // throw new NotImplementedException();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -55,8 +41,6 @@ namespace MemoryGame
             Help.Show();
             Close();
         }
-
-       
 
         private void button5_Click(object sender, EventArgs e)
         {

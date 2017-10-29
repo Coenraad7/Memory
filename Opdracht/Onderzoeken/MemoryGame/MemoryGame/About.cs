@@ -15,14 +15,8 @@ namespace MemoryGame
         public About()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
         
-        private void About_Load(object sender, EventArgs e)
-        {
-            
-        }
-        MainGame MainGame = new MainGame();
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();

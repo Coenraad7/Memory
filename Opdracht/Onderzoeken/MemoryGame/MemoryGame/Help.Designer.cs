@@ -89,7 +89,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1235, 498);
             this.listBox1.TabIndex = 20;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Help
             // 
@@ -99,10 +98,10 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Help";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Help";
-            this.Load += new System.EventHandler(this.Help_Load);
             this.ResumeLayout(false);
 
         }

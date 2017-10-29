@@ -297,6 +297,7 @@
             this.Controls.Add(this.reset);
             this.Controls.Add(this.score1txt);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";

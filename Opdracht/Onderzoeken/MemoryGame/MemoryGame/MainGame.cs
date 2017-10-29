@@ -26,7 +26,6 @@ namespace MemoryGame
         public MainGame()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
             init(); //maakt speelveld aan en geeft de juiste theme mee.
             scramble(); //spel begin kaarten randomizen
         }
@@ -43,15 +42,15 @@ namespace MemoryGame
                 stringArray[i] = "pictureBox" + (i + 1);
             }
 
-            int m = 0;
+            int m = 0, s = (600 / grid[(Variables.difficulty), 0]);
             for (int i = 0; i < grid[(Variables.difficulty), 0]; i++)
             {
                 for (int e = 0; e < grid[(Variables.difficulty), 1]; e++)
                 {
                     PictureBox box = new PictureBox();
-                    box.Location = new System.Drawing.Point((200 + (110 * i)), (10 + (110 * e)));
+                    box.Location = new System.Drawing.Point((200 + ((s + 10) * i)), (10 + ((s + 10) * e)));
                     box.Name = stringArray[m];
-                    box.Size = new System.Drawing.Size(100, 100);
+                    box.Size = new System.Drawing.Size(s, s);
                     box.BackColor = Color.White;
                     box.BackgroundImageLayout = ImageLayout.Stretch;
                     box.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default"); ;
@@ -293,38 +292,6 @@ namespace MemoryGame
             }
         }
         #endregion
-        #region wat moeten we hier nog mee?
-        /*
-        private void Reset()
-        {
-            foreach (var pictureBox in Controls.OfType<PictureBox>()) //vraagt alle picture boxes op
-            {
-                string name = pictureBox.Name;
-                if (Convert.ToInt32(name.Replace("pictureBox", "")) <= cardproperties.GetLength(0)) //vergelijkt de namen van de pictureboxes met de cards die gebruikt worden en reset ze naar _default, visible en enabled (voorkomen dat andere pictureboxes worden aangepast)
-                {
-                    pictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
-                    pictureBox.Enabled = true;
-                    pictureBox.BackColor = Color.White;
-                }
-                else
-                {
-                    break;
-                }
-            }
-            card1 = 0; //alle code die hier staat zorgt er voor dat de standaard waarden terug worden gezet
-            cardinfo1 = null;
-            card2 = 0;
-            cardinfo2 = null;
-            for (int r = 0; r < cardproperties.GetLength(0); r++)
-            {
-                cardproperties[r, 1] = 0;
-            }
-            label1.Text = "Score: 0";
-            multiplier = 1;
-            scramble(); //vraagt scramble op om zo de kaartjes te husselen
-        }
-        */
-        #endregion
         #region Buttons
         private void button1_Click(object sender, EventArgs e)
         {
@@ -340,7 +307,6 @@ namespace MemoryGame
             MainGame.MdiParent = this.ParentForm;
             MainGame.Show();
             Close();
-            //Reset();
         }
 #endregion
         private void undorotate_Tick(object sender, EventArgs e)

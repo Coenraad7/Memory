@@ -38,7 +38,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Merriweather Bold", 20F);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button2.Location = new System.Drawing.Point(488, 375);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 75);
@@ -49,7 +49,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Merriweather Bold", 20F);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button4.Location = new System.Drawing.Point(488, 294);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(210, 75);
@@ -60,7 +60,7 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Merriweather Bold", 20F);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button5.Location = new System.Drawing.Point(488, 456);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(210, 75);
@@ -71,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Merriweather Bold", 25F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.button1.Location = new System.Drawing.Point(488, 213);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 75);
@@ -82,7 +82,7 @@
             // 
             // Loadbtn
             // 
-            this.Loadbtn.Font = new System.Drawing.Font("Merriweather Bold", 18F);
+            this.Loadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.Loadbtn.Location = new System.Drawing.Point(488, 132);
             this.Loadbtn.Name = "Loadbtn";
             this.Loadbtn.Size = new System.Drawing.Size(210, 75);
@@ -102,11 +102,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
 
         }

@@ -15,7 +15,6 @@ namespace MemoryGame
         public Players()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void checkform()
@@ -147,11 +146,6 @@ namespace MemoryGame
         private void p4box_KeyPress(object sender, KeyPressEventArgs e)
         {
             p4box.BackColor = Color.White;
-        }
-
-        private void Players_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

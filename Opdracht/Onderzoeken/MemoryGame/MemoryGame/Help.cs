@@ -15,25 +15,14 @@ namespace MemoryGame
         public Help()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
-        private void Help_Load(object sender, EventArgs e)
-        {
-
-        }
-        MainGame MainGame = new MainGame();
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
             MainMenu.MdiParent = this.ParentForm;
             MainMenu.Show();
             Close();
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

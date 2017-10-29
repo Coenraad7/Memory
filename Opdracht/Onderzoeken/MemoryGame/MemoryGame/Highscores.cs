@@ -15,7 +15,6 @@ namespace MemoryGame
         public Highscores()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void Highscores_Load(object sender, EventArgs e)

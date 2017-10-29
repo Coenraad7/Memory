@@ -44,16 +44,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.Location = new System.Drawing.Point(965, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 14);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Highscore Form";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Merriweather Bold", 25F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.button1.Location = new System.Drawing.Point(1009, 613);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(238, 51);
@@ -66,10 +66,10 @@
             // 
             this.Scores.AutoSize = true;
             this.Scores.BackColor = System.Drawing.Color.Transparent;
-            this.Scores.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
+            this.Scores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Scores.Location = new System.Drawing.Point(29, 120);
             this.Scores.Name = "Scores";
-            this.Scores.Size = new System.Drawing.Size(41, 14);
+            this.Scores.Size = new System.Drawing.Size(35, 13);
             this.Scores.TabIndex = 21;
             this.Scores.Text = "label2";
             // 
@@ -90,10 +90,10 @@
             this.dif1.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif1.AutoSize = true;
             this.dif1.Checked = true;
-            this.dif1.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
+            this.dif1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.dif1.Location = new System.Drawing.Point(3, 3);
             this.dif1.Name = "dif1";
-            this.dif1.Size = new System.Drawing.Size(70, 24);
+            this.dif1.Size = new System.Drawing.Size(64, 23);
             this.dif1.TabIndex = 0;
             this.dif1.TabStop = true;
             this.dif1.Text = "Very Easy";
@@ -104,10 +104,10 @@
             // 
             this.dif2.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif2.AutoSize = true;
-            this.dif2.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
-            this.dif2.Location = new System.Drawing.Point(79, 3);
+            this.dif2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dif2.Location = new System.Drawing.Point(73, 3);
             this.dif2.Name = "dif2";
-            this.dif2.Size = new System.Drawing.Size(42, 24);
+            this.dif2.Size = new System.Drawing.Size(40, 23);
             this.dif2.TabIndex = 1;
             this.dif2.Text = "Easy";
             this.dif2.UseVisualStyleBackColor = true;
@@ -117,10 +117,10 @@
             // 
             this.dif3.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif3.AutoSize = true;
-            this.dif3.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
-            this.dif3.Location = new System.Drawing.Point(127, 3);
+            this.dif3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dif3.Location = new System.Drawing.Point(119, 3);
             this.dif3.Name = "dif3";
-            this.dif3.Size = new System.Drawing.Size(59, 24);
+            this.dif3.Size = new System.Drawing.Size(50, 23);
             this.dif3.TabIndex = 2;
             this.dif3.Text = "Normal";
             this.dif3.UseVisualStyleBackColor = true;
@@ -130,10 +130,10 @@
             // 
             this.dif4.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif4.AutoSize = true;
-            this.dif4.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
-            this.dif4.Location = new System.Drawing.Point(192, 3);
+            this.dif4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dif4.Location = new System.Drawing.Point(175, 3);
             this.dif4.Name = "dif4";
-            this.dif4.Size = new System.Drawing.Size(44, 24);
+            this.dif4.Size = new System.Drawing.Size(40, 23);
             this.dif4.TabIndex = 3;
             this.dif4.Text = "Hard";
             this.dif4.UseVisualStyleBackColor = true;
@@ -143,10 +143,10 @@
             // 
             this.dif5.Appearance = System.Windows.Forms.Appearance.Button;
             this.dif5.AutoSize = true;
-            this.dif5.Font = new System.Drawing.Font("Merriweather Bold", 8.25F);
-            this.dif5.Location = new System.Drawing.Point(242, 3);
+            this.dif5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dif5.Location = new System.Drawing.Point(221, 3);
             this.dif5.Name = "dif5";
-            this.dif5.Size = new System.Drawing.Size(63, 24);
+            this.dif5.Size = new System.Drawing.Size(55, 23);
             this.dif5.TabIndex = 4;
             this.dif5.Text = "Extreme";
             this.dif5.UseVisualStyleBackColor = true;
@@ -162,6 +162,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Highscores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Highscores";

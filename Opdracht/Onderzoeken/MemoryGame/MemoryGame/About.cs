@@ -30,5 +30,10 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

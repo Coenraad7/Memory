@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace MemoryGame
 {
@@ -66,17 +68,50 @@ namespace MemoryGame
             score4txt.Text = "";
             if (Variables.amountplayers >= 2)
             {
-                score2txt.Text = "Score: 0";
+                score2txt.Text = "0";
             }
             if (Variables.amountplayers >= 3)
             {
-                score3txt.Text = "Score: 0";
+                score3txt.Text = "0";
             }
             if (Variables.amountplayers == 4)
             {
-                score4txt.Text = "Score: 0";
+                score4txt.Text = "0";
             }
         }
+        #region Save function
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<spelerdetails> p1 = new List<spelerdetails>();
+            List<hiscores> h1 = new List<hiscores>();
+            XmlSerializer serial = new XmlSerializer(typeof(List<spelerdetails>));
+            XmlSerializer hiscore = new XmlSerializer(typeof(List<hiscores>));
+
+            p1.Add(new spelerdetails() { id = 1, speler = player1txt.Text, score = score1txt.Text});
+            h1.Add(new hiscores() { naam = player1txt.Text, hiscore = score1txt.Text });
+
+            if (Variables.amountplayers >= 2)
+            {
+                p1.Add(new spelerdetails() { id = 2, speler = player2txt.Text, score = score2txt.Text });
+            }
+            if (Variables.amountplayers >= 3)
+            {
+                p1.Add(new spelerdetails() { id = 3, speler = player3txt.Text, score = score3txt.Text });
+            }
+            if (Variables.amountplayers == 4)
+            {
+                p1.Add(new spelerdetails() { id = 4, speler = player4txt.Text, score = score4txt.Text });
+            }
+            using (FileStream fs = new FileStream(Environment.CurrentDirectory+ "\\spelers.xml", FileMode.Create, FileAccess.Write))
+            {
+                serial.Serialize(fs, p1);
+                MessageBox.Show("game Saved");
+            }
+       
+
+        }
+#endregion
+
 
         #region scramble funtions
         private void scramble()

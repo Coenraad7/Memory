@@ -41,9 +41,6 @@
             this.player2txt = new System.Windows.Forms.Label();
             this.score2txt = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.txtresult = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.arrow1 = new System.Windows.Forms.PictureBox();
@@ -178,21 +175,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 1000;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
             // txtresult
             // 
             this.txtresult.AutoSize = true;
@@ -301,7 +283,6 @@
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
-            this.Load += new System.EventHandler(this.MainGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow3)).EndInit();
@@ -309,7 +290,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.stopwatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -325,9 +305,6 @@
         private System.Windows.Forms.Label player2txt;
         private System.Windows.Forms.Label score2txt;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Label txtresult;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox arrow1;

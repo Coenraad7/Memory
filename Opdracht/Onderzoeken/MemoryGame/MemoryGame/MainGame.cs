@@ -21,16 +21,12 @@ namespace MemoryGame
         int timercount = 1;
         int[,] grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
 
-
-
         public MainGame()
         {
             InitializeComponent();
             init(); //maakt speelveld aan en geeft de juiste theme mee.
             scramble(); //spel begin kaarten randomizen
         }
-
-
 
         private void init()
         {
@@ -146,6 +142,22 @@ namespace MemoryGame
             }
         }
 
+        private void undorotate_Tick(object sender, EventArgs e)
+        {
+            if (card1 != 0 && card2 != 0) //reset na 0,4 seconden
+            {
+                cardinfo1.Enabled = true;
+                cardinfo2.Enabled = true;
+                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
+                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
+                card1 = 0;
+                cardinfo1 = null;
+                card2 = 0;
+                cardinfo2 = null;
+                undorotate.Stop();
+            }
+        }
+
         private void paircheck()
         {
             if (card1 == card2) //als de waarden gelijk zijn zal hij ze terug zetten naar standaard(_default) en verstoppen
@@ -189,12 +201,8 @@ namespace MemoryGame
                 }
             }
         }
-
-        private void MainGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
+#endregion
+        #region score
         public void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         {
             
@@ -308,59 +316,9 @@ namespace MemoryGame
             MainGame.Show();
             Close();
         }
-#endregion
-        private void undorotate_Tick(object sender, EventArgs e)
-        {
-            if (card1 != 0 && card2 != 0) //reset na 0,4 seconden
-            {
-                cardinfo1.Enabled = true;
-                cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
-                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
-                card1 = 0;
-                cardinfo1 = null;
-                card2 = 0;
-                cardinfo2 = null;
-                undorotate.Stop();
-            }
-        }
+        #endregion
         #region Timers
         public void timer1_Tick(object sender, EventArgs e)
-        {
-            int timer = Convert.ToInt32(txtresult.Text);
-            timer = timer - 1;
-            txtresult.Text = Convert.ToString(timer);
-            if (timer == 0)
-            {
-                timer1.Stop();
-                keepscore(false);
-            }
-        }
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            int timer = Convert.ToInt32(txtresult.Text);
-            timer = timer - 1;
-            txtresult.Text = Convert.ToString(timer);
-            if (timer == 0)
-            {
-                timer1.Stop();
-                keepscore(false);
-            }
-        }
-
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            int timer = Convert.ToInt32(txtresult.Text);
-            timer = timer - 1;
-            txtresult.Text = Convert.ToString(timer);
-            if (timer == 0)
-            {
-                timer1.Stop();
-                keepscore(false);
-            }
-        }
-
-        private void timer4_Tick(object sender, EventArgs e)
         {
             int timer = Convert.ToInt32(txtresult.Text);
             timer = timer - 1;
@@ -383,23 +341,20 @@ namespace MemoryGame
             else if (timercount == 2)
             {
                 timer1.Stop();
-                timer2.Stop();
                 txtresult.Text = "25";
-                timer2.Start();
+                timer1.Start();
             }
             else if (timercount == 3)
             {
-                timer2.Stop();
-                timer3.Stop();
+                timer1.Stop();
                 txtresult.Text = "20";
-                timer3.Start();
+                timer1.Start();
             }
             else
             {
-                timer3.Stop();
-                timer4.Stop();
+                timer1.Stop();
                 txtresult.Text = "15";
-                timer4.Start();
+                timer1.Start();
             }
         }
     }

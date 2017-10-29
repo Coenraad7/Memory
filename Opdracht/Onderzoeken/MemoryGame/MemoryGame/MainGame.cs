@@ -49,20 +49,18 @@ namespace MemoryGame
                 for (int e = 0; e < grid[(Variables.difficulty), 1]; e++)
                 {
                     PictureBox box = new PictureBox();
-                    box.Location = new System.Drawing.Point((110 * i), (110 * e));
+                    box.Location = new System.Drawing.Point((200 + (110 * i)), (10 + (110 * e)));
                     box.Name = stringArray[m];
                     box.Size = new System.Drawing.Size(100, 100);
                     box.BackColor = Color.White;
-                    box.Enabled = true;
                     box.BackgroundImageLayout = ImageLayout.Stretch;
                     box.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default"); ;
                     box.Click += new EventHandler(rotate);
-                    panel1.Controls.Add(box);
+                    Controls.Add(box);
                     m++;
                 }
             }
 
-            panel1.BackColor = Color.Transparent;
             this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "Background");
             player1txt.Text = Variables.playernames[0];
             player2txt.Text = Variables.playernames[1];

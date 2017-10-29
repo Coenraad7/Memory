@@ -34,7 +34,6 @@
             this.reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.player1txt = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.player4txt = new System.Windows.Forms.Label();
             this.score4txt = new System.Windows.Forms.Label();
             this.player3txt = new System.Windows.Forms.Label();
@@ -105,14 +104,6 @@
             this.player1txt.Size = new System.Drawing.Size(98, 15);
             this.player1txt.TabIndex = 19;
             this.player1txt.Text = "Name Player 1:";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.Location = new System.Drawing.Point(165, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(755, 611);
-            this.panel1.TabIndex = 20;
             // 
             // player4txt
             // 
@@ -285,7 +276,6 @@
             this.Controls.Add(this.score3txt);
             this.Controls.Add(this.player4txt);
             this.Controls.Add(this.score4txt);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.player1txt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reset);
@@ -309,7 +299,6 @@
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label player1txt;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label player4txt;
         private System.Windows.Forms.Label score4txt;
         private System.Windows.Forms.Label player3txt;

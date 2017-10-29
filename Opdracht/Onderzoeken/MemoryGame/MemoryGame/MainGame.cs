@@ -332,30 +332,24 @@ namespace MemoryGame
 
         private void timers()
         {
+            timer1.Stop();
             if (timercount == 1)
             {
-                timer1.Stop();
                 txtresult.Text = "30";
-                timer1.Start();
             }
             else if (timercount == 2)
             {
-                timer1.Stop();
                 txtresult.Text = "25";
-                timer1.Start();
             }
             else if (timercount == 3)
             {
-                timer1.Stop();
                 txtresult.Text = "20";
-                timer1.Start();
             }
             else
             {
-                timer1.Stop();
                 txtresult.Text = "15";
-                timer1.Start();
             }
+            timer1.Start();
         }
     }
         #endregion

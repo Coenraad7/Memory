@@ -300,6 +300,7 @@
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
+            this.Load += new System.EventHandler(this.MainGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow3)).EndInit();

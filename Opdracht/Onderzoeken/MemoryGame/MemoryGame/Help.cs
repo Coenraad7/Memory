@@ -30,5 +30,10 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

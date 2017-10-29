@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Merriweather Bold", 25F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.button1.Location = new System.Drawing.Point(1016, 613);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(231, 51);
@@ -89,6 +89,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1235, 498);
             this.listBox1.TabIndex = 20;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Help
             // 

@@ -191,6 +191,11 @@ namespace MemoryGame
             }
         }
 
+        private void MainGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         {
             

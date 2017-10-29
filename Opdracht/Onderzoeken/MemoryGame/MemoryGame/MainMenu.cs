@@ -23,17 +23,11 @@ namespace MemoryGame
         {
             Players form3 = new Players();
             form3.MdiParent = this.ParentForm;
-            form3.FormClosed += Form3_FormClosed;
             form3.Show();
+            Close();
         }
 
-        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Players form3 = new Players();
-            form3 = null;
-            // throw new NotImplementedException();
-        }
-
+        
         private void MainMenu_Load(object sender, EventArgs e)
         {
 
@@ -43,8 +37,8 @@ namespace MemoryGame
         {
             Highscores Highscores = new Highscores();
             Highscores.MdiParent = this.ParentForm;
-            Highscores.FormClosed += Highscores_FormClosed;
             Highscores.Show();
+            Close();
         }
 
         private void Highscores_FormClosed(object sender, FormClosedEventArgs e)
@@ -58,30 +52,18 @@ namespace MemoryGame
         {
             Help Help = new Help();
             Help.MdiParent = this.ParentForm;
-            Help.FormClosed += Help_FormClosed;
             Help.Show();
+            Close();
         }
 
-        private void Help_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Help Help = new Help();
-            Help = null;
-           // throw new NotImplementedException();
-        }
+       
 
         private void button5_Click(object sender, EventArgs e)
         {
             About About = new About();
             About.MdiParent = this.ParentForm;
-            About.FormClosed += About_FormClosed;
             About.Show();
-        }
-
-        private void About_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            About About = new About();
-            About = null;
-            //throw new NotImplementedException();
+            Close();
         }
 
         private void Loadbtn_Click(object sender, EventArgs e)  //the load funtion to load in the Previous game.

@@ -59,8 +59,8 @@ namespace MemoryGame
                 
                 MainGame MainGame = new MainGame();
                 MainGame.MdiParent = this.ParentForm;
-                MainGame.FormClosed += MainGame_FormClosed;
                 MainGame.Show();
+                Close();
                 
             }
             else
@@ -90,12 +90,7 @@ namespace MemoryGame
             }
         }
 
-        private void MainGame_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MainGame MainGame = new MainGame();
-            MainGame = null;
-            //throw new NotImplementedException();
-        }
+       
 
         private void backbutton_Click(object sender, EventArgs e)
         {
@@ -152,6 +147,11 @@ namespace MemoryGame
         private void p4box_KeyPress(object sender, KeyPressEventArgs e)
         {
             p4box.BackColor = Color.White;
+        }
+
+        private void Players_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

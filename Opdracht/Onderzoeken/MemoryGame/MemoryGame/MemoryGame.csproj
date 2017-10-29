@@ -470,6 +470,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Memory Game Icon.ico" />
+    <None Include="Theme\stopwatch.png" />
     <None Include="Theme\arrow down.png" />
     <None Include="Theme\arrow up.png" />
     <None Include="Resources\arrow.png" />

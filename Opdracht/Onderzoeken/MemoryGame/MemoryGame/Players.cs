@@ -20,23 +20,27 @@ namespace MemoryGame
 
         private void checkform()
         {
+            //selecteren van het thema
             if (theme1.Checked) { Variables.theme = 1; }
             else if (theme2.Checked) { Variables.theme = 2; }
             else if (theme3.Checked) { Variables.theme = 3; }
             else if (theme4.Checked) { Variables.theme = 4; }
             else if (theme5.Checked) { Variables.theme = 5; }
 
+            //selecteren van het de moeilijkheidsgraad
             if (dif1.Checked) { Variables.difficulty= 0; }
             else if (dif2.Checked) { Variables.difficulty= 1; }
             else if (dif3.Checked) { Variables.difficulty= 2; }
             else if (dif4.Checked) { Variables.difficulty = 3; }
             else if (dif5.Checked) { Variables.difficulty = 4; }
 
+            //selecteren van het aantal spelers
             if (player1.Checked) { Variables.amountplayers = 1; }
             else if (player2.Checked) { Variables.amountplayers = 2; }
             else if (player3.Checked) { Variables.amountplayers = 3; }
             else if (player4.Checked) { Variables.amountplayers = 4; }
 
+            //het weergeven van de spelernamen
             Variables.playernames[0] = p1box.Text;
             Variables.playernames[1] = p2box.Text;
             Variables.playernames[2] = p3box.Text;

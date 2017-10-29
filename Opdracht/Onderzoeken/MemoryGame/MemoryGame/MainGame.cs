@@ -196,6 +196,8 @@ namespace MemoryGame
             
             if (Variables.amountplayers == 1)
             {
+                arrow1.Visible = false;
+
                 if (correct == true)
                 {
                     string temp = score1txt.Text;
@@ -226,6 +228,7 @@ namespace MemoryGame
             }
             else if (Variables.amountplayers >= 2)
             {
+                stopwatch.Visible = true;
                 {
                     if (correct == true)
                     {
@@ -270,7 +273,7 @@ namespace MemoryGame
                             timers();
                         }
                     }
-                    if (turn == 2){ arrow1.Visible = false; arrow2.Visible = true; }
+                    if (turn == 2) { arrow1.Visible = false; arrow2.Visible = true; }
                     if (turn == 3) { arrow2.Visible = false; arrow3.Visible = true; }
                     if (turn == 4) { arrow3.Visible = false; arrow4.Visible = true; }
                     if (turn == 1)

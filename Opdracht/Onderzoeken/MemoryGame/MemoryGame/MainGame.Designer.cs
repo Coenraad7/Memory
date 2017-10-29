@@ -50,10 +50,12 @@
             this.arrow2 = new System.Windows.Forms.PictureBox();
             this.arrow3 = new System.Windows.Forms.PictureBox();
             this.arrow4 = new System.Windows.Forms.PictureBox();
+            this.stopwatch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopwatch)).BeginInit();
             this.SuspendLayout();
             // 
             // score1txt
@@ -194,9 +196,10 @@
             // txtresult
             // 
             this.txtresult.AutoSize = true;
-            this.txtresult.BackColor = System.Drawing.Color.Transparent;
+            this.txtresult.BackColor = System.Drawing.Color.Black;
             this.txtresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtresult.Location = new System.Drawing.Point(1084, 241);
+            this.txtresult.ForeColor = System.Drawing.Color.White;
+            this.txtresult.Location = new System.Drawing.Point(1135, 223);
             this.txtresult.Name = "txtresult";
             this.txtresult.Size = new System.Drawing.Size(0, 26);
             this.txtresult.TabIndex = 27;
@@ -258,18 +261,31 @@
             this.arrow4.TabStop = false;
             this.arrow4.Visible = false;
             // 
+            // stopwatch
+            // 
+            this.stopwatch.BackColor = System.Drawing.Color.Transparent;
+            this.stopwatch.Image = global::MemoryGame.Properties.Resources.stopwatch;
+            this.stopwatch.Location = new System.Drawing.Point(1089, 146);
+            this.stopwatch.Name = "stopwatch";
+            this.stopwatch.Size = new System.Drawing.Size(130, 154);
+            this.stopwatch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.stopwatch.TabIndex = 31;
+            this.stopwatch.TabStop = false;
+            this.stopwatch.Visible = false;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1259, 676);
+            this.Controls.Add(this.txtresult);
+            this.Controls.Add(this.stopwatch);
             this.Controls.Add(this.arrow4);
             this.Controls.Add(this.arrow3);
             this.Controls.Add(this.arrow2);
             this.Controls.Add(this.arrow1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtresult);
             this.Controls.Add(this.player2txt);
             this.Controls.Add(this.score2txt);
             this.Controls.Add(this.player3txt);
@@ -288,6 +304,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopwatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +332,6 @@
         private System.Windows.Forms.PictureBox arrow2;
         private System.Windows.Forms.PictureBox arrow3;
         private System.Windows.Forms.PictureBox arrow4;
+        private System.Windows.Forms.PictureBox stopwatch;
     }
 }

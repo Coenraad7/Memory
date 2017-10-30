@@ -68,5 +68,10 @@ namespace MemoryGame
                 Scores.Text += Variables.highscoresplayer[dif, i] + " with a score of: " + Variables.highscoresscore[dif, i] + "!" + System.Environment.NewLine;
             }
         }
+
+        private void Scores_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

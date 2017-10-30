@@ -18,6 +18,8 @@ namespace MemoryGame
         int card1, card2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 0;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
+       
+        
 
         public MainGame()
         {
@@ -135,6 +137,16 @@ namespace MemoryGame
                 cardproperties[i, 1] = random; //nummer aan de array 
             }
         }
+
+        private void MainGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stopwatch_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
         #region Rotate/cards functions
         private void rotate(object sender, EventArgs e)
@@ -209,6 +221,16 @@ namespace MemoryGame
                     {
                         highscore();
                     }
+
+                    // touch it, and your bases are belong to me!
+
+                    Endscreen endscreen =  new Endscreen();
+                    endscreen.MdiParent = this.ParentForm;
+                    endscreen.Show();
+                    Close();
+
+
+
                 }
             }
             else

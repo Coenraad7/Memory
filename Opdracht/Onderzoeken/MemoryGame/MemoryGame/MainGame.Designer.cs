@@ -212,6 +212,7 @@
             this.stopwatch.TabIndex = 31;
             this.stopwatch.TabStop = false;
             this.stopwatch.Visible = false;
+            this.stopwatch.Click += new System.EventHandler(this.stopwatch_Click);
             // 
             // score1txt
             // 
@@ -285,6 +286,7 @@
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
+            this.Load += new System.EventHandler(this.MainGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow3)).EndInit();

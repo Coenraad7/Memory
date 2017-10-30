@@ -29,17 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.score1txt = new System.Windows.Forms.Label();
             this.undorotate = new System.Windows.Forms.Timer(this.components);
             this.reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.player1txt = new System.Windows.Forms.Label();
             this.player4txt = new System.Windows.Forms.Label();
-            this.score4txt = new System.Windows.Forms.Label();
             this.player3txt = new System.Windows.Forms.Label();
-            this.score3txt = new System.Windows.Forms.Label();
             this.player2txt = new System.Windows.Forms.Label();
-            this.score2txt = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.txtresult = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,27 +44,16 @@
             this.arrow3 = new System.Windows.Forms.PictureBox();
             this.arrow4 = new System.Windows.Forms.PictureBox();
             this.stopwatch = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.score1txt = new System.Windows.Forms.Label();
+            this.score2txt = new System.Windows.Forms.Label();
+            this.score4txt = new System.Windows.Forms.Label();
+            this.score3txt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.arrow1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stopwatch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // score1txt
-            // 
-            this.score1txt.AutoSize = true;
-            this.score1txt.BackColor = System.Drawing.Color.White;
-            this.score1txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score1txt.Location = new System.Drawing.Point(89, 36);
-            this.score1txt.Name = "score1txt";
-            this.score1txt.Size = new System.Drawing.Size(14, 15);
-            this.score1txt.TabIndex = 16;
-            this.score1txt.Text = "0";
             // 
             // undorotate
             // 
@@ -119,17 +104,6 @@
             this.player4txt.TabIndex = 22;
             this.player4txt.Text = "Name Player 4:";
             // 
-            // score4txt
-            // 
-            this.score4txt.AutoSize = true;
-            this.score4txt.BackColor = System.Drawing.Color.White;
-            this.score4txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score4txt.Location = new System.Drawing.Point(1046, 601);
-            this.score4txt.Name = "score4txt";
-            this.score4txt.Size = new System.Drawing.Size(14, 15);
-            this.score4txt.TabIndex = 21;
-            this.score4txt.Text = "0";
-            // 
             // player3txt
             // 
             this.player3txt.AutoSize = true;
@@ -141,17 +115,6 @@
             this.player3txt.TabIndex = 24;
             this.player3txt.Text = "Name Player 3:";
             // 
-            // score3txt
-            // 
-            this.score3txt.AutoSize = true;
-            this.score3txt.BackColor = System.Drawing.Color.White;
-            this.score3txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score3txt.Location = new System.Drawing.Point(87, 601);
-            this.score3txt.Name = "score3txt";
-            this.score3txt.Size = new System.Drawing.Size(14, 15);
-            this.score3txt.TabIndex = 23;
-            this.score3txt.Text = "0";
-            // 
             // player2txt
             // 
             this.player2txt.AutoSize = true;
@@ -162,17 +125,6 @@
             this.player2txt.Size = new System.Drawing.Size(98, 15);
             this.player2txt.TabIndex = 26;
             this.player2txt.Text = "Name Player 2:";
-            // 
-            // score2txt
-            // 
-            this.score2txt.AutoSize = true;
-            this.score2txt.BackColor = System.Drawing.Color.White;
-            this.score2txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score2txt.Location = new System.Drawing.Point(1045, 36);
-            this.score2txt.Name = "score2txt";
-            this.score2txt.Size = new System.Drawing.Size(14, 15);
-            this.score2txt.TabIndex = 25;
-            this.score2txt.Text = "0";
             // 
             // timer1
             // 
@@ -211,6 +163,7 @@
             this.arrow1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.arrow1.TabIndex = 29;
             this.arrow1.TabStop = false;
+            this.arrow1.Visible = false;
             // 
             // arrow2
             // 
@@ -260,49 +213,49 @@
             this.stopwatch.TabStop = false;
             this.stopwatch.Visible = false;
             // 
-            // label1
+            // score1txt
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Score:";
+            this.score1txt.AutoSize = true;
+            this.score1txt.BackColor = System.Drawing.Color.White;
+            this.score1txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score1txt.Location = new System.Drawing.Point(26, 36);
+            this.score1txt.Name = "score1txt";
+            this.score1txt.Size = new System.Drawing.Size(56, 15);
+            this.score1txt.TabIndex = 32;
+            this.score1txt.Text = "Score: 0";
             // 
-            // label2
+            // score2txt
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(985, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 15);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Score:";
+            this.score2txt.AutoSize = true;
+            this.score2txt.BackColor = System.Drawing.Color.White;
+            this.score2txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score2txt.Location = new System.Drawing.Point(985, 36);
+            this.score2txt.Name = "score2txt";
+            this.score2txt.Size = new System.Drawing.Size(56, 15);
+            this.score2txt.TabIndex = 33;
+            this.score2txt.Text = "Score: 0";
             // 
-            // label3
+            // score4txt
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(985, 601);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Score:";
+            this.score4txt.AutoSize = true;
+            this.score4txt.BackColor = System.Drawing.Color.White;
+            this.score4txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score4txt.Location = new System.Drawing.Point(985, 601);
+            this.score4txt.Name = "score4txt";
+            this.score4txt.Size = new System.Drawing.Size(56, 15);
+            this.score4txt.TabIndex = 34;
+            this.score4txt.Text = "Score: 0";
             // 
-            // label4
+            // score3txt
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 601);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Score:";
+            this.score3txt.AutoSize = true;
+            this.score3txt.BackColor = System.Drawing.Color.White;
+            this.score3txt.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score3txt.Location = new System.Drawing.Point(28, 601);
+            this.score3txt.Name = "score3txt";
+            this.score3txt.Size = new System.Drawing.Size(56, 15);
+            this.score3txt.TabIndex = 35;
+            this.score3txt.Text = "Score: 0";
             // 
             // MainGame
             // 
@@ -310,10 +263,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1259, 676);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.score3txt);
+            this.Controls.Add(this.score4txt);
+            this.Controls.Add(this.score2txt);
+            this.Controls.Add(this.score1txt);
             this.Controls.Add(this.txtresult);
             this.Controls.Add(this.stopwatch);
             this.Controls.Add(this.arrow4);
@@ -322,15 +275,11 @@
             this.Controls.Add(this.arrow1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.player2txt);
-            this.Controls.Add(this.score2txt);
             this.Controls.Add(this.player3txt);
-            this.Controls.Add(this.score3txt);
             this.Controls.Add(this.player4txt);
-            this.Controls.Add(this.score4txt);
             this.Controls.Add(this.player1txt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reset);
-            this.Controls.Add(this.score1txt);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainGame";
@@ -347,17 +296,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label score1txt;
         private System.Windows.Forms.Timer undorotate;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label player1txt;
         private System.Windows.Forms.Label player4txt;
-        private System.Windows.Forms.Label score4txt;
         private System.Windows.Forms.Label player3txt;
-        private System.Windows.Forms.Label score3txt;
         private System.Windows.Forms.Label player2txt;
-        private System.Windows.Forms.Label score2txt;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label txtresult;
         private System.Windows.Forms.Button button2;
@@ -366,9 +311,9 @@
         private System.Windows.Forms.PictureBox arrow3;
         private System.Windows.Forms.PictureBox arrow4;
         private System.Windows.Forms.PictureBox stopwatch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label score1txt;
+        private System.Windows.Forms.Label score2txt;
+        private System.Windows.Forms.Label score4txt;
+        private System.Windows.Forms.Label score3txt;
     }
 }

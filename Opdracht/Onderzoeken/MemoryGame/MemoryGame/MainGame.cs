@@ -39,7 +39,6 @@ namespace MemoryGame
             {
                 stringArray[i] = "pictureBox" + (i + 1);
             }
-
             int m = 0, s = (600 / grid[(Variables.difficulty), 0]);
             for (int i = 0; i < grid[(Variables.difficulty), 0]; i++)
             {
@@ -68,15 +67,18 @@ namespace MemoryGame
             score4txt.Text = "";
             if (Variables.amountplayers >= 2)
             {
-                score2txt.Text = "0";
+                stopwatch.Visible = true;
+                txtresult.Text = "30";
+                score2txt.Text = "Score: 0";
+                arrow1.Visible = true;
             }
             if (Variables.amountplayers >= 3)
             {
-                score3txt.Text = "0";
+                score3txt.Text = "Score: 0";
             }
             if (Variables.amountplayers == 4)
             {
-                score4txt.Text = "0";
+                score4txt.Text = "Score: 0";
             }
         }
         #region Save function
@@ -107,12 +109,8 @@ namespace MemoryGame
                 serial.Serialize(fs, p1);
                 MessageBox.Show("game Saved");
             }
-       
-
         }
-#endregion
-
-
+        #endregion
         #region scramble funtions
         private void scramble()
         {
@@ -239,18 +237,13 @@ namespace MemoryGame
 #endregion
         #region score
         public void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
-        {
-            
+        { 
             if (Variables.amountplayers == 1)
             {
-                arrow1.Visible = false;
-
                 if (correct == true)
                 {
-                    string temp = score1txt.Text;
-                    int score = Convert.ToInt32(temp.Replace("Score: ", ""));
-                    score += Convert.ToInt32(multiplier * 10);
-                    score1txt.Text = "Score: " + Convert.ToString(score);
+                    score1 += Convert.ToInt32(multiplier * 10);
+                    score1txt.Text = "Score: " + score1;
 
                     if (multiplier % 1 == 0)
                     {
@@ -304,7 +297,6 @@ namespace MemoryGame
                             score4txt.Text = "Score: " + Convert.ToString(score4);
                             timers();
                         }
-
                     }
                     else if (correct == false)
                     {
@@ -330,7 +322,6 @@ namespace MemoryGame
                         arrow4.Visible = false;
                         arrow1.Visible = true;
                     }
-
                 }
             }
         }

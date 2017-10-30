@@ -14,14 +14,10 @@ namespace MemoryGame
 {
     public partial class MainGame : Form
     {
-
-        int[,] cardproperties;
-        int card1, card2, theme = Variables.theme;
+        int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
+        int card1, card2, theme = Variables.theme, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 1;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
-        int winst = 1, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1,count;
-        int timercount = 1;
-        int[,] grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
 
         public MainGame()
         {
@@ -274,26 +270,25 @@ namespace MemoryGame
                     {
                         if (turn == 1)
                         {
-                            score1 += Convert.ToInt32(winst);
+                            score1++;
                             score1txt.Text = "Score: " + Convert.ToString(score1);
                             timers();
                         }
                         else if (turn == 2)
                         {
-                            score2 += Convert.ToInt32(winst);
+                            score2++;
                             score2txt.Text = "Score: " + Convert.ToString(score2);
                             timers();
                         }
                         else if (turn == 3 && Variables.amountplayers >= 3)
                         {
-                            score3 += Convert.ToInt32(winst);
+                            score3++;
                             score3txt.Text = "Score: " + Convert.ToString(score3);
                             timers();
-
                         }
                         else if (turn == 4 && Variables.amountplayers == 4)
                         {
-                            score4 += Convert.ToInt32(winst);
+                            score4++;
                             score4txt.Text = "Score: " + Convert.ToString(score4);
                             timers();
                         }
@@ -377,7 +372,7 @@ namespace MemoryGame
             }
             timer1.Start();
         }
-    }
         #endregion
+    }
 }
 

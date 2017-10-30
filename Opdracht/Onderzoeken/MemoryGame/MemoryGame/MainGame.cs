@@ -15,7 +15,7 @@ namespace MemoryGame
     public partial class MainGame : Form
     {
         int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
-        int card1, card2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 1;
+        int card1, card2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 0;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
 
@@ -65,6 +65,7 @@ namespace MemoryGame
             {
                 stopwatch.Visible = true;
                 txtresult.Text = "30";
+                timer1.Start();
                 score2txt.Text = "Score: 0";
                 arrow1.Visible = true;
             }
@@ -114,11 +115,11 @@ namespace MemoryGame
             bool check;
             int random;
 
-            for (int i = 0; i < cardproperties.GetLength(0); i++) //cardproperties.GetLength(0) houd in dat hij de lengte bekijkt van de eerste indice
+            for (int i = 0; i < grid[Variables.difficulty, 2]; i++) //grid[Variables.difficulty,2] is het aantal kaarten dat gebruikt word
             {
                 check = true;
-                random = rng.Next(1, (cardproperties.GetLength(0) / 2 + 1));
-                for (int e = 0; e < cardproperties.GetLength(0); e++)
+                random = rng.Next(1, (grid[Variables.difficulty, 2] / 2 + 1));
+                for (int e = 0; e < grid[Variables.difficulty, 2]; e++)
                 {
                     if ((cardproperties[e, 1] == random) && (check == true)) //1e check dat er 1 nummer instaat (dit mag wel)
                     {
@@ -128,7 +129,7 @@ namespace MemoryGame
                     {
                         e = -1;
                         check = true;
-                        random = rng.Next(1, (cardproperties.GetLength(0) / 2 + 1));
+                        random = rng.Next(1, (grid[Variables.difficulty, 2] / 2 + 1));
                     }
                 }
                 cardproperties[i, 1] = random; //nummer aan de array 
@@ -357,17 +358,9 @@ namespace MemoryGame
         private void timers()
         {
             timer1.Stop();
-            if (timercount == 1)
+            if (timercount <= 3)
             {
-                txtresult.Text = "30";
-            }
-            else if (timercount == 2)
-            {
-                txtresult.Text = "25";
-            }
-            else if (timercount == 3)
-            {
-                txtresult.Text = "20";
+                txtresult.Text = Convert.ToString(30 - (5 * timercount));
             }
             else
             {

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.undorotate = new System.Windows.Forms.Timer(this.components);
+            this.undo = new System.Windows.Forms.Timer(this.components);
             this.reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.player1txt = new System.Windows.Forms.Label();
@@ -55,10 +55,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.stopwatch)).BeginInit();
             this.SuspendLayout();
             // 
-            // undorotate
+            // undo
             // 
-            this.undorotate.Interval = 400;
-            this.undorotate.Tick += new System.EventHandler(this.undorotate_Tick);
+            this.undo.Interval = 400;
+            this.undo.Tick += new System.EventHandler(this.undo_Tick);
             // 
             // reset
             // 
@@ -296,7 +296,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer undorotate;
+        private System.Windows.Forms.Timer undo;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label player1txt;

@@ -15,7 +15,7 @@ namespace MemoryGame
     public partial class MainGame : Form
     {
         int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
-        int card1, card2, theme = Variables.theme, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 1;
+        int card1, card2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 1;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
 
@@ -46,14 +46,14 @@ namespace MemoryGame
                     box.Size = new System.Drawing.Size(s, s);
                     box.BackColor = Color.White;
                     box.BackgroundImageLayout = ImageLayout.Stretch;
-                    box.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default"); ;
+                    box.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + "default"); ;
                     box.Click += new EventHandler(rotate);
                     Controls.Add(box);
                     m++;
                 }
             }
 
-            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "Background");
+            this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + "Background");
             player1txt.Text = Variables.playernames[0];
             player2txt.Text = Variables.playernames[1];
             player3txt.Text = Variables.playernames[2];
@@ -142,19 +142,11 @@ namespace MemoryGame
             int picture = ((Convert.ToInt32(temp.Replace("pictureBox", ""))) - 1);
             if (card1 != 0 && card2 != 0) //3e kaart click als ze nog niet zijn omgedraaid
             {
-                undorotate.Stop();
-                cardinfo1.Enabled = true;
-                cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
-                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
-                card1 = 0;
-                cardinfo1 = null;
-                card2 = 0;
-                cardinfo2 = null;
+                undorotate();
             }
 
             PictureBox card = (PictureBox)sender;
-            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
+            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
 
             if (card1 == 0) //1e klik
             {
@@ -171,19 +163,28 @@ namespace MemoryGame
             }
         }
 
-        private void undorotate_Tick(object sender, EventArgs e)
+        private void undorotate() //reset na 0,4 seconden
         {
-            if (card1 != 0 && card2 != 0) //reset na 0,4 seconden
+            undo.Stop();
+            if (card1 != card2) 
             {
                 cardinfo1.Enabled = true;
                 cardinfo2.Enabled = true;
-                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
-                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + theme + "default");
+                cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + "default");
+                cardinfo2.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + "default");
                 card1 = 0;
                 cardinfo1 = null;
                 card2 = 0;
                 cardinfo2 = null;
-                undorotate.Stop();
+            }
+            else if (card1 == card2)
+            {
+                cardinfo1.Visible = false;
+                cardinfo2.Visible = false;
+                card1 = 0;
+                cardinfo1 = null;
+                card2 = 0;
+                cardinfo2 = null;
             }
         }
 
@@ -191,47 +192,32 @@ namespace MemoryGame
         {
             if (card1 == card2) //als de waarden gelijk zijn zal hij ze terug zetten naar standaard(_default) en verstoppen
             {
-                cardinfo1.BackColor = Color.Transparent;
-                cardinfo2.BackColor = Color.Transparent;
-                cardinfo1.BackgroundImage = null;
-                cardinfo2.BackgroundImage = null;
-                card1 = 0;
-                cardinfo1 = null;
-                card2 = 0;
-                cardinfo2 = null;
                 keepscore(true);
                 count +=2;
+
+                if (count == grid[Variables.difficulty, 2]) //checkt of count gelijk is aan het aantal kaarten en bepaald dus of het spel klaar is
+                {
+                    timer1.Stop();
+                    stopwatch.Visible = false;
+                    txtresult.Text = "";
+                    arrow1.Visible = false;
+                    arrow2.Visible = false;
+                    arrow3.Visible = false;
+                    arrow4.Visible = false;
+                    if (Variables.amountplayers == 1 && score1 > Convert.ToInt32(Variables.highscoresscore[Variables.difficulty, 9])) //checkt of de behaalde score van een singleplayer game highscore waardig is.
+                    {
+                        highscore();
+                    }
+                }
             }
             else
             {
                 keepscore(false);
-                undorotate.Start();
             }
-
-            if (count == grid[Variables.difficulty,2] && Variables.amountplayers == 1)
-            {
-                string temp = score1txt.Text;
-                int score = Convert.ToInt32(temp.Replace("Score: ", ""));
-
-                if (score > Convert.ToInt32(Variables.highscoresscore[Variables.difficulty,9]))
-                {
-                    int spot = 9;
-                    for (int i = 8; i >= 0; i--)
-                    {
-                        if (score > Variables.highscoresscore[Variables.difficulty,i])
-                        {
-                            Variables.highscoresscore[Variables.difficulty, (i + 1)] = Variables.highscoresscore[Variables.difficulty, i];
-                            Variables.highscoresplayer[Variables.difficulty, (i + 1)] = Variables.highscoresplayer[Variables.difficulty, i];
-                            spot--;
-                        }
-                    }
-                    Variables.highscoresscore[Variables.difficulty, spot] = score;
-                    Variables.highscoresplayer[Variables.difficulty, spot] = player1txt.Text;
-                }
-            }
+            undo.Start();
         }
 #endregion
-        #region score
+        #region score/highscore
         public void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         { 
             if (Variables.amountplayers == 1)
@@ -272,25 +258,21 @@ namespace MemoryGame
                         {
                             score1++;
                             score1txt.Text = "Score: " + Convert.ToString(score1);
-                            timers();
                         }
                         else if (turn == 2)
                         {
                             score2++;
                             score2txt.Text = "Score: " + Convert.ToString(score2);
-                            timers();
                         }
                         else if (turn == 3 && Variables.amountplayers >= 3)
                         {
                             score3++;
                             score3txt.Text = "Score: " + Convert.ToString(score3);
-                            timers();
                         }
                         else if (turn == 4 && Variables.amountplayers == 4)
                         {
                             score4++;
                             score4txt.Text = "Score: " + Convert.ToString(score4);
-                            timers();
                         }
                     }
                     else if (correct == false)
@@ -298,15 +280,15 @@ namespace MemoryGame
                         if (turn != Variables.amountplayers)
                         {
                             turn += 1;
-                            timers();
                         }
                         else
                         {
                             turn = 1;
                             timercount++;
-                            timers();
-                        }
+                        }  
                     }
+                    timers();
+
                     if (turn == 2) { arrow1.Visible = false; arrow2.Visible = true; }
                     if (turn == 3) { arrow2.Visible = false; arrow3.Visible = true; }
                     if (turn == 4) { arrow3.Visible = false; arrow4.Visible = true; }
@@ -319,6 +301,22 @@ namespace MemoryGame
                     }
                 }
             }
+        }
+
+        private void highscore()
+        {
+            int spot = 9;
+            for (int i = 8; i >= 0; i--)
+            {
+                if (score1 > Variables.highscoresscore[Variables.difficulty, i])
+                {
+                    Variables.highscoresscore[Variables.difficulty, (i + 1)] = Variables.highscoresscore[Variables.difficulty, i];
+                    Variables.highscoresplayer[Variables.difficulty, (i + 1)] = Variables.highscoresplayer[Variables.difficulty, i];
+                    spot--;
+                }
+            }
+            Variables.highscoresscore[Variables.difficulty, spot] = score1;
+            Variables.highscoresplayer[Variables.difficulty, spot] = player1txt.Text;
         }
         #endregion
         #region Buttons
@@ -339,6 +337,11 @@ namespace MemoryGame
         }
         #endregion
         #region Timers
+        private void undo_Tick(object sender, EventArgs e)
+        {
+            undorotate();
+        }
+
         public void timer1_Tick(object sender, EventArgs e)
         {
             int timer = Convert.ToInt32(txtresult.Text);

@@ -217,6 +217,7 @@ namespace MemoryGame
                     arrow2.Visible = false;
                     arrow3.Visible = false;
                     arrow4.Visible = false;
+
                     if (Variables.amountplayers == 1 && score1 > Convert.ToInt32(Variables.highscoresscore[Variables.difficulty, 9])) //checkt of de behaalde score van een singleplayer game highscore waardig is.
                     {
                         highscore();
@@ -225,6 +226,10 @@ namespace MemoryGame
                     // touch it, and your bases are belong to me!
 
                     Endscreen endscreen =  new Endscreen();
+                    endscreen.score1 = score1;
+                    endscreen.score2 = score2;
+                    endscreen.score3 = score3;
+                    endscreen.score4 = score4;
                     endscreen.MdiParent = this.ParentForm;
                     endscreen.Show();
                     Close();

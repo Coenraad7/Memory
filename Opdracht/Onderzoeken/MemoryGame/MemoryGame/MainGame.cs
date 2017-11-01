@@ -84,29 +84,26 @@ namespace MemoryGame
         private void button2_Click(object sender, EventArgs e)
         {
             List<spelerdetails> p1 = new List<spelerdetails>();
-            List<hiscores> h1 = new List<hiscores>();
             XmlSerializer serial = new XmlSerializer(typeof(List<spelerdetails>));
-            XmlSerializer hiscore = new XmlSerializer(typeof(List<hiscores>));
-
-            p1.Add(new spelerdetails() { id = 1, speler = player1txt.Text, score = score1txt.Text});
-            h1.Add(new hiscores() { naam = player1txt.Text, hiscore = score1txt.Text });
+            p1.Add(new spelerdetails() { id = 0, moeilijkheidsgraad = Variables.difficulty ,thema = Variables.theme, beurtspeler = count, multiplier = multiplier, players = Variables.amountplayers, timers = timercount });
+            p1.Add(new spelerdetails() { id = 1, speler = Variables.playernames[0], score = score1 });
 
             if (Variables.amountplayers >= 2)
             {
-                p1.Add(new spelerdetails() { id = 2, speler = player2txt.Text, score = score2txt.Text });
+                p1.Add(new spelerdetails() { id = 2, speler = Variables.playernames[1], score = score2 });
             }
             if (Variables.amountplayers >= 3)
             {
-                p1.Add(new spelerdetails() { id = 3, speler = player3txt.Text, score = score3txt.Text });
+                p1.Add(new spelerdetails() { id = 3, speler = Variables.playernames[2], score = score3 });
             }
             if (Variables.amountplayers == 4)
             {
-                p1.Add(new spelerdetails() { id = 4, speler = player4txt.Text, score = score4txt.Text });
+                p1.Add(new spelerdetails() { id = 4, speler = Variables.playernames[3], score = score4 });
             }
-            using (FileStream fs = new FileStream(Environment.CurrentDirectory+ "\\spelers.xml", FileMode.Create, FileAccess.Write))
+            using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\spelers.xml", FileMode.Create, FileAccess.Write))
             {
                 serial.Serialize(fs, p1);
-                MessageBox.Show("game Saved");
+                MessageBox.Show("Game Saved");
             }
         }
         #endregion

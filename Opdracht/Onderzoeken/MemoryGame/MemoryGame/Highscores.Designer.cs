@@ -60,7 +60,6 @@
             this.Scores.Size = new System.Drawing.Size(92, 31);
             this.Scores.TabIndex = 21;
             this.Scores.Text = "label2";
-            this.Scores.Click += new System.EventHandler(this.Scores_Click);
             // 
             // flowLayoutPanel1
             // 

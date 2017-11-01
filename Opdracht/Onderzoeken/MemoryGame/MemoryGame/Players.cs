@@ -147,15 +147,5 @@ namespace MemoryGame
         {
             p4box.BackColor = Color.White;
         }
-
-        private void Players_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void p1box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -12,11 +12,7 @@ namespace MemoryGame
 {
     public partial class Endscreen : Form
     {
-        public int score1;
-        public int score2;
-        public int score3;
-        public int score4;
-        int Max; // word niet gebruikt?
+        public int[] scores = new int[4] { 0, 0, 0, 0 };
 
         public Endscreen()
         {
@@ -27,13 +23,6 @@ namespace MemoryGame
         {
             List();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,35 +40,25 @@ namespace MemoryGame
             Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void List()
         {
 
-            int temp = Math.Max(score1, score2); 
+            //int temp = Math.Max(score1, score2); 
 
-            label2.Text = Variables.playernames[0] + " finished the game with a score of: " + score1 + System.Environment.NewLine;
+            label2.Text = Variables.playernames[0] + " finished the game with a score of: " + scores[0] + System.Environment.NewLine;
 
             if (Variables.amountplayers >= 2)
             {
-                label2.Text += Variables.playernames[1] + " finished the game with a score of: " + score2 + System.Environment.NewLine;
+                label2.Text += Variables.playernames[1] + " finished the game with a score of: " + scores[1] + System.Environment.NewLine;
             }
             if (Variables.amountplayers >= 3)
             {
-                label2.Text += Variables.playernames[2] + " finished the game with a score of: " + score3 + System.Environment.NewLine;
+                label2.Text += Variables.playernames[2] + " finished the game with a score of: " + scores[2] + System.Environment.NewLine;
             }
             if (Variables.amountplayers == 4)
             {
-                label2.Text += Variables.playernames[3] + " finished the game with a score of: " + score4 + System.Environment.NewLine;
+                label2.Text += Variables.playernames[3] + " finished the game with a score of: " + scores[3] + System.Environment.NewLine;
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -44,7 +44,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Game over!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -77,7 +76,6 @@
             this.label2.Size = new System.Drawing.Size(109, 39);
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Endscreen
             // 

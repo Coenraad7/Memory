@@ -15,11 +15,10 @@ namespace MemoryGame
     public partial class MainGame : Form
     {
         int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
-        int card1, card2, score1 = 0, score2 = 0, score3 = 0, score4 = 0, turn = 1, count, timercount = 0;
+        int[] scores = new int[4] { 0, 0, 0, 0 };
+        int card1, card2, turn = 1, count, timercount = 0;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
-       
-        
 
         public MainGame()
         {
@@ -86,19 +85,19 @@ namespace MemoryGame
             List<spelerdetails> p1 = new List<spelerdetails>();
             XmlSerializer serial = new XmlSerializer(typeof(List<spelerdetails>));
             p1.Add(new spelerdetails() { id = 0, moeilijkheidsgraad = Variables.difficulty ,thema = Variables.theme, beurtspeler = count, multiplier = multiplier, players = Variables.amountplayers, timers = timercount });
-            p1.Add(new spelerdetails() { id = 1, speler = Variables.playernames[0], score = score1 });
+            p1.Add(new spelerdetails() { id = 1, speler = Variables.playernames[0], score = scores[0] });
 
             if (Variables.amountplayers >= 2)
             {
-                p1.Add(new spelerdetails() { id = 2, speler = Variables.playernames[1], score = score2 });
+                p1.Add(new spelerdetails() { id = 2, speler = Variables.playernames[1], score = scores[1] });
             }
             if (Variables.amountplayers >= 3)
             {
-                p1.Add(new spelerdetails() { id = 3, speler = Variables.playernames[2], score = score3 });
+                p1.Add(new spelerdetails() { id = 3, speler = Variables.playernames[2], score = scores[2] });
             }
             if (Variables.amountplayers == 4)
             {
-                p1.Add(new spelerdetails() { id = 4, speler = Variables.playernames[3], score = score4 });
+                p1.Add(new spelerdetails() { id = 4, speler = Variables.playernames[3], score = scores[3] });
             }
             using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\spelers.xml", FileMode.Create, FileAccess.Write))
             {
@@ -215,24 +214,19 @@ namespace MemoryGame
                     arrow3.Visible = false;
                     arrow4.Visible = false;
 
-                    if (Variables.amountplayers == 1 && score1 > Convert.ToInt32(Variables.highscoresscore[Variables.difficulty, 9])) //checkt of de behaalde score van een singleplayer game highscore waardig is.
+                    if (Variables.amountplayers == 1 && scores[0] > Convert.ToInt32(Variables.highscoresscore[Variables.difficulty, 9])) //checkt of de behaalde score van een singleplayer game highscore waardig is.
                     {
                         highscore();
                     }
 
-                    // touch it, and your bases are belong to me!
-
                     Endscreen endscreen =  new Endscreen();
-                    endscreen.score1 = score1;
-                    endscreen.score2 = score2;
-                    endscreen.score3 = score3;
-                    endscreen.score4 = score4;
+                    endscreen.scores[0] = scores[0];
+                    endscreen.scores[1] = scores[1];
+                    endscreen.scores[2] = scores[2];
+                    endscreen.scores[3] = scores[3];
                     endscreen.MdiParent = this.ParentForm;
                     endscreen.Show();
                     Close();
-
-
-
                 }
             }
             else
@@ -249,8 +243,8 @@ namespace MemoryGame
             {
                 if (correct == true)
                 {
-                    score1 += Convert.ToInt32(multiplier * 10);
-                    score1txt.Text = "Score: " + score1;
+                    scores[0] += Convert.ToInt32(multiplier * 10);
+                    score1txt.Text = "Score: " + scores[0];
 
                     if (multiplier % 1 == 0)
                     {
@@ -281,23 +275,23 @@ namespace MemoryGame
                     {
                         if (turn == 1)
                         {
-                            score1++;
-                            score1txt.Text = "Score: " + Convert.ToString(score1);
+                            scores[0]++;
+                            score1txt.Text = "Score: " + Convert.ToString(scores[0]);
                         }
                         else if (turn == 2)
                         {
-                            score2++;
-                            score2txt.Text = "Score: " + Convert.ToString(score2);
+                            scores[1]++;
+                            score2txt.Text = "Score: " + Convert.ToString(scores[1]);
                         }
                         else if (turn == 3 && Variables.amountplayers >= 3)
                         {
-                            score3++;
-                            score3txt.Text = "Score: " + Convert.ToString(score3);
+                            scores[2]++;
+                            score3txt.Text = "Score: " + Convert.ToString(scores[2]);
                         }
                         else if (turn == 4 && Variables.amountplayers == 4)
                         {
-                            score4++;
-                            score4txt.Text = "Score: " + Convert.ToString(score4);
+                            scores[3]++;
+                            score4txt.Text = "Score: " + Convert.ToString(scores[3]);
                         }
                     }
                     else if (correct == false)
@@ -333,14 +327,14 @@ namespace MemoryGame
             int spot = 9;
             for (int i = 8; i >= 0; i--)
             {
-                if (score1 > Variables.highscoresscore[Variables.difficulty, i])
+                if (scores[0] > Variables.highscoresscore[Variables.difficulty, i])
                 {
                     Variables.highscoresscore[Variables.difficulty, (i + 1)] = Variables.highscoresscore[Variables.difficulty, i];
                     Variables.highscoresplayer[Variables.difficulty, (i + 1)] = Variables.highscoresplayer[Variables.difficulty, i];
                     spot--;
                 }
             }
-            Variables.highscoresscore[Variables.difficulty, spot] = score1;
+            Variables.highscoresscore[Variables.difficulty, spot] = scores[0];
             Variables.highscoresplayer[Variables.difficulty, spot] = player1txt.Text;
         }
         #endregion
@@ -374,6 +368,13 @@ namespace MemoryGame
             txtresult.Text = Convert.ToString(timer);
             if (timer == 0)
             {
+                if (card1 != 0)
+                {
+                    cardinfo1.Enabled = true;
+                    cardinfo1.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + "default");
+                    card1 = 0;
+                    cardinfo1 = null;
+                }
                 timer1.Stop();
                 keepscore(false);
             }

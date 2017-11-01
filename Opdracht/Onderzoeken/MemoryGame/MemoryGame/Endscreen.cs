@@ -16,7 +16,7 @@ namespace MemoryGame
         public int score2;
         public int score3;
         public int score4;
-        int Max;
+        int Max; // word niet gebruikt?
 
         public Endscreen()
         {

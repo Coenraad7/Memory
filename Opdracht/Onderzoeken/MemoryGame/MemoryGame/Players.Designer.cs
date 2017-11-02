@@ -376,6 +376,7 @@
             this.p1box.Name = "p1box";
             this.p1box.Size = new System.Drawing.Size(247, 41);
             this.p1box.TabIndex = 4;
+            this.p1box.TextChanged += new System.EventHandler(this.p1box_TextChanged);
             this.p1box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.p1box_KeyPress);
             // 
             // p4box

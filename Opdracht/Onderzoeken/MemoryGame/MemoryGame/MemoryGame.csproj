@@ -76,6 +76,12 @@
     <Compile Include="Endscreen.Designer.cs">
       <DependentUpon>Endscreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Whostarts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Whostarts.Designer.cs">
+      <DependentUpon>Whostarts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Whostarts.resx">
+      <DependentUpon>Whostarts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

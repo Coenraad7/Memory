@@ -14,15 +14,20 @@ namespace MemoryGame
 {
     public partial class MainGame : Form
     {
+        public int turn;
         int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
         int[] scores = new int[4] { 0, 0, 0, 0 };
-        int card1, card2, turn = 1, count, timercount = 0;
+        int card1, card2, count, timercount = 0;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
 
         public MainGame()
         {
             InitializeComponent();
+        }
+
+        private void MainGame_Load(object sender, EventArgs e)
+        {
             init(); //maakt speelveld aan en geeft de juiste theme mee.
             scramble(); //spel begin kaarten randomizen
         }
@@ -62,13 +67,30 @@ namespace MemoryGame
             score2txt.Text = "";
             score3txt.Text = "";
             score4txt.Text = "";
+            
             if (Variables.amountplayers >= 2)
             {
+                if (turn == 1)
+                {
+                    arrow1.Visible = true;
+                }
+                else if (turn == 2)
+                {
+                    arrow2.Visible = true;
+                }
+                else if (turn == 3)
+                {
+                    arrow3.Visible = true;
+                }
+                else if (turn == 4)
+                {
+                    arrow4.Visible = true;
+                }
+
                 stopwatch.Visible = true;
                 txtresult.Text = "30";
                 timer1.Start();
                 score2txt.Text = "Score: 0";
-                arrow1.Visible = true;
             }
             if (Variables.amountplayers >= 3)
             {
@@ -132,11 +154,6 @@ namespace MemoryGame
                 }
                 cardproperties[i, 1] = random; //nummer aan de array 
             }
-        }
-
-        private void MainGame_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void stopwatch_Click(object sender, EventArgs e)
@@ -311,13 +328,7 @@ namespace MemoryGame
                     if (turn == 2) { arrow1.Visible = false; arrow2.Visible = true; }
                     if (turn == 3) { arrow2.Visible = false; arrow3.Visible = true; }
                     if (turn == 4) { arrow3.Visible = false; arrow4.Visible = true; }
-                    if (turn == 1)
-                    {
-                        arrow2.Visible = false;
-                        arrow3.Visible = false;
-                        arrow4.Visible = false;
-                        arrow1.Visible = true;
-                    }
+                    if (turn == 1) { arrow4.Visible = false; arrow1.Visible = true; }
                 }
             }
         }
@@ -349,10 +360,20 @@ namespace MemoryGame
 
         private void reset_Click(object sender, EventArgs e)
         {
-            MainGame MainGame = new MainGame();
-            MainGame.MdiParent = this.ParentForm;
-            MainGame.Show();
-            Close();
+            if (Variables.amountplayers >= 2)
+            {
+                Whostarts Whostarts = new Whostarts();
+                Whostarts.MdiParent = this.ParentForm;
+                Whostarts.Show();
+                Close();
+            }
+            else
+            {
+                MainGame MainGame = new MainGame();
+                MainGame.MdiParent = this.ParentForm;
+                MainGame.Show();
+                Close();
+            }
         }
         #endregion
         #region Timers

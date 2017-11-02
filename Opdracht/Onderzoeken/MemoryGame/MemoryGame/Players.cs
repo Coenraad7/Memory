@@ -55,12 +55,20 @@ namespace MemoryGame
             {
 
                 checkform();
-                
-                MainGame MainGame = new MainGame();
-                MainGame.MdiParent = this.ParentForm;
-                MainGame.Show();
-                Close();
-                
+                if (Variables.amountplayers >= 2)
+                {
+                    Whostarts Whostarts = new Whostarts();
+                    Whostarts.MdiParent = this.ParentForm;
+                    Whostarts.Show();
+                    Close();
+                }
+                else
+                {
+                    MainGame MainGame = new MainGame();
+                    MainGame.MdiParent = this.ParentForm;
+                    MainGame.Show();
+                    Close();
+                }  
             }
             else
             {

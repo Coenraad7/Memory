@@ -16,7 +16,6 @@ namespace MemoryGame
         {
             InitializeComponent();
         }
-
         private void checkform()
         {
             //selecteren van het thema

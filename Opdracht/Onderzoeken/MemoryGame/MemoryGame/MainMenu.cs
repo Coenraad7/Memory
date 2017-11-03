@@ -17,7 +17,7 @@ namespace MemoryGame
         {
             InitializeComponent();
         }
-
+        //coen
         private void button1_Click(object sender, EventArgs e)
         {
             Players form3 = new Players();
@@ -25,7 +25,7 @@ namespace MemoryGame
             form3.Show();
             Close();
         }
-
+        //coen
         private void button2_Click(object sender, EventArgs e)
         {
             Highscores Highscores = new Highscores();
@@ -33,7 +33,7 @@ namespace MemoryGame
             Highscores.Show();
             Close();
         }
-
+        //coen
         private void button4_Click(object sender, EventArgs e)
         {
             Help Help = new Help();
@@ -41,7 +41,7 @@ namespace MemoryGame
             Help.Show();
             Close();
         }
-
+        //coen
         private void button5_Click(object sender, EventArgs e)
         {
             About About = new About();

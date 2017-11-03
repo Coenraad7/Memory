@@ -97,8 +97,8 @@ namespace MemoryGame
             }
         }
 
-       
 
+        //coen
         private void backbutton_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -157,6 +157,11 @@ namespace MemoryGame
         }
 
         private void p1box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Players_Load(object sender, EventArgs e)
         {
 
         }

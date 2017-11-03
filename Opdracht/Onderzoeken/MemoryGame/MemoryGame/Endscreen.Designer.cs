@@ -48,7 +48,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.button1.Location = new System.Drawing.Point(1043, 614);
+            this.button1.Location = new System.Drawing.Point(12, 614);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 2;
@@ -59,11 +59,11 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.button2.Location = new System.Drawing.Point(12, 613);
+            this.button2.Location = new System.Drawing.Point(1032, 614);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 50);
+            this.button2.Size = new System.Drawing.Size(215, 50);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Highscores";
+            this.button2.Text = "Play Again?";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

@@ -34,9 +34,9 @@ namespace MemoryGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Highscores Highscores = new Highscores();
-            Highscores.MdiParent = this.ParentForm;
-            Highscores.Show();
+            Players form3 = new Players();
+            form3.MdiParent = this.ParentForm;
+            form3.Show();
             Close();
         }
 

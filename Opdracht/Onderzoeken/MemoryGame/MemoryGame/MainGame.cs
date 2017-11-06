@@ -17,7 +17,7 @@ namespace MemoryGame
         public int turn;
         int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
         int[] scores = new int[4] { 0, 0, 0, 0 };
-        int card1, card2, count, timercount = 0;
+        int card1, card2, picture1, picture2, count, timercount = 0;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
 
@@ -30,14 +30,16 @@ namespace MemoryGame
         {
             init(); //maakt speelveld aan en geeft de juiste theme mee.
             scramble(); //spel begin kaarten randomizen
+
+            //initspecial(); dit is foar johnny voor het inladen van de al omgedraaide kaarten ALLEEN DRAAIEN NA LADEN SPEL EN LADEN INIT()
         }
 
         private void init()
         {
-            cardproperties = new int[grid[Variables.difficulty,2], 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
+            cardproperties = new int[grid[Variables.difficulty, 2], 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
 
-            string[] stringArray = new string[grid[Variables.difficulty,2]];
-            for (int i = 0; i < grid[Variables.difficulty,2]; i++)
+            string[] stringArray = new string[grid[Variables.difficulty, 2]];
+            for (int i = 0; i < grid[Variables.difficulty, 2]; i++)
             {
                 stringArray[i] = "pictureBox" + (i + 1);
             }
@@ -64,10 +66,11 @@ namespace MemoryGame
             player2txt.Text = Variables.playernames[1];
             player3txt.Text = Variables.playernames[2];
             player4txt.Text = Variables.playernames[3];
+            score1txt.Text = "Score: " + scores[0];
             score2txt.Text = "";
             score3txt.Text = "";
             score4txt.Text = "";
-            
+
             if (Variables.amountplayers >= 2)
             {
                 if (turn == 1)
@@ -88,19 +91,41 @@ namespace MemoryGame
                 }
 
                 stopwatch.Visible = true;
-                txtresult.Text = "30";
+                txtresult.Text = "30"; //moet nog anders voor save functie
                 timer1.Start();
-                score2txt.Text = "Score: 0";
+                score2txt.Text = "Score: " + scores[1];
             }
             if (Variables.amountplayers >= 3)
             {
-                score3txt.Text = "Score: 0";
+                score3txt.Text = "Score: " + scores[2];
             }
             if (Variables.amountplayers == 4)
             {
-                score4txt.Text = "Score: 0";
+                score4txt.Text = "Score: " + scores[3];
             }
         }
+
+        private void initspecial()
+        {
+            foreach (var pb in this.Controls.OfType<PictureBox>())
+            {
+                try
+                {
+                    string temp = pb.Name;
+                    int picture = ((Convert.ToInt32(temp.Replace("pictureBox", ""))) - 1);
+
+                    if (cardproperties[picture, 1] == 1)
+                    {
+                        pb.Visible = false;
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
         #region Save function
         private void button2_Click(object sender, EventArgs e)
         {
@@ -141,18 +166,18 @@ namespace MemoryGame
                 random = rng.Next(1, (grid[Variables.difficulty, 2] / 2 + 1));
                 for (int e = 0; e < grid[Variables.difficulty, 2]; e++)
                 {
-                    if ((cardproperties[e, 1] == random) && (check == true)) //1e check dat er 1 nummer instaat (dit mag wel)
+                    if ((cardproperties[e, 0] == random) && (check == true)) //1e check dat er 1 nummer instaat (dit mag wel)
                     {
                         check = false;
                     }
-                    else if ((cardproperties[e, 1] == random) && (check == false)) //2e check dat er een nummer 2x instaat (dit mag niet en alles word gereset zodra dit bekend is)
+                    else if ((cardproperties[e, 0] == random) && (check == false)) //2e check dat er een nummer 2x instaat (dit mag niet en alles word gereset zodra dit bekend is)
                     {
                         e = -1;
                         check = true;
                         random = rng.Next(1, (grid[Variables.difficulty, 2] / 2 + 1));
                     }
                 }
-                cardproperties[i, 1] = random; //nummer aan de array 
+                cardproperties[i, 0] = random; //nummer aan de array 
             }
         }
 
@@ -172,19 +197,21 @@ namespace MemoryGame
             }
 
             PictureBox card = (PictureBox)sender;
-            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + cardproperties[picture, 1]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
+            card.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + cardproperties[picture, 0]); //kaartje naar juiste backgroundimage zetten (afhankelijk van paarnummer)
 
             if (card1 == 0) //1e klik
             {
-                card1 = cardproperties[picture, 1]; //onhouden wat het paarnummer is van 1e kaart
+                card1 = cardproperties[picture, 0]; //onhouden wat het paarnummer is van 1e kaart
                 cardinfo1 = card; //onhouden wat de 1e kaart is
                 card.Enabled = false; //zorgt ervoor dat het kaartje niet meer klikbaar is
+                picture1 = picture;
             }
             else //2e klik
             {
-                card2 = cardproperties[picture, 1];
+                card2 = cardproperties[picture, 0];
                 cardinfo2 = card;
                 card.Enabled = false;
+                picture2 = picture;
                 paircheck(); //hier word de methode voor het controlleren van paren opgevraagd
             }
         }
@@ -211,6 +238,8 @@ namespace MemoryGame
                 cardinfo1 = null;
                 card2 = 0;
                 cardinfo2 = null;
+                cardproperties[picture1, 1] = 1;
+                cardproperties[picture2, 1] = 1;
             }
         }
 

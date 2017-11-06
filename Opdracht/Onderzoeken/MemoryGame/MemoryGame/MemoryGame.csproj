@@ -489,6 +489,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Memory Game Icon.ico" />
+    <None Include="Theme\Mr.Meeseeks.gif" />
     <None Include="Theme\Memorygame players.png" />
     <None Include="Theme\Memorygame.gif" />
     <None Include="Resources\Memorygame.gif" />

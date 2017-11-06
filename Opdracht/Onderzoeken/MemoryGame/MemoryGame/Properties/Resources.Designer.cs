@@ -1173,6 +1173,16 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mr_Meeseeks {
+            get {
+                object obj = ResourceManager.GetObject("Mr_Meeseeks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stopwatch {
             get {
                 object obj = ResourceManager.GetObject("stopwatch", resourceCulture);

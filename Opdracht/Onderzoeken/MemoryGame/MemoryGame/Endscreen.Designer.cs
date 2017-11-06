@@ -35,6 +35,7 @@
             this.place2 = new System.Windows.Forms.Label();
             this.place1 = new System.Windows.Forms.Label();
             this.winlabel = new System.Windows.Forms.Label();
+            this.drawlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -51,11 +52,11 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.button2.Location = new System.Drawing.Point(1032, 614);
+            this.button2.Location = new System.Drawing.Point(1061, 614);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 50);
+            this.button2.Size = new System.Drawing.Size(186, 50);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Play Again?";
+            this.button2.Text = "Rematch?";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -63,9 +64,9 @@
             // 
             this.place4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.place4.BackColor = System.Drawing.Color.Transparent;
-            this.place4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.place4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.place4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.place4.Location = new System.Drawing.Point(12, 470);
+            this.place4.Location = new System.Drawing.Point(14, 439);
             this.place4.Name = "place4";
             this.place4.Size = new System.Drawing.Size(1235, 39);
             this.place4.TabIndex = 12;
@@ -77,11 +78,11 @@
             // 
             this.place3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.place3.BackColor = System.Drawing.Color.Transparent;
-            this.place3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.place3.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F);
             this.place3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.place3.Location = new System.Drawing.Point(12, 426);
+            this.place3.Location = new System.Drawing.Point(14, 363);
             this.place3.Name = "place3";
-            this.place3.Size = new System.Drawing.Size(1235, 46);
+            this.place3.Size = new System.Drawing.Size(1235, 60);
             this.place3.TabIndex = 11;
             this.place3.Text = "3";
             this.place3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,11 +92,11 @@
             // 
             this.place2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.place2.BackColor = System.Drawing.Color.Transparent;
-            this.place2.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.place2.Font = new System.Drawing.Font("Microsoft Sans Serif", 44F);
             this.place2.ForeColor = System.Drawing.Color.Silver;
-            this.place2.Location = new System.Drawing.Point(12, 369);
+            this.place2.Location = new System.Drawing.Point(13, 273);
             this.place2.Name = "place2";
-            this.place2.Size = new System.Drawing.Size(1235, 54);
+            this.place2.Size = new System.Drawing.Size(1237, 69);
             this.place2.TabIndex = 10;
             this.place2.Text = "2";
             this.place2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,11 +106,11 @@
             // 
             this.place1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.place1.BackColor = System.Drawing.Color.Transparent;
-            this.place1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
+            this.place1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
             this.place1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.place1.Location = new System.Drawing.Point(12, 302);
+            this.place1.Location = new System.Drawing.Point(14, 162);
             this.place1.Name = "place1";
-            this.place1.Size = new System.Drawing.Size(1235, 71);
+            this.place1.Size = new System.Drawing.Size(1235, 90);
             this.place1.TabIndex = 9;
             this.place1.Text = "1";
             this.place1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,6 +128,20 @@
             this.winlabel.Text = "You Won!";
             this.winlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // drawlabel
+            // 
+            this.drawlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.drawlabel.BackColor = System.Drawing.Color.Transparent;
+            this.drawlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
+            this.drawlabel.ForeColor = System.Drawing.Color.White;
+            this.drawlabel.Location = new System.Drawing.Point(12, 9);
+            this.drawlabel.Name = "drawlabel";
+            this.drawlabel.Size = new System.Drawing.Size(1235, 655);
+            this.drawlabel.TabIndex = 13;
+            this.drawlabel.Text = "You both have a score of: 4";
+            this.drawlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.drawlabel.Visible = false;
+            // 
             // Endscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,6 +155,7 @@
             this.Controls.Add(this.winlabel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.drawlabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Endscreen";
@@ -159,5 +175,6 @@
         private System.Windows.Forms.Label place2;
         private System.Windows.Forms.Label place1;
         private System.Windows.Forms.Label winlabel;
+        private System.Windows.Forms.Label drawlabel;
     }
 }

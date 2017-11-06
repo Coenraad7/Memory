@@ -45,21 +45,33 @@ namespace MemoryGame
 
             if (Variables.amountplayers == 1)
             {
-                place1.Text = "You finished the game with a score of: " + scores[0];
+                place1.Text = "You finished with a score of: " + scores[0];
+                button2.Text = "Retry?";
             }
             if (Variables.amountplayers >= 2)
             {
-                if (Math.Max(scores[0], scores[1]) == scores[0])
+                if (scores[0] == scores[1])
                 {
-                    place1.Text = Variables.playernames[0] + " won with a score of: " + scores[0];
-                    place2.Text = Variables.playernames[1] + " finished with a score of: " + scores[1];
+                    winlabel.Text = "You Tied";
+                    drawlabel.Text = "You both have a score of: " + scores[0];
+                    drawlabel.Visible = true;
+                    place1.Visible = false;
                 }
                 else
                 {
-                    place1.Text = Variables.playernames[1] + " won with a score of: " + scores[1];
-                    place2.Text = Variables.playernames[0] + " finished with a score of: " + scores[0];
+                    if (Math.Max(scores[0], scores[1]) == scores[0])
+                    {
+                        place1.Text = Variables.playernames[0] + " won with a score of: " + scores[0];
+                        place2.Text = Variables.playernames[1] + " finished with a score of: " + scores[1];
+                    }
+
+                    else
+                    {
+                        place1.Text = Variables.playernames[1] + " won with a score of: " + scores[1];
+                        place2.Text = Variables.playernames[0] + " finished with a score of: " + scores[0];
+                    }
+                    place2.Visible = true;
                 }
-                place2.Visible = true;
             }
             if (Variables.amountplayers >= 3)
             {

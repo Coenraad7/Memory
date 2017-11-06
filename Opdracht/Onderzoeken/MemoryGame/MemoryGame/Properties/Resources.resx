@@ -454,4 +454,7 @@
   <data name="Memorygame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Theme\Memorygame.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Mr_Meeseeks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Theme\Mr.Meeseeks.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -95,13 +95,13 @@
             // 
             // binimg
             // 
-            this.binimg.BackgroundImage = global::MemoryGame.Properties.Resources.Memorygame_players;
-            this.binimg.Location = new System.Drawing.Point(940, 12);
+            this.binimg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.binimg.Image = global::MemoryGame.Properties.Resources.Memorygame;
+            this.binimg.Location = new System.Drawing.Point(0, 0);
             this.binimg.Name = "binimg";
-            this.binimg.Size = new System.Drawing.Size(94, 55);
+            this.binimg.Size = new System.Drawing.Size(1259, 678);
             this.binimg.TabIndex = 32;
             this.binimg.TabStop = false;
-            this.binimg.Visible = false;
             // 
             // MainMenu
             // 

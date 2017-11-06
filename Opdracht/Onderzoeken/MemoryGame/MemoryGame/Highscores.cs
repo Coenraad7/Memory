@@ -22,16 +22,16 @@ namespace MemoryGame
         private void Highscores_Load(object sender, EventArgs e)
         {
             Scores.Text = "These are the scores for the Very Easy difficulty" + System.Environment.NewLine;
-            List(0);
-
+            
             //Load function!
-            // XmlSerializer xs = new XmlSerializer(typeof(spelerdetails));
-            // FileStream read = new FileStream("Hiscore.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
-            // spelerdetails info = (spelerdetails)xs.Deserialize(read);
-            // label2.text = hiscoreveryeasy;   ------voorbeeld!--------
+           // XmlSerializer xs = new XmlSerializer(typeof(spelerdetails));
+           // FileStream read = new FileStream("Hiscore.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+           // spelerdetails info = (spelerdetails)xs.Deserialize(read);
+           // label2.text = hiscoreveryeasy;   ------voorbeeld!--------
+           
+           // hier vul je de naam in van wat ie moet laden uit de xml. (kan zelf niet vinden waar jij die lists alles opslaat etc.
 
-            // hier vul je de naam in van wat ie moet laden uit de xml. (kan zelf niet vinden waar jij die lists alles opslaat etc.
-
+            List(0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,14 +76,7 @@ namespace MemoryGame
         {
             for (int i = 0; i < 10; i++)
             {
-                if (Variables.highscoresscore[dif, i] > 0)
-                {
-                    Scores.Text += Variables.highscoresplayer[dif, i] + " with a score of: " + Variables.highscoresscore[dif, i] + "!" + System.Environment.NewLine;
-                }
-                else
-                {
-                    break;
-                }
+                Scores.Text += Variables.highscoresplayer[dif, i] + " with a score of: " + Variables.highscoresscore[dif, i] + "!" + System.Environment.NewLine;
             }
         }
     }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace MemoryGame
 {
@@ -20,6 +22,15 @@ namespace MemoryGame
         private void Highscores_Load(object sender, EventArgs e)
         {
             Scores.Text = "These are the scores for the Very Easy difficulty" + System.Environment.NewLine;
+            
+            //Load function!
+           // XmlSerializer xs = new XmlSerializer(typeof(spelerdetails));
+           // FileStream read = new FileStream("Hiscore.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+           // spelerdetails info = (spelerdetails)xs.Deserialize(read);
+           // label2.text = hiscoreveryeasy;   ------voorbeeld!--------
+           
+           // hier vul je de naam in van wat ie moet laden uit de xml. (kan zelf niet vinden waar jij die lists alles opslaat etc.
+
             List(0);
         }
 

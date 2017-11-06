@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.XmlConfiguration;
 
 namespace MemoryGame
 {
@@ -26,8 +29,14 @@ namespace MemoryGame
             InitializeComponent();
         }
 
-        private void MainGame_Load(object sender, EventArgs e)
+        public void MainGame_Load(object sender, EventArgs e)
         {
+            if (Variables.loadgame == 1)
+            {
+                Loadgame();
+                Variables.loadgame = 0;
+            }
+
             init(); //maakt speelveld aan en geeft de juiste theme mee.
             scramble(); //spel begin kaarten randomizen
 
@@ -125,34 +134,87 @@ namespace MemoryGame
                 }
             }
         }
-
-        #region Save function
+        #region save & load
         private void button2_Click(object sender, EventArgs e)
         {
-            List<spelerdetails> p1 = new List<spelerdetails>();
-            XmlSerializer serial = new XmlSerializer(typeof(List<spelerdetails>));
-            p1.Add(new spelerdetails() { id = 0, moeilijkheidsgraad = Variables.difficulty ,thema = Variables.theme, beurtspeler = count, multiplier = multiplier, players = Variables.amountplayers, timers = timercount });
-            p1.Add(new spelerdetails() { id = 1, speler = Variables.playernames[0], score = scores[0] });
+            {
+                Savegame();
+            }
+        }
+        private void Savegame()
+        {
+            XmlTextWriter writer = new XmlTextWriter("memory_save.xml", Encoding.UTF8);
+            writer.Formatting = Formatting.Indented;
+            writer.WriteStartElement("values");
+            writer.WriteStartElement("ints");
+
+            writer.WriteElementString("player1_name", Convert.ToString(Variables.playernames[0]));
+            writer.WriteElementString("player1_score", Convert.ToString(scores[0]));
+            writer.WriteElementString("thema_game", Convert.ToString(Variables.theme));
+            writer.WriteElementString("Multiplier", Convert.ToString(multiplier));
+            writer.WriteElementString("Moeilijkheidgraad", Convert.ToString(Variables.difficulty));
+            writer.WriteElementString("turn", Convert.ToString(turn));
+            writer.WriteElementString("count", Convert.ToString(count));
+
+            // writer.WriteElementString("kaardparen", Convert.ToString(scores[0]));
+            // writer.WriteElementString("kaartpropperties", Convert.ToString(cardproperties));  spiekwerk 
 
             if (Variables.amountplayers >= 2)
             {
-                p1.Add(new spelerdetails() { id = 2, speler = Variables.playernames[1], score = scores[1] });
+                writer.WriteElementString("Timer", Convert.ToString(timercount));
+                writer.WriteElementString("player2_name", Convert.ToString(Variables.playernames[1]));
+                writer.WriteElementString("player2_score", Convert.ToString(scores[1]));
+                if (Variables.amountplayers >= 3)
+                {
+                    writer.WriteElementString("player3_score", Convert.ToString(scores[2]));
+                    writer.WriteElementString("player3_name", Convert.ToString(Variables.playernames[2]));
+                    if (Variables.amountplayers >= 4)
+                    {
+                        writer.WriteElementString("player4_name", Convert.ToString(Variables.playernames[3]));
+                        writer.WriteElementString("player4_score", Convert.ToString(scores[3]));
+                    }
+                }
             }
-            if (Variables.amountplayers >= 3)
+
+            writer.WriteEndElement();   //sluiten van de element
+            writer.WriteEndElement();
+            writer.Close();
+
+
+
+        }
+        private void Loadgame()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("memory_save.xml");
+
+            player1txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player1_name").InnerText);
+            scores[1] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player1_score").InnerText);
+            Variables.theme = Convert.ToInt32(doc.SelectSingleNode("values/ints/thema_game").InnerText);
+            multiplier = Convert.ToInt32(doc.SelectSingleNode("values/ints/Multiplier").InnerText);
+            Variables.difficulty = Convert.ToInt32(doc.SelectSingleNode("values/ints/Moeilijkheidgraad").InnerText);
+            count = Convert.ToInt32(doc.SelectSingleNode("values/ints/count").InnerText);
+            turn = Convert.ToInt32(doc.SelectSingleNode("values/ints/turn").InnerText);
+            timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText);
+
+            if (Variables.amountplayers > 2)
             {
-                p1.Add(new spelerdetails() { id = 3, speler = Variables.playernames[2], score = scores[2] });
-            }
-            if (Variables.amountplayers == 4)
-            {
-                p1.Add(new spelerdetails() { id = 4, speler = Variables.playernames[3], score = scores[3] });
-            }
-            using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\spelers.xml", FileMode.Create, FileAccess.Write))
-            {
-                serial.Serialize(fs, p1);
-                MessageBox.Show("Game Saved");
+                timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText);
+                player2txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player2_name").InnerText);
+                scores[2] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player2_score").InnerText);
+                if (Variables.amountplayers > 3)
+                {
+                    player3txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player3_name").InnerText);
+                    scores[3] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player3_score").InnerText);
+                    if (Variables.amountplayers == 4)
+                    {
+                        player4txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player4_name").InnerText);
+                        scores[4] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player4_score").InnerText);
+                    }
+                }
             }
         }
-        #endregion
+#endregion
         #region scramble funtions
         private void scramble()
         {

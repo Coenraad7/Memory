@@ -12,10 +12,11 @@ namespace MemoryGame
 {
     class Variables
     {
+
         public static string[] playernames = new string[4];
         public static string[,] highscoresplayer = new string[5, 10] { { "", "", "", "", "", "", "", "", "", "" }, { "", "", "", "", "", "", "", "", "", "" }, { "", "", "", "", "", "", "", "", "", "" }, { "", "", "", "", "", "", "", "", "", "" }, { "", "", "", "", "", "", "", "", "", "" } };
         public static int[,] highscoresscore = new int[5, 10] { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
-        public static int theme = 1, difficulty = 2, amountplayers = 1;
+        public static int theme = 1, difficulty = 2, amountplayers = 1, loadgame = 0;
     }
 
     public partial class MdiContainer : Form

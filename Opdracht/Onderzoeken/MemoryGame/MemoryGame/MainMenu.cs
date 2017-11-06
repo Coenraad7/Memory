@@ -52,7 +52,11 @@ namespace MemoryGame
 
         private void Loadbtn_Click(object sender, EventArgs e)  //the load funtion to load in the Previous game.
         {
-
+            MainGame MainGame = new MainGame();
+            Variables.loadgame = 1;
+            MainGame.MdiParent = this.ParentForm;
+            MainGame.Show();
+            Close();
         }
     }
 }

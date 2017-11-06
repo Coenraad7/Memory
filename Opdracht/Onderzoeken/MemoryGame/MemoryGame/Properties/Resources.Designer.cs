@@ -1163,19 +1163,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Memorygame_player {
+        internal static System.Drawing.Bitmap Memorygame_players {
             get {
-                object obj = ResourceManager.GetObject("Memorygame_player", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Mr_Meeseeks {
-            get {
-                object obj = ResourceManager.GetObject("Mr.Meeseeks", resourceCulture);
+                object obj = ResourceManager.GetObject("Memorygame_players", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

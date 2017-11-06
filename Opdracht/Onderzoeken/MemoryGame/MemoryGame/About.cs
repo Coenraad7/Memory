@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace MemoryGame // Berry
+namespace MemoryGame
 {
     public partial class About : Form
     {

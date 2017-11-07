@@ -25,7 +25,6 @@ namespace MemoryGame
         {
             timer1.Interval += 50;
             random();
-            
         }
 
         private void random()
@@ -46,11 +45,6 @@ namespace MemoryGame
                 MainGame.Show();
                 Close();
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

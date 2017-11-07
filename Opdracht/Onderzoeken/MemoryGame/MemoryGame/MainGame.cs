@@ -137,10 +137,9 @@ namespace MemoryGame
         #region save & load
         private void button2_Click(object sender, EventArgs e)
         {
-            {
                 Savegame();
-            }
         }
+
         private void Savegame()
         {
             XmlTextWriter writer = new XmlTextWriter("memory_save.xml", Encoding.UTF8);
@@ -175,13 +174,9 @@ namespace MemoryGame
                     }
                 }
             }
-
             writer.WriteEndElement();   //sluiten van de element
             writer.WriteEndElement();
             writer.Close();
-
-
-
         }
         private void Loadgame()
         {
@@ -241,11 +236,6 @@ namespace MemoryGame
                 }
                 cardproperties[i, 0] = random; //nummer aan de array 
             }
-        }
-
-        private void stopwatch_Click(object sender, EventArgs e)
-        {
-
         }
         #endregion
         #region Rotate/cards functions

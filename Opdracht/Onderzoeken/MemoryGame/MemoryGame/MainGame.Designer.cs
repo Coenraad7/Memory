@@ -212,7 +212,6 @@
             this.stopwatch.TabIndex = 31;
             this.stopwatch.TabStop = false;
             this.stopwatch.Visible = false;
-            this.stopwatch.Click += new System.EventHandler(this.stopwatch_Click);
             // 
             // score1txt
             // 

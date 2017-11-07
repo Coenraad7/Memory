@@ -52,11 +52,11 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.button2.Location = new System.Drawing.Point(1061, 614);
+            this.button2.Location = new System.Drawing.Point(1037, 614);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 50);
+            this.button2.Size = new System.Drawing.Size(210, 50);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Rematch?";
+            this.button2.Text = "Play Again?";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

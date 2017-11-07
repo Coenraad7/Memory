@@ -34,7 +34,7 @@ namespace MemoryGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Players form3 = new Players();
+            MainGame form3 = new MainGame();
             form3.MdiParent = this.ParentForm;
             form3.Show();
             Close();

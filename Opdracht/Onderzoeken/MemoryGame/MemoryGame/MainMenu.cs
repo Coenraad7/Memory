@@ -7,16 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using System.IO;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.XmlConfiguration;
 
 namespace MemoryGame
 {
-    
+
     public partial class MainMenu : Form
     {
         public MainMenu()
         {
             InitializeComponent();
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            loadhighscore();
+            if (!(File.Exists("memory_save.xml")))
+            {
+                Loadbtn.Visible = false;
+            }
+        }
+
         //coen
         private void button1_Click(object sender, EventArgs e)
         {
@@ -57,6 +72,23 @@ namespace MemoryGame
             MainGame.MdiParent = this.ParentForm;
             MainGame.Show();
             Close();
+        }
+    
+        private void loadhighscore()
+        {
+            if (File.Exists("highscores.xml"))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load("highscores.xml");
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int e = 0; e < 10; e++)
+                    {
+                        Variables.highscoresscore[i, e] = Convert.ToInt32(doc.SelectSingleNode("highscores/highscoresscore" + i + e).InnerText);
+                        Variables.highscoresplayer[i, e] = doc.SelectSingleNode("highscores/highscoresplayer" + i + e).InnerText;
+                    }
+                }
+            }
         }
     }
 }

@@ -34,20 +34,19 @@ namespace MemoryGame
             if (Variables.loadgame == 1)
             {
                 Loadgame();
-                initspecial();
+                init(); //maakt speelveld aan en geeft de juiste theme mee.
+                initspecial(); //voor het inladen van de al omgedraaide kaarten ALLEEN DRAAIEN NA LADEN SPEL EN LADEN INIT()
                 Variables.loadgame = 0;
             }
-
-            init(); //maakt speelveld aan en geeft de juiste theme mee.
-            scramble(); //spel begin kaarten randomizen
-
-            //initspecial(); dit is foar johnny voor het inladen van de al omgedraaide kaarten ALLEEN DRAAIEN NA LADEN SPEL EN LADEN INIT()
+            else
+            {
+                init(); //maakt speelveld aan en geeft de juiste theme mee.
+                scramble(); //spel begin kaarten randomizen
+            }
         }
 
         private void init()
         {
-            cardproperties = new int[grid[Variables.difficulty, 2], 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
-
             string[] stringArray = new string[grid[Variables.difficulty, 2]];
             for (int i = 0; i < grid[Variables.difficulty, 2]; i++)
             {
@@ -135,6 +134,7 @@ namespace MemoryGame
                 }
             }
         }
+
         #region save & load
         private void button2_Click(object sender, EventArgs e)
         {
@@ -155,9 +155,11 @@ namespace MemoryGame
             writer.WriteElementString("Moeilijkheidgraad", Convert.ToString(Variables.difficulty));
             writer.WriteElementString("turn", Convert.ToString(turn));
             writer.WriteElementString("count", Convert.ToString(count));
+            writer.WriteElementString("count", Convert.ToString(count));
+            
             //special init stuff
-            writer.WriteElementString("temp", Convert.ToString(Temp));
-            writer.WriteElementString("picturs", Convert.ToString(foto));
+            //writer.WriteElementString("temp", Convert.ToString(Temp));
+            //writer.WriteElementString("picturs", Convert.ToString(foto));
 
 
             // writer.WriteElementString("kaardparen", Convert.ToString(scores[0]));
@@ -179,8 +181,15 @@ namespace MemoryGame
                     }
                 }
             }
-            writer.WriteEndElement();   //sluiten van de element
-            writer.WriteEndElement();
+            writer.WriteEndElement();   //sluiten van element "ints"
+            writer.WriteStartElement("array");
+            for (int i = 0; i < cardproperties.GetLength(0); i++)
+            {
+                writer.WriteElementString("cardproperties" + i + 0, Convert.ToString(cardproperties[i, 0]));
+                writer.WriteElementString("cardproperties" + i + 1, Convert.ToString(cardproperties[i, 1]));
+            }
+            writer.WriteEndElement();   //sluiten van element "array"
+            writer.WriteEndElement();   //sluiten van element "values"
             writer.Close();
         }
         private void Loadgame()
@@ -195,8 +204,8 @@ namespace MemoryGame
             Variables.difficulty = Convert.ToInt32(doc.SelectSingleNode("values/ints/Moeilijkheidgraad").InnerText);
             count = Convert.ToInt32(doc.SelectSingleNode("values/ints/count").InnerText);
             turn = Convert.ToInt32(doc.SelectSingleNode("values/ints/turn").InnerText);
-            timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText);
-
+            //timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText); geeft error in singleplayer
+            
             if (Variables.amountplayers > 2)
             {
                 timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText);
@@ -213,11 +222,18 @@ namespace MemoryGame
                     }
                 }
             }
+            cardproperties = new int[grid[Variables.difficulty, 2], 2];
+            for (int i = 0; i < cardproperties.GetLength(0); i++)
+            {
+                cardproperties[i, 0] = Convert.ToInt32(doc.SelectSingleNode("values/array/cardproperties"+ i + 0).InnerText);
+                cardproperties[i, 1] = Convert.ToInt32(doc.SelectSingleNode("values/array/cardproperties"+ i + 1).InnerText);
+            }
         }
 #endregion
         #region scramble funtions
         private void scramble()
         {
+            cardproperties = new int[grid[Variables.difficulty, 2], 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
             Random rng = new Random();
             bool check;
             int random;
@@ -433,6 +449,27 @@ namespace MemoryGame
             }
             Variables.highscoresscore[Variables.difficulty, spot] = scores[0];
             Variables.highscoresplayer[Variables.difficulty, spot] = player1txt.Text;
+
+            XmlTextWriter writer = new XmlTextWriter("highscores.xml", Encoding.UTF8);
+            writer.Formatting = Formatting.Indented;
+            writer.WriteStartElement("highscores");
+            for (int i = 0; i < 5; i++)
+            {
+                for (int e = 0; e < 10; e++)
+                {
+                    writer.WriteElementString("highscoresscore" + i + e, Convert.ToString(Variables.highscoresscore[i, e]));
+                }
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                for (int e = 0; e < 10; e++)
+                {
+                    writer.WriteElementString("highscoresplayer" + i + e, Variables.highscoresplayer[i, e]);
+                }
+            }
+            writer.WriteEndElement();   //sluiten van element "highscores"
+            writer.Close();
+
         }
         #endregion
         #region Buttons

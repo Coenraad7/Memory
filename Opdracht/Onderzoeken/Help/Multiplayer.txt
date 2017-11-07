@@ -9,15 +9,16 @@ Memory is also known as Match Match, Match Up, Concentration, Pelmanism, Shinkei
 
 WHAT IS THE GOAL?:
 
-When you play by yourself the object of the game is to get as much points as possible.
+Singleplayer: 	When you play by yourself the object of the game is to get as much points as possible.
+Multiplayer: 	The object of the game is to collect the most matching pairs.
 
 HOW TO PLAY?:
 
-To play the game 
 
-when you start the game, you click on 2 random cards. If the 2 cards are excactly the same, you will get a point and the cards will disappear. If they are not, 
-the cards will flip and you may try again. The game continues in this fashion until the board is empty.
-You can check the highest score in the "Highscore"-window. Your
+
+Multiplayer: 	The first player chooses a random card. The same player then selects another random card. If the two cards are excactly the same they get a point and choose 
+		again 2 random cards. If the cards are not a match your turn is over and it is now the next players turn. The next player chooses their 2 random card. If they are 
+		excactly the same they get a point and choose again 2 cards. The game continues in this fashion until all the cards are played.
 
 SCORE:
 

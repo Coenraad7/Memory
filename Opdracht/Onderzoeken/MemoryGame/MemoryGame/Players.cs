@@ -154,5 +154,30 @@ namespace MemoryGame
         {
             p4box.BackColor = Color.White;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            theme1.Checked = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            theme2.Checked = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            theme3.Checked = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            theme4.Checked = true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            theme5.Checked = true;
+        }
     }
 }

@@ -55,6 +55,7 @@
             this.Scores.AutoSize = true;
             this.Scores.BackColor = System.Drawing.Color.Transparent;
             this.Scores.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Scores.ForeColor = System.Drawing.Color.White;
             this.Scores.Location = new System.Drawing.Point(29, 120);
             this.Scores.Name = "Scores";
             this.Scores.Size = new System.Drawing.Size(92, 31);
@@ -63,6 +64,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.dif1);
             this.flowLayoutPanel1.Controls.Add(this.dif2);
             this.flowLayoutPanel1.Controls.Add(this.dif3);
@@ -145,6 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MemoryGame.Properties.Resources.Memorygame_players;
             this.ClientSize = new System.Drawing.Size(1259, 676);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Scores);

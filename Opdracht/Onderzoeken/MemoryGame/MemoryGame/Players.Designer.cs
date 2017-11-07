@@ -63,17 +63,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,12 +87,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -191,6 +192,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -202,6 +204,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox2
             // 
@@ -213,6 +216,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox5
             // 
@@ -224,6 +228,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox1
             // 
@@ -235,12 +240,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // theme5
             // 
             this.theme5.Appearance = System.Windows.Forms.Appearance.Button;
             this.theme5.AutoSize = true;
             this.theme5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.theme5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.theme5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.theme5.ForeColor = System.Drawing.Color.Black;
             this.theme5.Location = new System.Drawing.Point(794, 259);
@@ -313,7 +320,7 @@
             this.player1.AutoSize = true;
             this.player1.Checked = true;
             this.player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.player1.Location = new System.Drawing.Point(118, 23);
+            this.player1.Location = new System.Drawing.Point(118, 37);
             this.player1.Name = "player1";
             this.player1.Size = new System.Drawing.Size(181, 35);
             this.player1.TabIndex = 0;
@@ -326,7 +333,7 @@
             // 
             this.p2box.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.p2box.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.p2box.Location = new System.Drawing.Point(347, 71);
+            this.p2box.Location = new System.Drawing.Point(347, 85);
             this.p2box.MaxLength = 3;
             this.p2box.Name = "p2box";
             this.p2box.Size = new System.Drawing.Size(247, 38);
@@ -338,7 +345,7 @@
             // 
             this.player2.AutoSize = true;
             this.player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.player2.Location = new System.Drawing.Point(118, 70);
+            this.player2.Location = new System.Drawing.Point(118, 84);
             this.player2.Name = "player2";
             this.player2.Size = new System.Drawing.Size(145, 35);
             this.player2.TabIndex = 1;
@@ -351,7 +358,7 @@
             // 
             this.player3.AutoSize = true;
             this.player3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.player3.Location = new System.Drawing.Point(118, 117);
+            this.player3.Location = new System.Drawing.Point(118, 131);
             this.player3.Name = "player3";
             this.player3.Size = new System.Drawing.Size(145, 35);
             this.player3.TabIndex = 2;
@@ -365,7 +372,7 @@
             this.p1box.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.p1box.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.p1box.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.p1box.Location = new System.Drawing.Point(347, 24);
+            this.p1box.Location = new System.Drawing.Point(347, 38);
             this.p1box.MaxLength = 3;
             this.p1box.Name = "p1box";
             this.p1box.Size = new System.Drawing.Size(247, 38);
@@ -376,7 +383,7 @@
             // 
             this.p4box.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.p4box.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.p4box.Location = new System.Drawing.Point(347, 165);
+            this.p4box.Location = new System.Drawing.Point(347, 179);
             this.p4box.MaxLength = 3;
             this.p4box.Name = "p4box";
             this.p4box.Size = new System.Drawing.Size(247, 38);
@@ -388,7 +395,7 @@
             // 
             this.player4.AutoSize = true;
             this.player4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.player4.Location = new System.Drawing.Point(118, 164);
+            this.player4.Location = new System.Drawing.Point(118, 178);
             this.player4.Name = "player4";
             this.player4.Size = new System.Drawing.Size(145, 35);
             this.player4.TabIndex = 3;
@@ -401,7 +408,7 @@
             // 
             this.p3box.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.p3box.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.p3box.Location = new System.Drawing.Point(347, 118);
+            this.p3box.Location = new System.Drawing.Point(347, 132);
             this.p3box.MaxLength = 3;
             this.p3box.Name = "p3box";
             this.p3box.Size = new System.Drawing.Size(247, 38);
@@ -515,6 +522,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.player2);
             this.groupBox1.Controls.Add(this.p3box);
             this.groupBox1.Controls.Add(this.player1);
@@ -524,11 +532,21 @@
             this.groupBox1.Controls.Add(this.p1box);
             this.groupBox1.Controls.Add(this.player3);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(219, 12);
+            this.groupBox1.Location = new System.Drawing.Point(219, -4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 212);
+            this.groupBox1.Size = new System.Drawing.Size(810, 228);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label8.Location = new System.Drawing.Point(341, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 25);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Playername:";
             // 
             // groupBox3
             // 
@@ -568,9 +586,9 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(210, 211);
+            this.pictureBox7.Location = new System.Drawing.Point(210, 215);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(825, 26);
+            this.pictureBox7.Size = new System.Drawing.Size(825, 22);
             this.pictureBox7.TabIndex = 26;
             this.pictureBox7.TabStop = false;
             // 
@@ -591,15 +609,6 @@
             this.pictureBox9.Size = new System.Drawing.Size(22, 333);
             this.pictureBox9.TabIndex = 28;
             this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Location = new System.Drawing.Point(210, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(825, 26);
-            this.pictureBox10.TabIndex = 29;
-            this.pictureBox10.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -646,18 +655,27 @@
             this.pictureBox15.TabIndex = 34;
             this.pictureBox15.TabStop = false;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Location = new System.Drawing.Point(211, -2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(825, 10);
+            this.pictureBox10.TabIndex = 29;
+            this.pictureBox10.TabStop = false;
+            // 
             // Players
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MemoryGame.Properties.Resources.Memorygame_players;
             this.ClientSize = new System.Drawing.Size(1259, 676);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -688,12 +706,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,11 +757,12 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

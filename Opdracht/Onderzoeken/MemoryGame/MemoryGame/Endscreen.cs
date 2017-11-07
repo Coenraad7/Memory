@@ -24,7 +24,7 @@ namespace MemoryGame
             List();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
             MainMenu.MdiParent = this.ParentForm;
@@ -42,13 +42,13 @@ namespace MemoryGame
 
         private void List()
         {
-
+            #region wat te doen als wanneer t spel klaar is (Daniel)
             if (Variables.amountplayers == 1)
             {
                 place1.Text = "You finished with a score of: " + scores[0];
                 button2.Text = "Retry?";
             }
-            if (Variables.amountplayers >= 2)
+            if (Variables.amountplayers == 2)
             {
                 if (scores[0] == scores[1])
                 {
@@ -73,7 +73,7 @@ namespace MemoryGame
                     place2.Visible = true;
                 }
             }
-            if (Variables.amountplayers >= 3)
+            if (Variables.amountplayers == 3)
             {
                 if (Math.Max(scores[0], Math.Max(scores[1], scores[2])) == scores[0])
                 {
@@ -121,10 +121,9 @@ namespace MemoryGame
                     }
 
                 }
-
+                place2.Visible = true;
                 place3.Visible = true;
             }
-
             if (Variables.amountplayers == 4)
             {
                 if (Math.Max(scores[0], Math.Max(scores[1], Math.Max(scores[2], scores[3]))) == scores[0])
@@ -327,8 +326,11 @@ namespace MemoryGame
                     }
                     #endregion
                 }
+                place2.Visible = true;
+                place3.Visible = true;
                 place4.Visible = true;
             }
+            #endregion
         }
     }
 }

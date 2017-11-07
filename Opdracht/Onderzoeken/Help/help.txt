@@ -1,0 +1,38 @@
+WHAT IS MEMORY?:
+
+Memory is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn.
+The object of the game is to turn over pairs of matching cards. Memory can be played with any number of players or as solitaire. 
+It is a particularly good game for young children, though adults may find it challenging and stimulating as well.
+The scheme is often used in quiz shows and can be employed as an educational game. It requires observation, concentration and a good memory to win.
+
+Memory is also known as Match Match, Match Up, Concentration, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs.
+
+WHAT IS THE GOAL?:
+
+Singleplayer: 	When you play by yourself the object of the game is to get as much points as possible.
+Multiplayer: 	The object of the game is to collect the most matching pairs.
+
+HOW TO PLAY?:
+
+Singleplayer:	When you start the game, you click on 2 random cards. If the 2 cards are excactly the same, you will get a point and the cards will disappear. If they are not, 
+		the cards will flip and you may try again. The game continues in this fashion until the board is empty.
+		You can check the highest score in the "Highscore"-window. Your
+
+Multiplayer: 	The first player chooses a random card. The same player then selects another random card. If the two cards are excactly the same they get a point and choose 
+		again 2 random cards. If the cards are not a match your turn is over and it is now the next players turn. The next player chooses their 2 random card. If they are 
+		excactly the same they get a point and choose again 2 cards. The game continues in this fashion until all the cards are played.
+
+HOW DO I WIN?:
+
+Once all the cards have been played the player with the most matching pairs is the winner.
+
+
+
+
+
+HINT:
+
+Singleplayer:	When you get multiple pairs in a row.
+Multiplayer: 	Just because it is another players turn doesn't mean you should stop paying attention. The cards that other players flip over could be the match you're 
+		looking for. 
+		Distract your opponent when it is their turn. When the timer is back to 0 it is your turn again.

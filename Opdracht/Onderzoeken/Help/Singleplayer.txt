@@ -1,0 +1,28 @@
+WHAT IS MEMORY?:
+
+Memory is a card game in which all of the cards are faced down on a surface and two cards are flipped face up over each turn.
+The object of the game is to turn over pairs of matching cards. Memory can be played with any number of players or as solitaire. 
+It is a particularly good game for young children, though adults may find it challenging and stimulating as well.
+A memory game requires observation, concentration and a good memory to win.
+
+Memory is also known as Match Match, Match Up, Concentration, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs.
+
+WHAT IS THE GOAL?:
+
+The objective of the game is to get as much points as possible.
+
+HOW TO PLAY?:
+
+When you start the game, you click on two random cards. If the two cards are the same, you will get a point and the cards will disappear. If they are not, 
+The cards will flip and you may try again. The game continues in this fashion until the board is empty.
+
+SCORE:
+
+By default you 10 points per correct pair but when you will receive -1 point for each wrong selected pair. This will be subtracted from the default points.
+When you get multiple pairs in a row, you get a combo. This will activate a multiplier to your points. This means you will receive more points at once. 
+A wrong pair turns the Multiplier off.
+While playing you can see your score in the top right corner. When you finish your game, your score will be saved in the high score window. 
+You can check if you have best score. 
+
+HINT:
+When you know where one pair is do not open them yet, search further until you know a few other pairs are as well. By doing this you will get more points.

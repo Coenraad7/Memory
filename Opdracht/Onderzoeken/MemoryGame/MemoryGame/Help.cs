@@ -24,5 +24,17 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
+
+        private void singlebut_Click(object sender, EventArgs e)
+        {
+            Multiplayerbox.Visible = false;
+            Singleplayerbox.Visible = true;
+        }
+
+        private void multibut_Click(object sender, EventArgs e)
+        {
+            Multiplayerbox.Visible = true;
+            Singleplayerbox.Visible = false;
+        }
     }
 }

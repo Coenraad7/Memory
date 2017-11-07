@@ -34,6 +34,7 @@ namespace MemoryGame
             if (Variables.loadgame == 1)
             {
                 Loadgame();
+                initspecial();
                 Variables.loadgame = 0;
             }
 
@@ -146,7 +147,7 @@ namespace MemoryGame
             writer.Formatting = Formatting.Indented;
             writer.WriteStartElement("values");
             writer.WriteStartElement("ints");
-
+            // Ellementen van Safe Functie's.
             writer.WriteElementString("player1_name", Convert.ToString(Variables.playernames[0]));
             writer.WriteElementString("player1_score", Convert.ToString(scores[0]));
             writer.WriteElementString("thema_game", Convert.ToString(Variables.theme));
@@ -154,6 +155,10 @@ namespace MemoryGame
             writer.WriteElementString("Moeilijkheidgraad", Convert.ToString(Variables.difficulty));
             writer.WriteElementString("turn", Convert.ToString(turn));
             writer.WriteElementString("count", Convert.ToString(count));
+            //special init stuff
+            writer.WriteElementString("temp", Convert.ToString(Temp));
+            writer.WriteElementString("picturs", Convert.ToString(foto));
+
 
             // writer.WriteElementString("kaardparen", Convert.ToString(scores[0]));
             // writer.WriteElementString("kaartpropperties", Convert.ToString(cardproperties));  spiekwerk 
@@ -184,7 +189,7 @@ namespace MemoryGame
             doc.Load("memory_save.xml");
 
             player1txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player1_name").InnerText);
-            scores[1] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player1_score").InnerText);
+            scores[0] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player1_score").InnerText);
             Variables.theme = Convert.ToInt32(doc.SelectSingleNode("values/ints/thema_game").InnerText);
             multiplier = Convert.ToInt32(doc.SelectSingleNode("values/ints/Multiplier").InnerText);
             Variables.difficulty = Convert.ToInt32(doc.SelectSingleNode("values/ints/Moeilijkheidgraad").InnerText);
@@ -196,15 +201,15 @@ namespace MemoryGame
             {
                 timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText);
                 player2txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player2_name").InnerText);
-                scores[2] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player2_score").InnerText);
+                scores[1] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player2_score").InnerText);
                 if (Variables.amountplayers > 3)
                 {
                     player3txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player3_name").InnerText);
-                    scores[3] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player3_score").InnerText);
+                    scores[2] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player3_score").InnerText);
                     if (Variables.amountplayers == 4)
                     {
                         player4txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player4_name").InnerText);
-                        scores[4] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player4_score").InnerText);
+                        scores[3] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player4_score").InnerText);
                     }
                 }
             }

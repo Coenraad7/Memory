@@ -140,8 +140,8 @@
             this.txtresult.Name = "txtresult";
             this.txtresult.Size = new System.Drawing.Size(61, 26);
             this.txtresult.TabIndex = 27;
-            this.txtresult.Text = "timer";
             this.txtresult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtresult.Visible = false;
             // 
             // button2
             // 

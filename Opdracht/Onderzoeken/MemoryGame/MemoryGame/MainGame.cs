@@ -100,6 +100,7 @@ namespace MemoryGame
                 }
 
                 stopwatch.Visible = true;
+                txtresult.Visible = true;
                 txtresult.Text = "30"; //moet nog anders voor save functie
                 timer1.Start();
                 score2txt.Text = "Score: " + scores[1];

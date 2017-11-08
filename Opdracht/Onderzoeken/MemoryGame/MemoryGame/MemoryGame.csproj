@@ -410,9 +410,6 @@
     <None Include="Theme\Theme 5\57.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Theme\Theme 4\417.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Theme\Theme 4\418.png" />
   </ItemGroup>
   <ItemGroup>
@@ -422,49 +419,10 @@
     <None Include="Theme\Theme 4\4default.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Theme\Theme 4\41.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\42.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Theme\Theme 4\43.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Theme\Theme 4\44.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\45.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\46.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\47.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\48.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\49.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\410.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\411.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Theme\Theme 4\412.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\413.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\414.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Theme\Theme 4\415.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Theme\Theme 4\416.png" />
@@ -489,6 +447,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Memory Game Icon.ico" />
+    <None Include="Theme\Theme 4\47.png" />
+    <None Include="Theme\Theme 4\46.png" />
+    <None Include="Theme\Theme 4\45.png" />
+    <None Include="Theme\Theme 4\44.png" />
+    <None Include="Theme\Theme 4\42.png" />
+    <None Include="Theme\Theme 4\41.png" />
+    <None Include="Theme\Theme 4\417.png" />
+    <None Include="Theme\Theme 4\415.png" />
+    <None Include="Theme\Theme 4\414.png" />
+    <None Include="Theme\Theme 4\413.png" />
+    <None Include="Theme\Theme 4\411.png" />
+    <None Include="Theme\Theme 4\410.png" />
+    <None Include="Theme\Theme 4\49.png" />
+    <None Include="Theme\Theme 4\48.png" />
     <None Include="Theme\Mr.Meeseeks.gif" />
     <None Include="Theme\Memorygame players.png" />
     <None Include="Theme\Memorygame.gif" />

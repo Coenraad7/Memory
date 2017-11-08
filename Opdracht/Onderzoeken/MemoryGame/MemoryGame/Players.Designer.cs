@@ -155,11 +155,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(226, 226);
+            this.label3.Location = new System.Drawing.Point(189, 226);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 29);
+            this.label3.Size = new System.Drawing.Size(171, 29);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Gaming";
+            this.label3.Text = "Gaming (Hard)";
             // 
             // label2
             // 

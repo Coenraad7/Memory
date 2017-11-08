@@ -57,7 +57,7 @@ namespace MemoryGame
         /// <para>Creator Daniel: </para>
         private void List()
         {
-            #region wat te doen als wanneer t spel klaar is (Daniel)
+            #region wat te doen als wanneer t spel klaar is
             if (Variables.amountplayers == 1)
             {
                 place1.Text = "You finished with a score of: " + scores[0];
@@ -124,14 +124,14 @@ namespace MemoryGame
                 {
                     place1.Text = Variables.playernames[2] + " won with a score of: " + scores[2];
 
-                    if (Math.Max(scores[1], scores[2]) == scores[1])
+                    if (Math.Max(scores[1], scores[0]) == scores[1])
                     {
                         place2.Text = Variables.playernames[1] + " finished 2nd with a score of: " + scores[1];
-                        place3.Text = Variables.playernames[2] + " finished 3rd with a score of: " + scores[2];
+                        place3.Text = Variables.playernames[0] + " finished 3rd with a score of: " + scores[0];
                     }
                     else
                     {
-                        place2.Text = Variables.playernames[2] + " finished 2nd with a score of: " + scores[2];
+                        place2.Text = Variables.playernames[0] + " finished 2nd with a score of: " + scores[0];
                         place3.Text = Variables.playernames[1] + " finished 3rd with a score of: " + scores[1];
                     }
 

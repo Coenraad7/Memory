@@ -51,7 +51,7 @@ namespace MemoryGame
                 Loadgame();
                 init(); //maakt speelveld aan en geeft de juiste theme mee.
                 initspecial(); //voor het inladen van de al omgedraaide kaarten ALLEEN DRAAIEN NA LADEN SPEL EN LADEN INIT()
-                Variables.loadgame = 0;
+                Variables.loadgame = 3;
             }
             else
             {
@@ -88,9 +88,9 @@ namespace MemoryGame
 
             this.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + Variables.theme + "Background");
             player1txt.Text = Variables.playernames[0];
-            player2txt.Text = Variables.playernames[1];
-            player3txt.Text = Variables.playernames[2];
-            player4txt.Text = Variables.playernames[3];
+            player2txt.Text = "";
+            player3txt.Text = "";
+            player4txt.Text = "";
             score1txt.Text = "Score: " + scores[0];
             score2txt.Text = "";
             score3txt.Text = "";
@@ -115,18 +115,21 @@ namespace MemoryGame
                     arrow4.Visible = true;
                 }
 
-                stopwatch.Visible = true;
                 txtresult.Visible = true;
-                txtresult.Text = "30"; //moet nog anders voor save functie
-                timer1.Start();
+                stopwatch.Visible = true;
+                
+                timers();
+                player2txt.Text = Variables.playernames[1];
                 score2txt.Text = "Score: " + scores[1];
             }
             if (Variables.amountplayers >= 3)
             {
+                player3txt.Text = Variables.playernames[2];
                 score3txt.Text = "Score: " + scores[2];
             }
             if (Variables.amountplayers == 4)
             {
+                player4txt.Text = Variables.playernames[3];
                 score4txt.Text = "Score: " + scores[3];
             }
         }
@@ -155,33 +158,29 @@ namespace MemoryGame
 
         #region save & load
         /// <summary>Method Savegame</summary>
-        /// <para>Creator Johnny: </para>
+        /// <para>Creator Richard/Johnny: This method loads all necessary variables to a .sav file</para>
         private void Savegame()
         {
-            XmlTextWriter writer = new XmlTextWriter("memory_save.xml", Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("memorysave.sav", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
             writer.WriteStartElement("values");
             writer.WriteStartElement("ints");
-            // Ellementen van Safe Functie's.
+
             writer.WriteElementString("player1_name", Convert.ToString(Variables.playernames[0]));
-            writer.WriteElementString("player1_score", Convert.ToString(scores[0]));
             writer.WriteElementString("thema_game", Convert.ToString(Variables.theme));
-            writer.WriteElementString("Multiplier", Convert.ToString(multiplier));
             writer.WriteElementString("Moeilijkheidgraad", Convert.ToString(Variables.difficulty));
-            writer.WriteElementString("turn", Convert.ToString(turn));
+            writer.WriteElementString("aantalspelers", Convert.ToString(Variables.amountplayers));
+
+            writer.WriteElementString("player1_score", Convert.ToString(scores[0]));
             writer.WriteElementString("count", Convert.ToString(count));
-            writer.WriteElementString("count", Convert.ToString(count));
-            
-            //special init stuff
-            //writer.WriteElementString("temp", Convert.ToString(Temp));
-            //writer.WriteElementString("picturs", Convert.ToString(foto));
 
-
-            // writer.WriteElementString("kaardparen", Convert.ToString(scores[0]));
-            // writer.WriteElementString("kaartpropperties", Convert.ToString(cardproperties));  spiekwerk 
-
-            if (Variables.amountplayers >= 2)
+            if (Variables.amountplayers == 1)
             {
+                writer.WriteElementString("Multiplier", Convert.ToString(multiplier));
+            }
+            else if (Variables.amountplayers >= 2)
+            {
+                writer.WriteElementString("turn", Convert.ToString(turn));
                 writer.WriteElementString("Timer", Convert.ToString(timercount));
                 writer.WriteElementString("player2_name", Convert.ToString(Variables.playernames[1]));
                 writer.WriteElementString("player2_score", Convert.ToString(scores[1]));
@@ -208,33 +207,36 @@ namespace MemoryGame
             writer.Close();
         }
         /// <summary>Method Loadgame</summary>
-        /// <para>Creator Johnny: </para>
+        /// <para>Creator Richard/Johnny: This method loads all necessary variables to a .sav file</para>
         private void Loadgame()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("memory_save.xml");
+            doc.Load("memorysave.sav");
 
-            player1txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player1_name").InnerText);
-            scores[0] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player1_score").InnerText);
             Variables.theme = Convert.ToInt32(doc.SelectSingleNode("values/ints/thema_game").InnerText);
-            multiplier = Convert.ToInt32(doc.SelectSingleNode("values/ints/Multiplier").InnerText);
             Variables.difficulty = Convert.ToInt32(doc.SelectSingleNode("values/ints/Moeilijkheidgraad").InnerText);
+            Variables.amountplayers = Convert.ToInt32(doc.SelectSingleNode("values/ints/aantalspelers").InnerText);
+            Variables.playernames[0] = (doc.SelectSingleNode("values/ints/player1_name").InnerText); 
+            scores[0] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player1_score").InnerText);
             count = Convert.ToInt32(doc.SelectSingleNode("values/ints/count").InnerText);
-            turn = Convert.ToInt32(doc.SelectSingleNode("values/ints/turn").InnerText);
-            //timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText); geeft error in singleplayer
             
-            if (Variables.amountplayers > 2)
+            if (Variables.amountplayers == 1)
             {
+                multiplier = Convert.ToDouble(doc.SelectSingleNode("values/ints/Multiplier").InnerText);
+            }
+            else if (Variables.amountplayers >= 2)
+            {
+                turn = Convert.ToInt32(doc.SelectSingleNode("values/ints/turn").InnerText);
                 timercount = Convert.ToInt32(doc.SelectSingleNode("values/ints/Timer").InnerText);
-                player2txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player2_name").InnerText);
+                Variables.playernames[1] = Convert.ToString(doc.SelectSingleNode("values/ints/player2_name").InnerText);
                 scores[1] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player2_score").InnerText);
-                if (Variables.amountplayers > 3)
+                if (Variables.amountplayers >= 3)
                 {
-                    player3txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player3_name").InnerText);
+                    Variables.playernames[2] = Convert.ToString(doc.SelectSingleNode("values/ints/player3_name").InnerText);
                     scores[2] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player3_score").InnerText);
                     if (Variables.amountplayers == 4)
                     {
-                        player4txt.Text = Convert.ToString(doc.SelectSingleNode("values/ints/player4_name").InnerText);
+                        Variables.playernames[3] = Convert.ToString(doc.SelectSingleNode("values/ints/player4_name").InnerText);
                         scores[3] = Convert.ToInt32(doc.SelectSingleNode("values/ints/player4_score").InnerText);
                     }
                 }
@@ -362,7 +364,11 @@ namespace MemoryGame
                     {
                         highscore();
                     }
-
+                    if (Variables.loadgame == 3)
+                    {
+                        File.Delete("memorysave.sav");
+                        Variables.loadgame = 0;
+                    }
                     Endscreen endscreen =  new Endscreen();
                     endscreen.scores[0] = scores[0];
                     endscreen.scores[1] = scores[1];

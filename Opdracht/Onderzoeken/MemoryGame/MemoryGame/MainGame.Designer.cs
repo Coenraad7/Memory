@@ -136,7 +136,7 @@
             this.txtresult.BackColor = System.Drawing.Color.Black;
             this.txtresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtresult.ForeColor = System.Drawing.Color.White;
-            this.txtresult.Location = new System.Drawing.Point(1124, 223);
+            this.txtresult.Location = new System.Drawing.Point(1124, 222);
             this.txtresult.Name = "txtresult";
             this.txtresult.Size = new System.Drawing.Size(61, 26);
             this.txtresult.TabIndex = 27;

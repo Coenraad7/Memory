@@ -30,7 +30,7 @@ namespace MemoryGame
         private void MainMenu_Load(object sender, EventArgs e)
         {
             loadhighscore();
-            if (!(File.Exists("memory_save.xml")))
+            if (!(File.Exists("memorysave.sav")))
             {
                 Loadbtn.Visible = false;
             }

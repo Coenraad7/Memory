@@ -1,0 +1,1099 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MemoryGame</name>
+    </assembly>
+    <members>
+        <member name="T:MemoryGame.About">
+            <summary>Class About</summary>
+            <para>This is the about class and contains some about information.</para>
+        </member>
+        <member name="M:MemoryGame.About.#ctor">
+            <summary>Method About</summary>
+            <para>Default method</para>
+        </member>
+        <member name="M:MemoryGame.About.button1_Click(System.Object,System.EventArgs)">
+            <summary>method button1_Click</summary>
+            <para>Creator Coenraad: opens MainMenu.cs and closes About.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.About.CopyResource">
+            <summary>Method CopyResource</summary>
+            <para>Creator Berry: </para>
+        </member>
+        <member name="M:MemoryGame.About.About_Load(System.Object,System.EventArgs)">
+            <summary>Method About_Load</summary>
+            <para>Creator Berry: </para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MemoryGame.About.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.About.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.About.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Endscreen">
+            <summary>Class Endscreen</summary>
+            <para>opens when a game is done and shows who won</para>
+        </member>
+        <member name="F:MemoryGame.Endscreen.scores">
+            <summary> Variable scores</summary>
+            <para>Creator Daniel: scores from the game</para>
+        </member>
+        <member name="M:MemoryGame.Endscreen.#ctor">
+            <summary>Method Endscreen</summary>
+            <para>Default Method</para>
+        </member>
+        <member name="M:MemoryGame.Endscreen.Endscreen_Load(System.Object,System.EventArgs)">
+            <summary>Method Endscreen_Load</summary>
+            <para>Creator Daniel: Calls method List</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Endscreen.Button1_Click(System.Object,System.EventArgs)">
+            <summary>Method Button1_Click</summary>
+            <para>Creator Coenraad: Opens Mainmenu.cs and closes Endscreen.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Endscreen.button2_Click(System.Object,System.EventArgs)">
+            <summary>Method Button2_Click</summary>
+            <para>Creator Coenraad: Opens MainGame.cs and closes Endscreen.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Endscreen.List">
+            <summary>Method List</summary>
+            <para>Creator Daniel: </para>
+        </member>
+        <member name="F:MemoryGame.Endscreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.Endscreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.Endscreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Whostarts">
+            <summary>Class Whostarts</summary>
+            <para>This class is opened on a multiplayer game and decides the starting player</para>
+        </member>
+        <member name="M:MemoryGame.Whostarts.#ctor">
+            <summary>Method Whostarts</summary>
+            <para>Default method, starts timer and edits the starting interval</para>
+        </member>
+        <member name="M:MemoryGame.Whostarts.timer1_Tick(System.Object,System.EventArgs)">
+            <summary>Method timer1_Tick</summary>
+            <para>Creator Richard: Increases the interval and calls random()</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Whostarts.random">
+            <summary>Method random</summary>
+            <para>Creator Richard: Generates a random number depending on amount of players and when the timer interval reaches a set amount will run open MainGame.cs and closes Whostarts.cs</para>
+        </member>
+        <member name="F:MemoryGame.Whostarts.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.Whostarts.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.Whostarts.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Help">
+            <summary>Class Help</summary>
+            <para>This form is for a textbox including some help</para>
+        </member>
+        <member name="M:MemoryGame.Help.#ctor">
+            <summary>Method Help</summary>
+            <para>Default method</para>
+        </member>
+        <member name="M:MemoryGame.Help.button1_Click(System.Object,System.EventArgs)">
+            <summary>Method button1_Click</summary>
+            <para>Creator Coenraad: Opens MainMenu.cs and closes Help.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Help.singlebut_Click(System.Object,System.EventArgs)">
+            <summary>Method singlebut_Click</summary>
+            <para>Creator Daniel: shows the textbox for singleplayer and hides multiplayer</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Help.multibut_Click(System.Object,System.EventArgs)">
+            <summary>Method singlebut_Click</summary>
+            <para>Creator Daniel: shows the textbox for multiplayer and hides singleplayer</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MemoryGame.Help.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.Help.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.Help.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Highscores">
+            <summary>Class Highscores</summary>
+            <para>Shows the highscores of every difficulty</para>
+        </member>
+        <member name="M:MemoryGame.Highscores.#ctor">
+            <summary>Method Highscores</summary>
+            <para>Default method</para>
+        </member>
+        <member name="M:MemoryGame.Highscores.Highscores_Load(System.Object,System.EventArgs)">
+            <summary>Method Highscores_Load</summary>
+            <para>Creator Richard: Loads the list of very easy difficulty</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Highscores.button1_Click(System.Object,System.EventArgs)">
+            <summary>Method button1_Click</summary>
+            <para>Creator Coenraad: Opens Mainmenu.cs and closes Highscores.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Highscores.dif1_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>Methods dif*_CheckedChanged</summary>
+            <para>Creator Richard: Changes the text box to according difficulty and calls method List with the according difficulty</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Highscores.List(System.Int32)">
+            <summary>Method List</summary>
+            <Para>Creator Richard: Shows every line of the highscores list depending on choses difficulty</Para>
+            <param name="dif">Radiobutton</param>
+        </member>
+        <member name="F:MemoryGame.Highscores.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.Highscores.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.Highscores.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.MainGame">
+            <summary>Class MainGame</summary>
+            <para>This is the maingame class and contains most of the code used for the memorygame itself.</para>
+        </member>
+        <member name="F:MemoryGame.MainGame.turn">
+            <summary>Variables in Class Maingame</summary>
+            <para>public int Turn: keeps track of what players turn it is. only used in multiplayer and is given a value from Whostarts.</para>
+            <Para>int[,] cardproperties: Contains info of every picturebox. [x.y] x = picturebox number, y = pairnumber and visible(0 or 1).</Para>
+            <para>int[,] grid: contains a set ammount of values depending on the difficulty level.</para>
+            <para>int[] scores: keeps track of every player score in the current game.</para>
+            <para>int card1, card2: Contains pairnumbers from the last picture boxes that have been clicked.</para>
+            <para>int picture1, picture2: remembers the cardproperties number for when they can be removed.</para>
+            <para>int count: keeps track of the ammount of cards that have been played away.</para>
+            <para>int timercount: this value helps decreasing the timers time and increases when all the players had their turn.</para>
+            <para>PictureBox cardinfo1, cardinfo2: Contains the picturebox information from the last 2 picturebox clicks.</para>
+            <para>double multiplier: keeps track of a multiplier for the scoring system in SINGLEPLAYER.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.#ctor">
+            <summary>Method MainGame</summary>
+            <para>default method</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.MainGame_Load(System.Object,System.EventArgs)">
+            <summary>Method MainGame_Load</summary>
+            <para>Runs code when the form loads. this depends on the Variables.Loadgame</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.init">
+            <summary>Method init</summary>
+            <para>Creator Richard: init initizalizes most of the game. It creates pictureboxes, empties textboxes and fills them accordingly. Mostely depends on difficulty, amountplayers.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.initspecial">
+            <summary>Method initspecial</summary>
+            <para>This method only runs when a continue game is selected. it makes the pictureboxes that have been played away invisible.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.Savegame">
+            <summary>Method Savegame</summary>
+            <para>Creator Richard/Johnny: This method loads all necessary variables to a .sav file</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.Loadgame">
+            <summary>Method Loadgame</summary>
+            <para>Creator Richard/Johnny: This method loads all necessary variables to a .sav file</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.scramble">
+            <summary>Method scramble</summary>
+            <para>Creator Richard: This method initializes the cardproperties array and fills it with randomized number variating per difficulty. every number will be created only twice and will act as a pair in the game.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.rotate(System.Object,System.EventArgs)">
+            <summary>Method rotate</summary>
+            <para>Creator Richard: This method is called when a picture box is clicked. it acts as a rotation in the memory game because the picture will change. after the second click it will also call paircheck() to check the cards. if the 3th card is clicked to fast it will also call Undorotate().</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.undorotate">
+            <summary>Method undorotate</summary>
+            <para>Creator Richard: undo's the rotated cards after it is called. This results in that you are able to view the cards before they are invisible or back to the default background.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.paircheck">
+            <summary>Method paircheck</summary>
+            <para>Creator Richard: This method will compares the values of card1 and card2. if they have the same value it will call Keepscore(true) and add 2 to the count. it also checks if the game is finished or not. if the cards arent the same Keepscore(false) will be called.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.keepscore(System.Boolean)">
+            <summary>Method keepscore</summary>
+            <para>Creator Richard: This is a method in the MainGame class/form. It makes sure the players get a score when correct = true. if its not it will rotate to the next player or decreases Multiplier.</para>
+            <param name="correct"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.highscore">
+            <summary>Method highscore</summary>
+            <para>Creator Richard: This is a method in the MainGame class/form. When a game is finished it check if the current SINGLEPLAYER score is higher than the lowest highscore of that difficulty and places it in the correct spot and saves it to highscores.sav.</para>
+        </member>
+        <member name="M:MemoryGame.MainGame.button1_Click(System.Object,System.EventArgs)">
+            <summary>Method button1_Click</summary>
+            <para>Creator Coenraad: This button brings you back to the MainMenu.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.reset_Click(System.Object,System.EventArgs)">
+            <summary>Method reset_Click</summary>
+            <para>Creator Richard: This button reloads the MainGame.cs and acts as a reset button.</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.button2_Click(System.Object,System.EventArgs)">
+            <summary>Method button2_click</summary>
+            <para>Creator Johnny: Calls Savegame method</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.undo_Tick(System.Object,System.EventArgs)">
+            <summary>Method undo_tick</summary>
+            <para>Creator Richard: This timer calls the undo rotate after a certain ammount of time.</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.timer1_Tick(System.Object,System.EventArgs)">
+            <summary>Method timer1_Tick</summary>
+            <para>Creator Johnny: This timer only works in Multiplayer and brings a timer to the screen. and ticks it down to 0 if it reaches 0 the cards will be default if needed and the next player will be able to play.</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainGame.timers">
+            <summary>Method timers</summary>
+            <para>Creator Johnny: This is the method that starts and stops the timer. it also decreases the timers time after all the players had their turn in a multiplayer session.</para>
+        </member>
+        <member name="F:MemoryGame.MainGame.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.MainGame.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.MainGame.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Variables">
+            <summary>Class Variables</summary>
+            <para>Creator Richard: Contains variables that are public static and used in different forms.</para>
+        </member>
+        <member name="F:MemoryGame.Variables.playernames">
+            <summary>Variables.*</summary>
+            <para>Playernames: is filled in from the Players.cs.</para>
+            <para>highscoresplayer, highscorescores: contains the highscore information gets loaded in from the mainmenu and is saved to a .sav when they're changed.</para>
+            <para>Theme, difficulty, amountplayers: these are settings that are filled in from the players.cs.</para>
+            <para>loadgame: gets changed when the continuegame button is pressed so that MainGame.cs loads it.</para>
+        </member>
+        <member name="T:MemoryGame.MdiContainer">
+            <summary>Class MdiContainer</summary>
+            <para>Contains mdicontainer</para>
+        </member>
+        <member name="M:MemoryGame.MdiContainer.#ctor">
+            <summary>Method MdiContainer</summary>
+            <para>Default method</para>
+        </member>
+        <member name="M:MemoryGame.MdiContainer.Form1_Load(System.Object,System.EventArgs)">
+            <summary>Method Form1_Load</summary>
+            <para>Creator Coenraad: Loads mainmenu in a MdiContainer</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MemoryGame.MdiContainer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.MdiContainer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.MdiContainer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.MainMenu">
+            <summary>Class MainMenu</summary>
+            <para>First visible menu and contains buttons for other forms.</para>
+        </member>
+        <member name="M:MemoryGame.MainMenu.#ctor">
+            <summary>Method MainMenu</summary>
+            <para>Default method</para>
+        </member>
+        <member name="M:MemoryGame.MainMenu.MainMenu_Load(System.Object,System.EventArgs)">
+            <summary>Method MainMenu_Load</summary>
+            <para>Creator Richard: Checks if a save file exists and shows a button to load it when the save is found.</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.button1_Click(System.Object,System.EventArgs)">
+            <summary>Method button1_Click</summary>
+            <para>Creator coenraad: opens Players.cs and closes MainMenu.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.button2_Click(System.Object,System.EventArgs)">
+            <summary>Method button2_Click</summary>
+            <para>Creator coenraad: opens Highscores.cs and closes MainMenu.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.button4_Click(System.Object,System.EventArgs)">
+            <summary>Method button4_Click</summary>
+            <para>Creator coenraad: opens Help.cs and closes MainMenu.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.button5_Click(System.Object,System.EventArgs)">
+            <summary>Method button5_Click</summary>
+            <para>Creator coenraad: opens About.cs and closes MainMenu.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.Loadbtn_Click(System.Object,System.EventArgs)">
+            <summary>Method Loadbtn_Click</summary>
+            <para>Creator Johnny: opens MainGame.cs with Variables.loadgame = 1 and closes MainMenu.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.loadhighscore">
+            <summary>Method Loadhighscore</summary>
+            <para>Creator Richard: Checks for a highscores.sav and loads it in.</para>
+        </member>
+        <member name="F:MemoryGame.MainMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.MainMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.MainMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Players">
+            <summary>Class Players</summary>
+            <para>This is the players form it opens when you press play and gives you a set amount of settings.</para>
+        </member>
+        <member name="M:MemoryGame.Players.#ctor">
+            <summary>Method Players</summary>
+            <para>Default method</para>
+        </member>
+        <member name="M:MemoryGame.Players.applysettings">
+            <summary>Method applysettings</summary>
+            <para>Creator Daniel: changes the settings accordingly</para>
+        </member>
+        <member name="M:MemoryGame.Players.nextbutton_Click(System.Object,System.EventArgs)">
+            <summary>Method nextbutton_Click</summary>
+            <para>Creator Daniel: This button brings you to the Whostarts.cs or MainGame.cs after checking if all the settings ahve been filled in</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Players.backbutton_Click(System.Object,System.EventArgs)">
+            <summary>Method backbutton_Click</summary>
+            <para>Creator Coenraad: opens MainMenu.cs and closes Players.cs</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Players.player1_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>Methods player*_CheckChanged</summary>
+            <para>Creator Daniel: These methods show the textboxes of player names when the corresponding radiobutton is pressed</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Players.p1box_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>Methods p*box_KeyPress</summary>
+            <para>Creator Daniel: These keypresses change the background color of a textbox back to white when something is typed in it</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryGame.Players.pictureBox1_Click(System.Object,System.EventArgs)">
+            <summary>Methods pictureBox*_Click</summary>
+            <para>Creator Daniel: Changes the radiobuttons for themes when a uses clicks on the picture of a theme.</para>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MemoryGame.Players.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.Players.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MemoryGame.Players.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MemoryGame.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:MemoryGame.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._11">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._110">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._111">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._112">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._113">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._114">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._115">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._116">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._117">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._118">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._12">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._13">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._14">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._15">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._16">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._17">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._18">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._19">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._1Background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._1default">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._1icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._21">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._210">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._211">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._212">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._213">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._214">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._215">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._216">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._217">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._218">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._22">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._23">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._24">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._25">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._26">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._27">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._28">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._29">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._2Background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._2default">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._2icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._31">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._310">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._311">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._312">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._313">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._314">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._315">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._316">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._317">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._318">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._32">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._33">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._34">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._35">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._36">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._37">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._38">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._39">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._3Background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._3default">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._3icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._41">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._410">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._411">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._412">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._413">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._414">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._415">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._416">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._417">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._418">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._42">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._43">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._44">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._45">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._46">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._47">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._48">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._49">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._4Background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._4default">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._4icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._51">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._510">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._511">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._512">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._513">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._514">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._515">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._516">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._517">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._518">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._52">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._53">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._54">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._55">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._56">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._57">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._58">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._59">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._5Background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._5default">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources._5icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.arrow_down">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.arrow_up">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.IntroResized">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.Memory_Game_Icon_48x48">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.Memorygame">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.Memorygame_players">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.Mr_Meeseeks">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MemoryGame.Properties.Resources.stopwatch">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

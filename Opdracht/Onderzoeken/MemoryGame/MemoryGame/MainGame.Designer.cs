@@ -62,23 +62,23 @@
             // 
             // reset
             // 
-            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reset.Location = new System.Drawing.Point(1089, 363);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(158, 51);
             this.reset.TabIndex = 17;
-            this.reset.Text = "Reset Game";
+            this.reset.Text = "Reset game";
             this.reset.UseVisualStyleBackColor = true;
             this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(1089, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 51);
             this.button1.TabIndex = 18;
-            this.button1.Text = "Main Menu";
+            this.button1.Text = "Main menu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -150,7 +150,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 51);
             this.button2.TabIndex = 28;
-            this.button2.Text = "Save Game";
+            this.button2.Text = "Save game";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

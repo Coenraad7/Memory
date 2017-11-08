@@ -10,19 +10,23 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
-using System.Xml.Linq;
-using System.Xml.XmlConfiguration;
 
 namespace MemoryGame
 {
-
+    /// <summary>Class MainMenu</summary>
+    /// <para>First visible menu and contains buttons for other forms.</para>
     public partial class MainMenu : Form
     {
+        /// <summary>Method MainMenu</summary>
+        /// <para>Default method</para>
         public MainMenu()
         {
             InitializeComponent();
         }
-
+        /// <summary>Method MainMenu_Load</summary>
+        /// <para>Creator Richard: Checks if a save file exists and shows a button to load it when the save is found.</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainMenu_Load(object sender, EventArgs e)
         {
             loadhighscore();
@@ -32,7 +36,10 @@ namespace MemoryGame
             }
         }
 
-        //coen
+        /// <summary>Method button1_Click</summary>
+        /// <para>Creator coenraad: opens Players.cs and closes MainMenu.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Players form3 = new Players();
@@ -40,7 +47,10 @@ namespace MemoryGame
             form3.Show();
             Close();
         }
-        //coen
+        /// <summary>Method button2_Click</summary>
+        /// <para>Creator coenraad: opens Highscores.cs and closes MainMenu.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             Highscores Highscores = new Highscores();
@@ -48,7 +58,10 @@ namespace MemoryGame
             Highscores.Show();
             Close();
         }
-        //coen
+        /// <summary>Method button4_Click</summary>
+        /// <para>Creator coenraad: opens Help.cs and closes MainMenu.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             Help Help = new Help();
@@ -56,7 +69,10 @@ namespace MemoryGame
             Help.Show();
             Close();
         }
-        //coen
+        /// <summary>Method button5_Click</summary>
+        /// <para>Creator coenraad: opens About.cs and closes MainMenu.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button5_Click(object sender, EventArgs e)
         {
             About About = new About();
@@ -64,7 +80,10 @@ namespace MemoryGame
             About.Show();
             Close();
         }
-
+        /// <summary>Method Loadbtn_Click</summary>
+        /// <para>Creator Johnny: opens MainGame.cs with Variables.loadgame = 1 and closes MainMenu.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Loadbtn_Click(object sender, EventArgs e)  //the load funtion to load in the Previous game.
         {
             MainGame MainGame = new MainGame();
@@ -73,13 +92,14 @@ namespace MemoryGame
             MainGame.Show();
             Close();
         }
-    
+        /// <summary>Method Loadhighscore</summary>
+        /// <para>Creator Richard: Checks for a highscores.sav and loads it in.</para>
         private void loadhighscore()
         {
-            if (File.Exists("highscores.xml"))
+            if (File.Exists("highscores.sav"))
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load("highscores.xml");
+                doc.Load("highscores.sav");
                 for (int i = 0; i < 5; i++)
                 {
                     for (int e = 0; e < 10; e++)

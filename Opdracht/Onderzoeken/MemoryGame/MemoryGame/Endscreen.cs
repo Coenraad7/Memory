@@ -10,20 +10,31 @@ using System.Windows.Forms;
 
 namespace MemoryGame
 {
+    /// <summary>Class Endscreen</summary>
+    /// <para>opens when a game is done and shows who won</para>
     public partial class Endscreen : Form
     {
+        /// <summary> Variable scores</summary>
+        /// <para>Creator Daniel: scores from the game</para>
         public int[] scores = new int[4] { 0, 0, 0, 0 };
-
+        /// <summary>Method Endscreen</summary>
+        /// <para>Default Method</para>
         public Endscreen()
         {
             InitializeComponent();
         }
-
+        /// <summary>Method Endscreen_Load</summary>
+        /// <para>Creator Daniel: Calls method List</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Endscreen_Load(object sender, EventArgs e)
         {
             List();
         }
-
+        /// <summary>Method Button1_Click</summary>
+        /// <para>Creator Coenraad: Opens Mainmenu.cs and closes Endscreen.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -31,15 +42,19 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
-
+        /// <summary>Method Button2_Click</summary>
+        /// <para>Creator Coenraad: Opens MainGame.cs and closes Endscreen.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            MainGame form3 = new MainGame();
-            form3.MdiParent = this.ParentForm;
-            form3.Show();
+            MainGame MainGame = new MainGame();
+            MainGame.MdiParent = this.ParentForm;
+            MainGame.Show();
             Close();
         }
-
+        /// <summary>Method List</summary>
+        /// <para>Creator Daniel: </para>
         private void List()
         {
             #region wat te doen als wanneer t spel klaar is (Daniel)

@@ -10,25 +10,40 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
-using System.Xml.Linq;
-using System.Xml.XmlConfiguration;
 
 namespace MemoryGame
 {
+    /// <summary>Class MainGame</summary>
+    /// <para>This is the maingame class and contains most of the code used for the memorygame itself.</para>
     public partial class MainGame : Form
     {
+        /// <summary>Variables in Class Maingame</summary>
+        /// <para>public int Turn: keeps track of what players turn it is. only used in multiplayer and is given a value from Whostarts.</para>
+        /// <Para>int[,] cardproperties: Contains info of every picturebox. [x.y] x = picturebox number, y = pairnumber and visible(0 or 1).</Para>
+        /// <para>int[,] grid: contains a set ammount of values depending on the difficulty level.</para>
+        /// <para>int[] scores: keeps track of every player score in the current game.</para>
+        /// <para>int card1, card2: Contains pairnumbers from the last picture boxes that have been clicked.</para>
+        /// <para>int picture1, picture2: remembers the cardproperties number for when they can be removed.</para>
+        /// <para>int count: keeps track of the ammount of cards that have been played away.</para>
+        /// <para>int timercount: this value helps decreasing the timers time and increases when all the players had their turn.</para>
+        /// <para>PictureBox cardinfo1, cardinfo2: Contains the picturebox information from the last 2 picturebox clicks.</para>
+        /// <para>double multiplier: keeps track of a multiplier for the scoring system in SINGLEPLAYER.</para>
         public int turn;
         int[,] cardproperties, grid = new int[5, 3] { { 4, 4, 16 }, { 5, 4, 20 }, { 6, 4, 24 }, { 6, 5, 30 }, { 6, 6, 36 } };
         int[] scores = new int[4] { 0, 0, 0, 0 };
         int card1, card2, picture1, picture2, count, timercount = 0;
         PictureBox cardinfo1, cardinfo2;
         double multiplier = 1;
-
+        /// <summary>Method MainGame</summary>
+        /// <para>default method</para>
         public MainGame()
         {
             InitializeComponent();
         }
-
+        /// <summary>Method MainGame_Load</summary>
+        /// <para>Runs code when the form loads. this depends on the Variables.Loadgame</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void MainGame_Load(object sender, EventArgs e)
         {
             if (Variables.loadgame == 1)
@@ -44,7 +59,8 @@ namespace MemoryGame
                 scramble(); //spel begin kaarten randomizen
             }
         }
-
+        /// <summary>Method init</summary>
+        /// <para>Creator Richard: init initizalizes most of the game. It creates pictureboxes, empties textboxes and fills them accordingly. Mostely depends on difficulty, amountplayers.</para>
         private void init()
         {
             string[] stringArray = new string[grid[Variables.difficulty, 2]];
@@ -114,7 +130,8 @@ namespace MemoryGame
                 score4txt.Text = "Score: " + scores[3];
             }
         }
-
+        /// <summary>Method initspecial</summary>
+        /// <para>This method only runs when a continue game is selected. it makes the pictureboxes that have been played away invisible.</para>
         private void initspecial()
         {
             foreach (var pb in this.Controls.OfType<PictureBox>())
@@ -137,11 +154,8 @@ namespace MemoryGame
         }
 
         #region save & load
-        private void button2_Click(object sender, EventArgs e)
-        {
-                Savegame();
-        }
-
+        /// <summary>Method Savegame</summary>
+        /// <para>Creator Johnny: </para>
         private void Savegame()
         {
             XmlTextWriter writer = new XmlTextWriter("memory_save.xml", Encoding.UTF8);
@@ -193,6 +207,8 @@ namespace MemoryGame
             writer.WriteEndElement();   //sluiten van element "values"
             writer.Close();
         }
+        /// <summary>Method Loadgame</summary>
+        /// <para>Creator Johnny: </para>
         private void Loadgame()
         {
             XmlDocument doc = new XmlDocument();
@@ -230,8 +246,10 @@ namespace MemoryGame
                 cardproperties[i, 1] = Convert.ToInt32(doc.SelectSingleNode("values/array/cardproperties"+ i + 1).InnerText);
             }
         }
-#endregion
+        #endregion
         #region scramble funtions
+        /// <summary>Method scramble</summary>
+        /// <para>Creator Richard: This method initializes the cardproperties array and fills it with randomized number variating per difficulty. every number will be created only twice and will act as a pair in the game.</para>
         private void scramble()
         {
             cardproperties = new int[grid[Variables.difficulty, 2], 2]; //1e getal is kaartnummer/picturebox, 2e getal is een property ,1 is bvb paarnummer(bij 16 kaarten 1tm8)
@@ -261,6 +279,10 @@ namespace MemoryGame
         }
         #endregion
         #region Rotate/cards functions
+        /// <summary>Method rotate</summary>
+        /// <para>Creator Richard: This method is called when a picture box is clicked. it acts as a rotation in the memory game because the picture will change. after the second click it will also call paircheck() to check the cards. if the 3th card is clicked to fast it will also call Undorotate().</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rotate(object sender, EventArgs e)
         {
             string temp = (sender as PictureBox).Name;
@@ -289,7 +311,8 @@ namespace MemoryGame
                 paircheck(); //hier word de methode voor het controlleren van paren opgevraagd
             }
         }
-
+        /// <summary>Method undorotate</summary>
+        /// <para>Creator Richard: undo's the rotated cards after it is called. This results in that you are able to view the cards before they are invisible or back to the default background.</para>
         private void undorotate() //reset na 0,4 seconden
         {
             undo.Stop();
@@ -316,7 +339,8 @@ namespace MemoryGame
                 cardproperties[picture2, 1] = 1;
             }
         }
-
+        /// <summary>Method paircheck</summary>
+        /// <para>Creator Richard: This method will compares the values of card1 and card2. if they have the same value it will call Keepscore(true) and add 2 to the count. it also checks if the game is finished or not. if the cards arent the same Keepscore(false) will be called.</para>
         private void paircheck()
         {
             if (card1 == card2) //als de waarden gelijk zijn zal hij ze terug zetten naar standaard(_default) en verstoppen
@@ -355,8 +379,11 @@ namespace MemoryGame
             }
             undo.Start();
         }
-#endregion
+        #endregion
         #region score/highscore
+        /// <summary>Method keepscore</summary>
+        /// <para>Creator Richard: This is a method in the MainGame class/form. It makes sure the players get a score when correct = true. if its not it will rotate to the next player or decreases Multiplier.</para>
+        /// <param name="correct"></param>
         public void keepscore(bool correct) //methode voor bij houden van score en het toepassen van de multiplier
         { 
             if (Variables.amountplayers == 1)
@@ -435,7 +462,8 @@ namespace MemoryGame
                 }
             }
         }
-
+        /// <summary>Method highscore</summary>
+        /// <para>Creator Richard: This is a method in the MainGame class/form. When a game is finished it check if the current SINGLEPLAYER score is higher than the lowest highscore of that difficulty and places it in the correct spot and saves it to highscores.sav.</para>
         private void highscore()
         {
             int spot = 9;
@@ -451,7 +479,7 @@ namespace MemoryGame
             Variables.highscoresscore[Variables.difficulty, spot] = scores[0];
             Variables.highscoresplayer[Variables.difficulty, spot] = player1txt.Text;
 
-            XmlTextWriter writer = new XmlTextWriter("highscores.xml", Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("highscores.sav", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
             writer.WriteStartElement("highscores");
             for (int i = 0; i < 5; i++)
@@ -474,6 +502,10 @@ namespace MemoryGame
         }
         #endregion
         #region Buttons
+        /// <summary>Method button1_Click</summary>
+        /// <para>Creator Coenraad: This button brings you back to the MainMenu.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -481,7 +513,10 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
-
+        /// <summary>Method reset_Click</summary>
+        /// <para>Creator Richard: This button reloads the MainGame.cs and acts as a reset button.</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void reset_Click(object sender, EventArgs e)
         {
             if (Variables.amountplayers >= 2)
@@ -499,13 +534,28 @@ namespace MemoryGame
                 Close();
             }
         }
+        /// <summary>Method button2_click</summary>
+        /// <para>Creator Johnny: Calls Savegame method</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Savegame();
+        }
         #endregion
         #region Timers
+        /// <summary>Method undo_tick</summary>
+        /// <para>Creator Richard: This timer calls the undo rotate after a certain ammount of time.</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void undo_Tick(object sender, EventArgs e)
         {
             undorotate();
         }
-
+        /// <summary>Method timer1_Tick</summary>
+        /// <para>Creator Johnny: This timer only works in Multiplayer and brings a timer to the screen. and ticks it down to 0 if it reaches 0 the cards will be default if needed and the next player will be able to play.</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void timer1_Tick(object sender, EventArgs e)
         {
             int timer = Convert.ToInt32(txtresult.Text);
@@ -524,7 +574,8 @@ namespace MemoryGame
                 keepscore(false);
             }
         }
-
+        /// <summary>Method timers</summary>
+        /// <para>Creator Johnny: This is the method that starts and stops the timer. it also decreases the timers time after all the players had their turn in a multiplayer session.</para>
         private void timers()
         {
             timer1.Stop();

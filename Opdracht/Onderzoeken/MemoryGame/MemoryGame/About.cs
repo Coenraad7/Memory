@@ -11,8 +11,12 @@ using System.IO;
 
 namespace MemoryGame
 {
+    /// <summary>Class About</summary>
+    /// <para>This is the about class and contains some about information.</para>
     public partial class About : Form
     {
+        /// <summary>Method About</summary>
+        /// <para>Default method</para>
         public About()
         {
             InitializeComponent();
@@ -24,7 +28,10 @@ namespace MemoryGame
             //flash1.movie = path.gettemppath() + @"\intro.swf";
 
         }
-        
+        /// <summary>method button1_Click</summary>
+        /// <para>Creator Coenraad: opens MainMenu.cs and closes About.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -32,7 +39,8 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
-
+        /// <summary>Method CopyResource</summary>
+        /// <para>Creator Berry: </para>
         private void CopyResource()
         {
             if (File.Exists(Path.GetTempPath() + @"\IntroResized.swf"))
@@ -46,7 +54,10 @@ namespace MemoryGame
                 File.WriteAllBytes(Path.GetTempPath() + @"\IntroResized.swf", Properties.Resources.IntroResized);
             }
         }
-
+        /// <summary>Method About_Load</summary>
+        /// <para>Creator Berry: </para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void About_Load(object sender, EventArgs e)
         {
             CopyResource();

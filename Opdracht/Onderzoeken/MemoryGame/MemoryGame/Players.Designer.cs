@@ -157,9 +157,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label3.Location = new System.Drawing.Point(189, 226);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 29);
+            this.label3.Size = new System.Drawing.Size(167, 29);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Gaming (Hard)";
+            this.label3.Text = "Gaming (hard)";
             // 
             // label2
             // 
@@ -541,10 +541,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label8.Location = new System.Drawing.Point(341, 9);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(341, 6);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 25);
+            this.label8.Size = new System.Drawing.Size(166, 31);
             this.label8.TabIndex = 35;
             this.label8.Text = "Playername:";
             // 

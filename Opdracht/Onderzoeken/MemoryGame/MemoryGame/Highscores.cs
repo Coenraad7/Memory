@@ -12,27 +12,29 @@ using System.Xml.Serialization;
 
 namespace MemoryGame
 {
+    /// <summary>Class Highscores</summary>
+    /// <para>Shows the highscores of every difficulty</para>
     public partial class Highscores : Form
     {
+        /// <summary>Method Highscores</summary>
+        /// <para>Default method</para>
         public Highscores()
         {
             InitializeComponent();
         }
-
+        /// <summary>Method Highscores_Load</summary>
+        /// <para>Creator Richard: Loads the list of very easy difficulty</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Highscores_Load(object sender, EventArgs e)
         {
             Scores.Text = "These are the scores for the Very Easy difficulty" + System.Environment.NewLine;
             List(0);
-
-            //Load function!
-            // XmlSerializer xs = new XmlSerializer(typeof(spelerdetails));
-            // FileStream read = new FileStream("Hiscore.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
-            // spelerdetails info = (spelerdetails)xs.Deserialize(read);
-            // label2.text = hiscoreveryeasy;   ------voorbeeld!--------
-
-            // hier vul je de naam in van wat ie moet laden uit de xml. (kan zelf niet vinden waar jij die lists alles opslaat etc.
         }
-
+        /// <summary>Method button1_Click</summary>
+        /// <para>Creator Coenraad: Opens Mainmenu.cs and closes Highscores.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -40,7 +42,10 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
-
+        /// <summary>Methods dif*_CheckedChanged</summary>
+        /// <para>Creator Richard: Changes the text box to according difficulty and calls method List with the according difficulty</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dif1_CheckedChanged(object sender, EventArgs e)
         {
             Scores.Text = "These are the scores for the Very Easy difficulty" + System.Environment.NewLine;
@@ -70,7 +75,9 @@ namespace MemoryGame
             Scores.Text = "These are the scores for the Extreme difficulty" + System.Environment.NewLine;
             List(4);
         }
-
+        /// <summary>Method List</summary>
+        /// <Para>Creator Richard: Shows every line of the highscores list depending on choses difficulty</Para>
+        /// <param name="dif">Radiobutton</param>
         private void List(int dif)
         {
             

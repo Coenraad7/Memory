@@ -10,13 +10,19 @@ using System.Windows.Forms;
 
 namespace MemoryGame
 {
+    /// <summary>Class Players</summary>
+    /// <para>This is the players form it opens when you press play and gives you a set amount of settings.</para>
     public partial class Players : Form
     {
+        /// <summary>Method Players</summary>
+        /// <para>Default method</para>
         public Players()
         {
             InitializeComponent();
         }
-        private void checkform()
+        /// <summary>Method applysettings</summary>
+        /// <para>Creator Daniel: changes the settings accordingly</para>
+        private void applysettings()
         {
             //selecteren van het thema
             if (theme1.Checked) { Variables.theme = 1; }
@@ -44,7 +50,10 @@ namespace MemoryGame
             Variables.playernames[2] = p3box.Text;
             Variables.playernames[3] = p4box.Text;
         }
-
+        /// <summary>Method nextbutton_Click</summary>
+        /// <para>Creator Daniel: This button brings you to the Whostarts.cs or MainGame.cs after checking if all the settings ahve been filled in</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextbutton_Click(object sender, EventArgs e)
         {
 
@@ -53,7 +62,7 @@ namespace MemoryGame
                 //Bij een x aantal spelers MOET hetzelfde aantal aan nicknames ingevult worden.
             {
 
-                checkform();
+                applysettings();
                 if (Variables.amountplayers >= 2)
                 {
                     Whostarts Whostarts = new Whostarts();
@@ -97,7 +106,10 @@ namespace MemoryGame
         }
 
 
-        //coen
+        /// <summary>Method backbutton_Click</summary>
+        /// <para>Creator Coenraad: opens MainMenu.cs and closes Players.cs</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backbutton_Click(object sender, EventArgs e)
         {
             MainMenu MainMenu = new MainMenu();
@@ -105,7 +117,10 @@ namespace MemoryGame
             MainMenu.Show();
             Close();
         }
-
+        /// <summary>Methods player*_CheckChanged</summary>
+        /// <para>Creator Daniel: These methods show the textboxes of player names when the corresponding radiobutton is pressed</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void player1_CheckedChanged(object sender, EventArgs e)
         {
             p2box.Visible = false;
@@ -134,7 +149,10 @@ namespace MemoryGame
             p4box.Visible = true;
         }
         //hierdoor worden alleen de hoeveelheid tekstboxen zichtbaar die aan wordt gegeven doormiddel van de "check"
-
+        /// <summary>Methods p*box_KeyPress</summary>
+        /// <para>Creator Daniel: These keypresses change the background color of a textbox back to white when something is typed in it</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void p1box_KeyPress(object sender, KeyPressEventArgs e)
         {
             p1box.BackColor = Color.White;
@@ -154,7 +172,10 @@ namespace MemoryGame
         {
             p4box.BackColor = Color.White;
         }
-
+        /// <summary>Methods pictureBox*_Click</summary>
+        /// <para>Creator Daniel: Changes the radiobuttons for themes when a uses clicks on the picture of a theme.</para>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             theme1.Checked = true;
